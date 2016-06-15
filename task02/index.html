@@ -23,7 +23,7 @@
 	<article id='a1'>
 		<h2>Content Head I</h2>	
 		<h3>Content Head II</h3>
-		<p>Author  PublishDate</p>
+		<p class="article_desc">Author  PublishDate</p>
 		<p>
 			laan4 lou6 jyu5 pin1 ci5 syut3 faa1 jam2 jap1 dik1 nei5 dung3 maa1, ze5 fung1 leoi5 ngo5 kap1 nei5 mo4 dou3 jau5 kam1 faa1
 		</p>
@@ -40,9 +40,9 @@
 		<p>
 			cang4 jyun4 zoek6/ syut3 lou6 long6 jau4 wai46 ho4 wai46 hou2 si6 leoi6 lau4,seoi4 nang4 pang4 oi3 ji3 jiu3 fu3 si6 saan1 si1 jau5
 		</p>
-		<p>
-			<img src="flower.jpg" width="400" height="300">
-		</p>
+		
+		<img class="flower" src="flower.jpg" width="400" height="300">
+		
 		<p>
 			ho4 bat1 baa2 bei1 oi1 gam2 gok3/gaau3 gaa2/gaa3 cit3 si6 loi4 zi6 nei5 heoi1<a href="http://www.baidu.com" target="_blank" >There is a link to Baidu(_blank)</a> kau3/gau3,si3 gun2 leoi5 zaau2 bat1 dou3 taa1 jim5 wu1 ngaan5 mau4
 		</p>
@@ -54,7 +54,7 @@
 	<article id="a2">
 		<h2>Another Content Head I</h2>
 		<h3>Content Head II</h3>
-		<p>Author PublishDate</p>
+		<p class="article_desc">Author PublishDate</p>
 		<p>
 			laan4 lou6 jyu5 pin1 ci5 syut3 faa1 jam2 jap1 dik1 nei5 dung3 maa1, ze5 fung1 leoi5 ngo5 kap1 nei5 mo4 dou3 jau5 kam1 faa1
 		</p>	
@@ -73,9 +73,9 @@
 		<p>			
 			cang4 jyun4 zoek6/ syut3 lou6 long6 jau4 wai46 ho4 wai46 hou2 si6 leoi6 lau4,seoi4 nang4 pang4 oi3 ji3 jiu3 fu3 si6 saan1 si1 jau5<br/>
 		</p>
-		<p>
-			<img src="flower.jpg" width="400" height="300"><br/>
-		</p>
+		
+		<img class="flower" src="flower.jpg" width="400" height="300"><br/>
+
 		<ul>
 			<li>List I</li>
 			<li>List II</li>
@@ -84,33 +84,33 @@
 	</article>
 
 	<article id="a3">
-		<h3>PICTURES</h3>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
-			<p>nice picture<br/><img src="flower.jpg" width="400" height="300"></p>
+		<h2>PICTURES</h2>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
 	</article>
 
 	<article id="a4" >
 		<h2>Last Content Head I</h2>
 		<h3>Content Head II</h3>
-		<p>Author PublishDate</p>
+		<p class="article_desc">Author PublishDate</p>
 		<ul>
 			<li>1.First</li>
 			<li>2.Second</li>
 			<li>3.Third</li>
 		</ul>
-		<p>
+		<p id="tb_desc">
 			There is a table below, and the border is 1.
 		</p>
-		<table border="1" >
-			<tr align="left">
+		<table >
+			<tr  align="left">
 				<th>tHead</th>
 				<th>tHead</th>
 				<th>tHead</th>
@@ -135,7 +135,7 @@
 				<td>cell 4.2</td>
 				<td><a href="">Operation</a></td>
 			</tr>
-			<tr align="left">
+			<tr id="calc" align="left">
 				<td>Total</td>
 				<td colspan="2">1000</td>
 			</tr>
@@ -143,29 +143,41 @@
 	</article>
 
 	<aside id="as1">
-		<h2>The Siderbar Title</h2>
+		
+
 		<h3>Siderbar Registration Title</h3>
-		<form>
-			<label>Email: <input type="text" value="this is a text input box"></label><br/>
-			Pls input the right email address.<br/>
-			<label>Password: <input type="password" ></label> 
-			<label>Confirm Password:<input type="password" ></label><br/>
-			Password should be 8~16 english letters or numbers.<br/>
-			Gender: <label><input type="radio" name="gender" value ="Male">Male</label> 
-					<label><input type="radio" name="gender" value ="Female"> Female</label>
-			<label> City: <select>
-					<option value="BeiJing">BeiJing</option>
-					<option value="ShangHai">ShangHai</option>
-					<option value="ShengZhen">ShengZhen</option>
-					<option value="GuangZhou">GuangZhou</option>
-				</select>
-			</label>
-			Hobby: 
-			<label><input type="checkbox" value="sports">sports </label>
-			<label><input type="checkbox" value="arts">arts </label>
-			<label><input type="checkbox" value="science">science</label>
-			<label>Personal Discription:<textarea rows="2">this is a multi-line input box, pls input your personal discription.</textarea></label>
-			<input type="button" value ="Submit">
+		<form >
+			<label>Email</label> 
+			<input class="reg" type="text" value="this is a text input box"><br/>
+			<p class="info">Pls input the right email address.<br/></p>
+
+			<label>Password </label> 
+			<input class="reg" type="password" value="password" ></br>
+
+			<label>Confirm Password</label>
+			<input class="reg" type="password" value="password" ><br/>
+			<p class="info">Password should be 8~16 english letters or numbers.<br/></p>
+
+			<label>Gender:</label> <input class="reg" type="radio" name="gender" value ="Male"> Male 
+					<input class="reg" type="radio" name="gender" value ="Female"> Female<br/>
+
+			<label> City</label>
+			<select class="reg">
+				<option value="BeiJing">BeiJing</option>
+				<option value="ShangHai">ShangHai</option>
+				<option value="ShengZhen">ShengZhen</option>
+				<option value="GuangZhou">GuangZhou</option>
+			</select></br>
+
+			<label>Hobby</label>
+			<input class="reg"  type="checkbox" value="sports"> Sports 
+			<input class="reg" type="checkbox" value="arts"> Arts 
+			<input class="reg" type="checkbox" value="science"> Science </br>
+
+			<label>Personal Discription</label>
+			<textarea class="reg" >this is a multi-line input box, pls input your personal discription.</textarea></br>
+			
+			<input id="submit" type="button" value ="Submit">
 		</form>
 
 	</aside>
