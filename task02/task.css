@@ -9,11 +9,14 @@ nav {
 	margin-bottom: 15px;
 	padding: 5px;
 	height: 35px;	
+
+
 }
 
 nav>ul>li {
 	float:right;
-	list-style-type: none;		
+	list-style-type: none;	
+
 }
 
 nav>ul>li>a {
@@ -29,11 +32,13 @@ nav>ul>li>a:hover {color:#4876FF;}
 nav>ul>li>a:active {color:#CD2626;}
 
 article,aside {	
+	overflow: hidden;
 	background-color: #fff;
-	margin: 15px;
+	margin-top: 15px;
 	padding: 20px 10px;
 	box-shadow:  2px 2px #D4D4D4;
-	width: auto;
+	margin-left: 10%;
+	margin-right: 10%;
 
 }
 
@@ -112,6 +117,7 @@ label {
 .reg {
 	text-align: left;
 	margin: 5px 0;
+	
 }
 .info{
 	color: #D4D4D4;
