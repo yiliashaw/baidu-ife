@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'></meta>
+    <meta charset=utf-8/>
 	<title>task02</title>
-	<link rel="stylesheet" type="text/css" href="task.css">
+	<link rel=stylesheet href="task.css">
 </head>
 <body>
 	
     <nav>
-    	
+    	<img src="cat-sleep-icon.png" width="45" height="35">
 	    <ul>
 	    	<li><a href="#a4">Link 4</a></li>
 			<li><a href="#a3">Link 3</a></li>
 			<li><a href="#a2">Link 2</a></li>
 			<li><a href="#a1">Link 1</a></li>
-			<img src="cat-sleep-icon.png" width="45" height="35">
+			
 			
 	    </ul>
     </nav>		
 	
 	
-	<article id='a1'>
-		<h2>Content Head I</h2>	
-		<h3>Content Head II</h3>
-		<p class="article_desc">Author  PublishDate</p>
+	<article id="a1">
+		<hgroup>
+			<h2>Content Head I</h2>	
+			<h3>Content Head II</h3>
+		</hgroup>
+		<address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
+         on <time pubdate datetime="2011-08-28" title="August 28th, 2011">8/28/11</time>	
 		<p>
 			laan4 lou6 jyu5 pin1 ci5 syut3 faa1 jam2 jap1 dik1 nei5 dung3 maa1, ze5 fung1 leoi5 ngo5 kap1 nei5 mo4 dou3 jau5 kam1 faa1
 		</p>
@@ -40,9 +43,9 @@
 		<p>
 			cang4 jyun4 zoek6/ syut3 lou6 long6 jau4 wai46 ho4 wai46 hou2 si6 leoi6 lau4,seoi4 nang4 pang4 oi3 ji3 jiu3 fu3 si6 saan1 si1 jau5
 		</p>
-		
-		<img class="flower" src="flower.jpg" width="400" height="300">
-		
+		<figure>
+			<img class="flower" src="flower.jpg" width="400" height="300">
+		</figure>
 		<p>
 			ho4 bat1 baa2 bei1 oi1 gam2 gok3/gaau3 gaa2/gaa3 cit3 si6 loi4 zi6 nei5 heoi1<a href="http://www.baidu.com" target="_blank" >There is a link to Baidu(_blank)</a> kau3/gau3,si3 gun2 leoi5 zaau2 bat1 dou3 taa1 jim5 wu1 ngaan5 mau4
 		</p>
@@ -52,9 +55,12 @@
 	</article>
 
 	<article id="a2">
-		<h2>Another Content Head I</h2>
-		<h3>Content Head II</h3>
-		<p class="article_desc">Author PublishDate</p>
+		<hgroup>
+			<h2>Another Content Head I</h2>
+			<h3>Content Head II</h3>
+		</hgroup>
+		<address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
+         on <time pubdate datetime="2011-08-28" title="August 28th, 2011">8/28/11</time>
 		<p>
 			laan4 lou6 jyu5 pin1 ci5 syut3 faa1 jam2 jap1 dik1 nei5 dung3 maa1, ze5 fung1 leoi5 ngo5 kap1 nei5 mo4 dou3 jau5 kam1 faa1
 		</p>	
@@ -74,7 +80,9 @@
 			cang4 jyun4 zoek6/ syut3 lou6 long6 jau4 wai46 ho4 wai46 hou2 si6 leoi6 lau4,seoi4 nang4 pang4 oi3 ji3 jiu3 fu3 si6 saan1 si1 jau5<br/>
 		</p>
 		
-		<img class="flower" src="flower.jpg" width="400" height="300"><br/>
+		<figure>
+			<img class="flower" src="flower.jpg" width="400" height="300">
+		</figure>
 
 		<ul>
 			<li>List I</li>
@@ -85,30 +93,39 @@
 
 	<article id="a3">
 		<h2>PICTURES</h2>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
-		<p>nice picture<br/><img class="flower" src="flower.jpg" width="400" height="300"></p>
+		<figure>
+			<figcaption>nice picture</figcaption>
+			<img class="flower" src="flower.jpg" width="400" height="300">
+		</figure>
+		<figure>
+			<figcaption>nice picture</figcaption>
+			<img class="flower" src="flower.jpg" width="400" height="300">
+		</figure>
+		<figure>
+			<figcaption>nice picture</figcaption>
+			<img class="flower" src="flower.jpg" width="400" height="300">
+		</figure>
+		<figure>
+			<figcaption>nice picture</figcaption>
+			<img class="flower" src="flower.jpg" width="400" height="300">
+		</figure>
 	</article>
 
 	<article id="a4" >
-		<h2>Last Content Head I</h2>
-		<h3>Content Head II</h3>
-		<p class="article_desc">Author PublishDate</p>
+		<hgroup>
+			<h2>Last Content Head I</h2>
+			<h3>Content Head II</h3>
+		</hgroup>
+		<address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
+         on <time pubdate datetime="2011-08-28" title="August 28th, 2011">8/28/11</time>
 		<ul>
 			<li>1.First</li>
 			<li>2.Second</li>
 			<li>3.Third</li>
 		</ul>
-		<p id="tb_desc">
-			There is a table below, and the border is 1.
-		</p>
+		<figure id="tb_desc">
+			<figcaption>There is a table below, and the border is 1.<figcaption>
+		</figure>
 		<table >
 			<tr  align="left">
 				<th>tHead</th>
@@ -147,22 +164,23 @@
 
 		<h3>Siderbar Registration Title</h3>
 		<form >
-			<label>Email</label> 
-			<input class="reg" type="text" value="this is a text input box"><br/>
+			<label for="email">Email</label> 
+			<input class="reg" type="text" value="this is a text input box" name="email"><br/>
 			<p class="info">Pls input the right email address.<br/></p>
 
-			<label>Password </label> 
-			<input class="reg" type="password" value="password" ></br>
+			<label for="psd">Password </label> 
+			<input class="reg" type="password" value="password" name="psd"></br>
 
-			<label>Confirm Password</label>
-			<input class="reg" type="password" value="password" ><br/>
+			<label for="psd">Confirm Password</label>
+			<input class="reg" type="password" value="password" name="psd" ><br/>
 			<p class="info">Password should be 8~16 english letters or numbers.<br/></p>
 
-			<label>Gender</label> <input class="reg" type="radio" name="gender" value ="Male"> Male 
-					<input class="reg" type="radio" name="gender" value ="Female"> Female<br/>
+			<label for ="gender">Gender</label> 
+				<input class="reg" type="radio" name="gender" value ="Male"> Male 
+				<input class="reg" type="radio" name="gender" value ="Female"> Female<br/>
 
-			<label> City</label>
-			<select class="reg">
+			<label for="city"> City</label>
+			<select class="reg" name="city">
 				<option value="BeiJing">BeiJing</option>
 				<option value="ShangHai">ShangHai</option>
 				<option value="ShengZhen">ShengZhen</option>
@@ -170,7 +188,7 @@
 			</select></br>
 
 			<label>Hobby</label>
-			<input class="reg"  type="checkbox" value="sports"> Sports 
+			<input class="reg" type="checkbox" value="sports"> Sports
 			<input class="reg" type="checkbox" value="arts"> Arts 
 			<input class="reg" type="checkbox" value="science"> Science </br>
 
