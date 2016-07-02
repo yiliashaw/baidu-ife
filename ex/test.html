@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8/>
+	<title>TEST_CSS</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	
+
+</head>
+
+<body>
+	<header>
+		<div>a</div>
+		<nav class="multi_drop_menu">
+			<!--一级菜单-->	
+			<ul>
+				<li><a href="">Power</a></li>
+				<li><a href="">Money</a></li>
+				<li><a href="">Love</a></li>
+				<li><a href="">Fame</a>
+					<!--二级菜单-->	
+					<ul>
+						<li><a href="">Sports Star</a></li>
+						<li><a href="">Movie Star</a></li>
+						<li><a href="">Rock Star</a></li>
+						<li><a href="">Web Designer</a>
+							<!--三级菜单-->	
+							<ul>
+							<li><a href="">Bruce Springsteen</a></li>
+							<li><a href="">Bono</a></li>
+							<li><a href="">Mick Jagger</a></li>
+							<li><a href="">Bob Dylan</a>
+								<!--三级菜单-->	
+								<ul>
+								<li><a href="">Bruce Springsteen</a></li>
+								<li><a href="">Bono</a></li>
+								<li><a href="">Mick Jagger</a></li>
+								<li><a href="">Bob Dylan</a></li>
+								</ul>
+							</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>	
+		</nav>
+
+		<form class="stylin_form_search1" action="#" method="post">
+			<label for="search">search</label>
+			<input type="search" id="search" name="search" placeholder="search">
+		</form>
+
+	</header>
+	
+	<form class="stylin_form1" action="" method="post">
+		<h3>A Stylin' Form</h3>
+		<fieldset>
+			<legend><span>Part1. Basic Controls</span></legend>
+			<p><span>*</span>indicates required field</p>
+			<section>			
+				<label for="user_name">User Name<span>*<span></label>
+				<input type="text" id="user_name" name="user_name">
+				<p>Please select a user name</p>
+			</section>
+			<section>
+				<label for="password">Password<span>*</span></label>
+				<input type="password" id="password" name="password">
+				<p>Password must be 8 or more characters</p>	
+			</section>
+			<section>
+				<label for="description">Description</label>
+				<textarea name="description" id="description" placeholder="Enter the description here."></textarea>
+			</section>
+			<section>
+				<label for="date">Date</label>
+				<input type="date" id="date" name="date">
+			</section>		
+		</fieldset>
+		<fieldset>
+			<legend><span>Part2.Multuple-Choice Controls</span></legend>
+			<section>
+				<h4>Selcet Any Number</h4>
+				<section>
+					<input type="checkbox" name="checkset" id="check1" value="1">
+					<label for="check1">choice1</label>
+				</section>
+				<section>
+					<input type="checkbox" name="checkset" id="check2" checked="checked" value="2">
+					<label for="check2">choice2 is pre-checked</label>
+				</section>
+				<section>
+					<input type="checkbox" name="checkset" id="check3" value="3">
+					<label for="check3">choice3 add as many as you meed!</label>
+				</section>
+				<p>You must choice one or more</p>
+			</section>
+			<section>
+				<h4>Select Only One</h4>
+				<section>
+					<input type="radio" id="radio1" checked="checked" name="radioset" value="choice_1">
+					<label for="">choice1 is pre selected and shows the text wraps nicely if it goes multiple lines.</label>
+				</section>
+				<section>
+					<input type="radio" id="radio2"  name="radioset" value="choice_2">
+					<label for="">choice2</label>
+				</section>
+				<section>
+					<input type="radio" id="radio2"  name="radioset" value="choice_2">
+					<label for="">choice2</label>
+				</section>
+			</section>
+			<section>
+				<label for="select">Select Your Choice</label>
+				<select name="select" id="select">
+					<option value="0">None</option>
+					<option value="1">Choice 1</option>
+					<option value="2">Choice 2</option>
+					<option value="3">Choice 3</option>
+					<option value="4">Choice 4</option>
+				</select>
+			</section>
+		</fieldset>
+		<section>
+			<input type="submit" value="Submit This Form">
+		</section>
+	</form>
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

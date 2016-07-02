@@ -1,0 +1,113 @@
+h1, h2, h3 {color:blue;}
+
+上下文选择符
+	t1 t2 {声明} :t2是选择目标，而且t1必须是t2的祖先元素（不定是父元素）
+	article p {font-weight:bold;}
+	arritcle h1 em {color:green;}
+
+特殊的上下文选择符
+	1. 子选择符：>
+	t1 > t2 {声明}：t2必须是t1的子元素，t2必须要是t1的父元素
+	section > h2 {font-style:italic;}
+
+	2. 紧邻同胞选择符：+
+	t1 + t2 {声明}：t2必须紧跟在t1的后面
+	h2 + p {font-variant:small-caps;}
+
+	3. 一般的同胞选择符：~
+	t1 ~ t2 {声明}: t2必须跟（不一定紧跟）在其同胞标签t1后面
+	h2 ~ a {color:red;}
+
+	4. 通用选择符：*
+	* ｛声明｝：*是一个通配符，它匹配任何元素
+	* ｛color:green;｝
+	p * {color:red;}   //p包含的所有元素的文本变成红色
+	section * a ｛font-size:1.3em;｝ //所有section的孙子元素非子元素
+
+ID和类选择符
+一、类属性
+	类选择符（class）：.class_name {声明}
+	.specialtext {font-style:italic;}
+
+	标签带类选择符：t.class_name {声明}
+	p.specialtext {color:red;}
+	p.specialtext span {font-weight:bold;}
+
+	多类选择符：<p class="specialtext featured">hello</p> 多个类名
+	.specialtext.featured {font-size:120%;} //两个类名之间无空格
+
+二、ID属性：#id {声明}  或者  t#id {声明}
+	#specialtext {color:red;}
+	p#specialtext {color:red;}
+
+
+属性选择符
+一、属性名选择符
+	标签名[属性名] {声明}
+	img[title] {border:2px solid blue;} //鼠标移到图标上显示
+	img[alt] {color:red;} //图片未能加载时显示的文本
+
+二、属性值选择符
+	标签名[属性名="属性值"] {声明}
+	img[title = "red flower"] {boder:4px solid green;}
+
+
+伪类
+一个冒号(:)表示伪类，两个冒号(::)表示CSS3新增的伪类元素。
+一、UI伪类
+
+	链接伪类
+	(按l-v-h-a顺序来写，否则浏览器结果可能不同)
+	link: 此时，链接就在那儿等着用户点击。
+	visited: 用户此前点击过这个链接。
+	hover: 鼠标指针正悬停在链接上。
+	active: 链接正被点击（鼠标在元素上按下，还没有释放）。
+	a:link {color:black;}
+	a:visited {color:gray;}
+	a:hover {text-decoration:none;}
+	a:active {color:red;}
+	p:hover {background-colr:grey;} //除了a元素，其它元素也可以用伪类
+
+	:focus伪类
+	t:focus {声明}
+	input:focus {border:1px solid blue;} //在光标位于input字段中时，为该字段添加一个蓝色边框。这样可以让用户明确地知道输入的字符会出现在哪里。
+
+	:target伪类（如果用户点击一个指向页面中其他元素的链接，则那个元素就是target，可以用:target选中它）
+	t:target {声明}
+	#head2:target {background:#eee;}//会在用户单击链接转向ID为head2的元素时，为该元素添加灰色背景
+
+二、结构化伪类
+
+	:first-child 和 :last-child
+	t:first-child {声明}
+	t:last-child {声明}
+	ol.results li:first-child {color:blue;} //第一个li蓝色
+	ol.results li:last-child {color:red;} //最后一个为红色
+
+	:nth-child
+	t:nth-child(n) {声明} //n表示一个数值(也可用odd或even)
+	li:nth-child(3) {color:red;} //一组列表中第个第三项为红色
+
+
+伪元素
+文档中若有实无的元素。
+一、::first-letter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

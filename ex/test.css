@@ -1,0 +1,296 @@
+body {
+	background-color: #fff;
+
+}
+header {
+	font-family: helvetica,arial,sans-serif;
+	display: block;
+	width: 800px;
+	margin: 30px;
+	border-radius: 6px;
+	background-color: #ddd;
+}
+.multi_drop_menu {
+	font:1em helvetica, arial, sans-serif;
+}
+.multi_drop_menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.multi_drop_menu ul ul {
+	display: none;
+
+}
+.multi_drop_menu>ul:after{
+	clear:both;
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+}
+.multi_drop_menu>ul>li {
+	float: left;
+	list-style: none;
+	position: relative;
+	
+}
+.multi_drop_menu li a {
+	width: 4em;
+	display: block;
+	text-decoration: none;
+	color: #aaa;
+	background-color: #fff;
+	padding: 1px 2px;
+	text-align: center;
+	border: 1px solid transparent;
+	background-clip: padding-box;
+}
+
+.multi_drop_menu li:hover>a{
+	color: #fff;
+	background-color: #aaa;
+}
+
+.multi_drop_menu li:hover>ul {
+	display: block;
+
+}
+
+.multi_drop_menu ul ul a {
+	width: 8em;
+	text-align: left;
+}
+
+.multi_drop_menu>ul>li>ul {
+	position: absolute;
+	top:100%;
+	left:0;
+}
+.multi_drop_menu>ul>li>ul li {
+	position: relative;
+}
+
+.multi_drop_menu>ul>li>ul ul {
+	position: absolute;
+	top:0;
+	left:100%;
+} 
+
+
+
+form * {
+	margin: 0;
+	padding: 0;
+	font-family:helvetica,arial,sans-serif;
+}
+
+form.stylin_form1 {
+	width: 14em;
+	margin: 20px auto;
+	border:1px solid #bbb7ae;
+	padding: .5em .5em ;
+	box-shadow: 2px 2px 5px #ccc;
+}
+
+form.stylin_form1 h3 {
+	padding: 0 0 .2em .2em;
+	color: #bbb7ae;
+}
+
+ 
+
+form.stylin_form1 fieldset {
+	border: 0;
+	padding: 0 0 .2em 0;
+	margin: 0;
+	width: 100%;
+
+}
+
+form.stylin_form1 fieldset legend {
+	background-color: #bbb7ae;
+	width:100%;
+	padding: .3em 0;
+}
+
+form.stylin_form1 fieldset legend span {
+	display: block;
+	font-size: 1em;
+	line-height: 1.1em;
+	padding: 0 0 0 .4em;
+	font-weight: 600;
+	color: #fff;	
+}
+
+form.stylin_form1 section {
+	overflow: hidden;
+	padding: .2em 0 .4em 0;
+}
+
+form.stylin_form1 label,form.stylin_form1 h4 {
+	display: block;
+	clear: both;
+	font-size: 0.8em;
+	margin: .3em .3em 0 0;
+	padding: .12em .12em;
+	line-height: 1.1;
+
+}
+
+form.stylin_form1 p>span,form.stylin_form1 label>span {
+	vertical-align: text-top;
+	padding: .12em .5em .12em .2em;
+}
+
+form.stylin_form1 legend+p,form.stylin_form1 label>span{
+	color: red;
+
+} 
+
+form.stylin_form1 p {
+	font-size: 0.5em;
+	padding: .5em .12em;
+	clear: both;
+	margin: .3em .75em 0;
+}
+form.stylin_form1 section p.error {
+	color: #f00;
+}
+
+form.stylin_form1 fieldset>section+section {
+	border-top: 9px solid #EAEAEA;
+}
+
+
+
+
+form.stylin_form1 input,form.stylin_form1 textarea,form.stylin_form1 select{
+	margin: .2em .5em .2em 0;
+	padding: .2em .4em;
+	color: #000;
+	box-shadow: 1px 1px 3px #ccc;
+	outline: none;
+}
+
+form.stylin_form1 input,form.stylin_form1 textarea {
+	width: 12em;
+	border: 1px solid #bbb7ae;
+	border-radius: 3px;
+	font-size: .8em;
+}
+
+form.stylin_form1 textarea {
+	height: 5em;
+	margin-top:.3em;
+	line-height: 1.1;
+}
+
+form.stylin_form1 section section {
+	overflow: hidden;
+	margin: .2em 0 .3em .4em;
+	padding: 0 0 .1em 0;	
+}
+
+form.stylin_form1 section section input {
+	float: left;
+	
+	width: .8em;
+	margin: .1em 0 0 .3em;
+
+}
+form.stylin_form1 section section label {
+	float: left;
+	clear: none;
+	width: 15em;
+	margin: .15em 0 0 .6em;
+	font-weight: normal;
+	font-size: .7em;
+	line-height: 1.2;
+}
+
+form.stylin_form1 section select {
+	margin-left: .4em;
+	font-size: .7em;
+}
+
+form.stylin_form1>section>input {
+	width: auto;
+	margin: .4em .3em 0 0 ;
+	font-size: 1em;
+	font-weight: 600;
+	background-color: #bbb7ae;
+	color: #fff;
+	cursor: pointer;
+
+}
+
+form.stylin_form1>section {
+	text-align: center;
+}
+
+
+form.stylin_form_search1 label {
+	display: none;
+}
+
+form.stylin_form_search1 {
+	float: right;
+	width: 200px;
+	margin: 5px;
+	padding: 5px;
+	
+}
+
+form.stylin_form_search1 input {
+	float: right;
+	width: 100px;
+	padding: 2px 0 3px 5px;
+	outline: none;
+	font-size: .8em;
+	border-color: #eee #ccc #ccc #eee;	
+	border-radius: 10px;
+
+
+}
+
+form.stylin_form_search1 input:focus {
+	width: 200px;
+}
+
+header>div {
+	border:12px solid;
+	border-color: transparent red transparent transparent;
+	height: 0px;
+	width: 0px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
