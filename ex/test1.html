@@ -3,7 +3,11 @@
 <head>
 	<meta charset=utf-8/>
 	<title>TEST_CSS</title>
-	<link rel="stylesheet" type="text/css" href="test1.css">
+	<link rel="stylesheet"  href="test1.css">
+	<!--
+		<link rel="stylesheet"  href="https://use.typekit.net/c/b41767/1w;myriad-pro,2,ftd:W:i3,ftg:W:i4,ftc:W:n3,ftf:W:n4,fth:W:n6,ftk:W:n7;runda,2,XTS:W:i3,XTV:W:i4,XTX:W:i5,XTR:W:n3,XTT:W:n4,XTW:W:n5,XTY:W:n7/l" media="all">
+	-->
+	
 	
 
 </head>
@@ -47,17 +51,21 @@
 		<article>
 			<date>October 27, 2016</date>
 			<h3>Medium - a new blogging platform </h3>
-			<figure><img src="charles_wyke-smith.jpg" alt=" Charles Wyke-Smith"></figure>
-			<p>RECENTLY,|SIGNED UP At Medium, the blogging platform, and can't resist visiting at least a couple of times a day - it's a very addictive experience! Articles come from numerous authors but display in one continuous feed, so it's a different model from most blog sites that are the voice of single person. <a href="#">Read this Article</a></p>
+			<figure><img src="charles_wyke-smith.jpg" alt=" Charles Wyke-Smith" title="Charles Wyke-Smith"></figure>
+			<p>RECENTLY,I SIGNED UP At Medium, the blogging platform, and can't resist visiting at least a couple of times a day - it's a very addictive experience! Articles come from numerous authors but display in one continuous feed, so it's a different model from most blog sites that are the voice of single person. <a href="#">Read this Article</a></p>
 		</article>
 		<aside>
 			<form action="">
 				<fieldset>
 					<legend>Sign In for Code and Updates</legend>
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email">
-					<input type="submit" value="Sign In">
-					<p>Not signed up? <a href="#">Register now!</a></p>
+					<section class="email">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email">
+					</section>
+					<section class="submit">
+						<input type="submit" id="submit" value="Sign In">
+						<p>Not signed up? <a href="#">Register now!</a></p>
+					</section>
 				</fieldset>
 			</form>
 			<nav>
@@ -70,74 +78,71 @@
 			</nav>
 		</aside>
 	</section>
-	<section id="aside">
+	<section id="book_area">
 		<article>
-			<div>
-				<h3>HTMLS5+CSS3</h3>
-				<a href=""><img src="stylin3_cover1.jpg" alt=""></a>
-				<aside>
-					<ul>
-						<li>Download the Code</li>
-						<li>Table of Contents</li>
-						<li>Buy this Book</li>
-					</ul>
-				</aside>
-			</div>
+			<h3>HTMLS5+CSS3</h3>
+			<a href=""><img src="stylin3_cover1.jpg" alt=""></a>
+			<aside>
+				<ul>
+					<li><a href="">Download the Code</a></li>
+					<li><a href="">Table of Contents</a></li>
+					<li><a href="">Buy this Book</a></li>
+				</ul>
+			</aside>
+		
 		</article>
 		<article>
-			<div>
-				<h3>Scriptin' javaScript Ajax</h3>
-				<a href=""><img src="scriptin_cover1.jpg" alt=""></a>
-				<aside>
-					<ul>
-						<li>Download the Code</li>
-						<li>Table of Contents</li>
-						<li>Buy this Book</li>
-					</ul>
-				</aside>
-			</div>
+			<h3>JavaScript</h3>
+			<a href=""><img src="scriptin_cover1.jpg" alt=""></a>
+			<aside>
+				<ul>
+					<li><a href="">Download the Code</a></li>
+					<li><a href="">Table of Contents</a></li>
+					<li><a href="">Buy this Book</a></li>
+				</ul>
+			</aside>
+			
 		</article>
 		<article>
-			<div>
-				<h3>PHP+SQL</h3>
-				<a href=""><img src="codin_cover.jpg" alt=""></a>
-				<aside>
-					<ul>
-						<li>Download the Code</li>
-						<li>Table of Contents</li>
-						<li>Buy this Book</li>
-					</ul>
-				</aside>
-			</div>
+			<h3>PHP+SQL</h3>
+			<a href=""><img src="codin_cover.jpg" alt=""></a>
+			<aside>
+				<ul>
+					<li><a href="">Download the Code</a></li>
+					<li><a href="">Table of Contents</a></li>
+					<li><a href="">Buy this Book</a></li>
+				</ul>
+			</aside>
+			
 		</article>
 		<article>
-			<div>
-				<h3>Presentation</h3>
-				<a href=""><img src="visual_stylin_cover_smaller.jpg" alt=""></a>
-				<aside>
-					<ul>
-						<li>Download the Code</li>
-						<li>Table of Contents</li>
-						<li>Buy this Book</li>
-					</ul>
-				</aside>
-			</div>
+			<h3>Presentation</h3>
+			<a href=""><img src="visual_stylin_cover_smaller.jpg" alt=""></a>
+			<aside>
+				<ul>
+					<li>Download the Code</li>
+					<li>Table of Contents</li>
+					<li>Buy this Book</li>
+				</ul>
+			</aside>
+			
 		</article>
 	</section>
 	<footer>
-		<p>© 2013-2016 Charles Wyke-Smith.  All rights reserved.</p>
+		
 		<nav>
 			<ul>
-				<li>Home</li>
-				<li>Articles</li>
-				<li>Books</li>
-				<li>Resources</li>
-				<li>Bookshelf</li>
-				<li>Code Downloads</li>
-				<li>Contact Me</li>
-				<li>Privacy Policy</li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Articles</a></li>
+				<li><a href="#">Books</a></li>
+				<li><a href="#">Resources</a></li>
+				<li><a href="#">Bookshelf</a></li>
+				<li><a href="#">Code Downloads</a></li>
+				<li><a href="#">Contact Me</a></li>
+				<li><a href="#">Privacy Policy</a></li>
 			</ul>
 		</nav>
+		<p>&copy; 2013-2016 Charles Wyke-Smith.  All rights reserved.</p>
 	</footer>
 </div>
 
