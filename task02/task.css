@@ -1,59 +1,70 @@
-* {margin: 0; padding: 0;}
+* {
+	margin: 0; 
+	padding: 0;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.logo {
+	height: 30px;
+	width: 35px;
+}
+.flower {
+	height: 400px;
+	width: 500px;
+}
 
 body {
 	background-color: #E3E3E3;
 }
 
-nav {
+
+header {
 	background-color: #3B3B3B;
-	margin-bottom: 15px;
-	padding: 5px;
-	height: 35px;	
-
-
+	overflow: hidden;
 }
 
-nav>ul>li {
-	float:right;
-	list-style-type: none;	
-
+header nav{
+	float: right;
+	margin: 3px 10px;
 }
 
-nav>ul>li>a {
+header ul li{
+	float: right;
+	margin: 3px 5px;
+	list-style-type: none;
+}
+
+header ul li a {
+	display: block;
+	color: white;
 	text-decoration: none;
-	color:#fff;
-	margin: 5px 10px;
-	line-height: 35px;
+	padding: 0 8px;
+	font-size: .9em;
+
 }
 
 nav>ul>li>a:link {color:#fff;}
-nav>ul>li>a:visited {color:#6C7B8B;}
 nav>ul>li>a:hover {color:#4876FF;}
 nav>ul>li>a:active {color:#CD2626;}
 
 article,aside {	
 	overflow: hidden;
 	background-color: #fff;
-	margin-top: 15px;
+	margin: 15px auto;
 	padding: 20px 10px;
-	box-shadow:  2px 2px #D4D4D4;
-	margin-left: 10%;
-	margin-right: 10%;
+	box-shadow: 2px 4px 4px #D4D4D4;
+	min-width: 660px;
+	max-width: 1600px;
 
+	
 }
 
 h3 {
 	color: #7A7A7A;
-	font-size:1em;
+	font-size:1.1em;
 	line-height: 25px;
 }
 
-.article_desc {
-	text-indent: 0px;
-	color: #7A7A7A;
-	font-size:0.6em;
-	line-height: 35px;
-}
 
 p {
 	text-indent: 24px;
@@ -66,13 +77,16 @@ article#a2>ul>li,article#a4>ul>li{
 }
 
 
-article#a3>p {
+article#a3 figure {
 	border: 1px solid  #D4D4D4;
 	margin: 8px;
-	width: 430px;
+	float: left;
 	text-align: center;
-	line-height: 35px;
 	margin-left: 80px;
+	padding: 25px;
+}
+article#a3 figure img {
+	margin: 15px 20px;
 }
 
 p#tb_desc {
@@ -88,6 +102,7 @@ tr>th {
 	border: 1px solid #6C7B8B;
 	background-color: #4A4A4A;
 	color: #fff;
+	text-align: left;
 } 
 tr>td {
 	border: 1px solid #6C7B8B;
@@ -96,7 +111,9 @@ tr>td {
 tr#calc {
 	background-color: #D4D4D4;
 	font-weight: bold;
+
 }
+
 
 aside>h3 {
 	border-left: 3px solid #D4D4D4;
@@ -104,15 +121,35 @@ aside>h3 {
 	color: #000;
 }
 
+form fieldset {
+	border:none;
+}
+form legend {
+	display: none;
+}
 
-
-label {
+form label {
 	float: left;
 	width:50%;
 	text-align: right;
-	margin:5px  10px;
+	margin:0 10px;
+	
+}
+
+form input, form select,form textarea {
+	outline: none;
+}
+
+
+form section {
+	overflow: hidden;
 
 }
+form .gender, form .hobby {
+	float: none;
+	margin: 0 3px;
+}
+
 
 .reg {
 	text-align: left;
@@ -125,12 +162,18 @@ label {
 	font-size: 0.75em;
 }
 
-form > textarea {
+form  textarea {
 	width: 45%;
-	height: 80px;
+	height: 150px;
 }
 
 #submit {
 	width: 100%;
-
+	border:none;
+	background-color: #6495ED;
+	color:#fff;
+	height: 30px;
+	border-radius: 5px;
+	margin: 2px 20px;
+	font-size: 1.1em;
 }
