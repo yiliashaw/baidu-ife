@@ -81,6 +81,7 @@ article#a3 figure {
 	border: 1px solid  #D4D4D4;
 	margin: 8px;
 	float: left;
+	clear: both;
 	text-align: center;
 	margin-left: 80px;
 	padding: 25px;
