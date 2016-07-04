@@ -7,6 +7,7 @@
 .logo {
 	height: 30px;
 	width: 35px;
+	margin: 0 0 0 20px;
 }
 .flower {
 	height: 400px;
@@ -25,13 +26,28 @@ header {
 
 header nav{
 	float: right;
+	clear: both;
 	margin: 3px 10px;
+}
+
+header nav:after {
+	content: '';
+	clear: both;
+	display: block;
+
 }
 
 header ul li{
 	float: right;
 	margin: 3px 5px;
 	list-style-type: none;
+}
+
+header ul li:after {
+	content: '';
+	clear: both;
+	display: block;
+
 }
 
 header ul li a {
@@ -54,7 +70,7 @@ article,aside {
 	padding: 20px 10px;
 	box-shadow: 2px 4px 4px #D4D4D4;
 	min-width: 660px;
-	max-width: 1600px;
+	max-width: 1200px;
 
 	
 }
@@ -80,12 +96,13 @@ article#a2>ul>li,article#a4>ul>li{
 article#a3 figure {
 	border: 1px solid  #D4D4D4;
 	margin: 8px;
-	float: left;
-	clear: both;
+	width: 40%;
 	text-align: center;
 	margin-left: 80px;
 	padding: 25px;
 }
+
+
 article#a3 figure img {
 	margin: 15px 20px;
 }
@@ -129,25 +146,26 @@ form legend {
 	display: none;
 }
 
-form label {
+form .desc {
 	float: left;
 	width:50%;
 	text-align: right;
-	margin:0 10px;
-	
+	margin:0 10px;	
 }
+
+form .desc:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
 
 form input, form select,form textarea {
 	outline: none;
-}
-
-
-form section {
-	overflow: hidden;
 
 }
+
 form .gender, form .hobby {
-	float: none;
 	margin: 0 3px;
 }
 
@@ -174,7 +192,6 @@ form  textarea {
 	background-color: #6495ED;
 	color:#fff;
 	height: 30px;
-	border-radius: 5px;
-	margin: 2px 20px;
+	border-radius: 5px;	
 	font-size: 1.1em;
 }
