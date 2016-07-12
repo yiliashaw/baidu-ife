@@ -349,6 +349,7 @@ footer {
 
 footer ul {
 	display: inline-block;
+
 }
 
 footer li{
@@ -377,6 +378,7 @@ footer li+li {
 
 
 footer p {
+	
 	font-size: .7em;
 	clear: both;
 	color: #616161;
