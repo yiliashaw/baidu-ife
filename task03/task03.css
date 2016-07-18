@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+
+
+#wrapper {
+	margin: 20px 20px;
+	padding: 20px;
+	background-color: #eee;
+	border:1px solid #999;
+}
+#wrapper:after {
+	content: '';
+	clear: both;
+	display:block; 
+}
+aside.left {
+	border:1px solid #999;
+	width: 200px;
+	float: left;
+	padding: 20px;
+	background-color: #fff;
+}
+
+.team figurecaption {
+	vertical-align: top;
+	margin: 0 15px;
+} 
+
+article {
+	border:1px solid #999;	
+	margin: 0 150px 0 260px;
+	background-color: #fff;
+	
+}
+article h2 {
+	text-align: center;
+	margin: 10px;
+}
+article p {
+	text-indent: 25px;
+	padding: 10px;
+	margin: 10px;
+
+
+}
+aside.right {
+	border:1px solid #999;
+	float:right;
+	padding: 20px;
+	background-color: #fff;
+
+}
+
+aside.right figure {
+	margin-bottom: 10px;
+}
