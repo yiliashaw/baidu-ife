@@ -1,22 +1,31 @@
 * {
 	margin: 0;
-	padding: 0;
-	
+	padding: 0;	
 }
 
 #wrapper {
-	width: 400px;
-	height: 200px;
+	border:1px solid red;
 	background-color: #ccc;
 	overflow: hidden;
 	position: absolute;
-	margin:auto;
-	top:0;
-	left:0;
-	bottom: 0;
-	right: 0;	
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
 }
 
+#wrapper p {
+	text-indent: 30px;
+	width: 400px;
+	height: 200px;
+	
+		
+
+}
+#wrapper:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 #left {
 	background-color: #fc0;
 	width: 100px;
@@ -25,6 +34,8 @@
 	position: absolute;
 	left:-50px;
 	top:-50px;
+	z-index: -1;
+
 }
 
 #right {
@@ -33,7 +44,9 @@
 	height: 100px;
 	border-radius: 50px;
 	position: absolute;
-	right: -50px;
-	bottom: -50px;
+	right:-50px;
+	bottom:-50px;
+	z-index: -1;
+	
 
 }
