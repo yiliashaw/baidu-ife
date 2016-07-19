@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+#wrapper {
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	overflow: hidden;
+	position: absolute;
+	margin:auto;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;	
+}
+
+#left {
+	background-color: #fc0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	position: absolute;
+	left:-50px;
+	top:-50px;
+}
+
+#right {
+	background-color: #fc0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	position: absolute;
+	right: -50px;
+	bottom: -50px;
+
+}
