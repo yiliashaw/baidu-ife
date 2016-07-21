@@ -180,6 +180,7 @@ header .date {
 #s2 {
 	margin: 18px 0;
 	width: 415px;
+    height: 800px;
 	float: left;
 	margin-right: 5px;
 	position: relative;
@@ -234,6 +235,7 @@ article:after {
 #s3 {
 	margin: 18px 0;
 	width: 458px;
+    height: 800px;
 	float:right;
 }
 
@@ -269,17 +271,19 @@ article:after {
 }
 #s3 .content {
 	width: 458px;
-	height: 318px;
+	height: 480px;
 	margin: 20px 0 0 0 ;
 	position: relative;
+    background-color:antiquewhite;
 }
 #s3 .content ul {
 	list-style-type: none; 
-	margin: 10px 5px 10px 25px;
+	margin: 40px 5px 10px 25px;
+    padding: 20px 0;
 }
 
 #s3 .content ul li{
-	margin: 10px 0;	
+	margin: 30px 0;
 }
 #s3 .content ul li:before {
 	content: '';
@@ -326,7 +330,6 @@ article:after {
 	top:50px;
 	padding-left: 10px;
 }
-
 #s3 .content .title .right span {
 	font-size: 8px;
 	display: block;
@@ -337,57 +340,25 @@ article:after {
 	position: absolute;
 	right:5px;
 	bottom: 0;
-	line-height: 1.8em;
+	line-height: 1.6em;
 	font-family: SimHei, sans-serif;
 	font-style: italic;
+    text-indent: 60px;
 }
 #s3 .content .quote span {
 	font-size: 60px;
-	vertical-align: bottom;
 	color:#d45d5c;
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#s3 .content .quote .start {
+     position: absolute;
+    left:-80px;
+    top:8px;
+}
+#s3 .content .quote .end {
+     position: absolute;
+    right:100px;
+    bottom:12px;
+}
 
 /*Footer*/
 
