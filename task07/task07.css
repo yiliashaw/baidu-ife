@@ -97,7 +97,6 @@ header nav .login a {
     width: 1280px;
     height: 854px;
     position: relative;
-    margin-top: 1px;
 }
 
 #welcome h2 {
@@ -200,7 +199,7 @@ header nav .login a {
 
 /*activity*/
 #activity {
-  border: 1px solid blue;
+
    height: 972px;
     width: 100%;
     background-image: url(images/search_map_02.png);
@@ -210,7 +209,7 @@ header nav .login a {
 }
 
 #activity form {
-    border: 1px solid red;
+    
     height: 340px;
 
     padding-left:100px;
@@ -288,13 +287,107 @@ color: rgba( 50, 51, 51, 0.702 );
   font: 400 14px/1.896 'Microsoft YaHei';
 }
 
+/*News*/
 
+#news {
+    height: 1087px;
+    border:1px solid red;
+    text-align: center;
+     position: relative;
+}
+#news .up{
+   
+}
+#news .up .left {
+    position: absolute;
+    left:0;
+    top:0;
+    background-image: url(images/news_up_left.png);
+    width: 850px;
+    height: 566px;
+}
+#news .up .right {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 431px;
+    height:566px;
+    text-align: center;;
+    border:1px solid green ;
+}
+#news .up .right h4 {
+    padding-top:150px; 
+}
+#news .up .right .content{
+    padding: 30px 80px;
+  
+    font-size: .5em;
+    line-height: 2em;
+}
+#news .up .right .more {
+    border: 1px solid #be4e48;
+    display: inline-block;
+    
+    padding: 10px;
+}
+#news .up .right .more a {
+    text-decoration: none;
+    display: block;
+    color:#be4e48;
+}
+#news .up .right ul {
+   
+    margin-top:10px;
 
+}
 
+#news .up .right ul li {
+    list-style-type: none;
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    border:1px solid #aaa;
 
+}
 
+#news .up .right ul li:hover {
+    background-color: #aaa;
+}
 
+#news .down {
+    position: absolute;
+    left:0;
+    top:566px;
+}
 
+#news .down .left {
+    position: absolute;
+    left:0;
+    top:0;
+    border:1px solid yellow;
+    height: 521px;
+    width: 424px;
+
+}
+#news .down .middle {
+    position: absolute;
+    left:424px;
+    top:0px;
+    height: 521px;
+    width: 425px;
+    border:1px solid green;
+}
+#news .down .right {
+    position: absolute;
+    left:849px ;
+    top:0;
+    height: 521px;
+    width: 431px;
+    border:1px solid pink;
+    background-image: url(images/news_down_bgi.png);
+
+}
 
 
 
