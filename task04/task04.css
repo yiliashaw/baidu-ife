@@ -4,7 +4,9 @@
 }
 
 #wrapper {
+	
 	background-color: #ccc;
+	
 	position: absolute;
 	top:50%;
 	left:50%;
@@ -17,29 +19,25 @@
 }
 
 #left {
-	width:0;
-	height: 0;
-	border-radius: 50px;
-	border:50px solid transparent;
-	border-right-color:#fc0;
-	transform:rotate(45deg);
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+	border-radius: 0 0 100% 0;
 	position: absolute;
-	left:-50px;
-	top:-50px;
+	left:0px;
+	top:0px;
 	z-index: -1;
 
 }
 
 #right {
-	width:0;
-	height: 0;
-	border-radius: 50px;
-	border:50px solid transparent;
-	border-right-color:#fc0;
-	transform:rotate(-135deg);
+	background-color: #fc0;
+	width:50px;
+	height: 50px;
+	border-radius: 100% 0 0 0;
 	position: absolute;
-	right:-50px;
-	bottom:-50px;
+	right:0px;
+	bottom:0px;
 	z-index: -1;
 	
 
