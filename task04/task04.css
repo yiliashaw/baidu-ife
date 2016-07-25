@@ -4,9 +4,7 @@
 }
 
 #wrapper {
-	
 	background-color: #ccc;
-	overflow: hidden;
 	position: absolute;
 	top:50%;
 	left:50%;
@@ -19,10 +17,12 @@
 }
 
 #left {
-	background-color: #fc0;
-	width: 100px;
-	height: 100px;
+	width:0;
+	height: 0;
 	border-radius: 50px;
+	border:50px solid transparent;
+	border-right-color:#fc0;
+	transform:rotate(45deg);
 	position: absolute;
 	left:-50px;
 	top:-50px;
@@ -31,10 +31,12 @@
 }
 
 #right {
-	background-color: #fc0;
-	width: 100px;
-	height: 100px;
+	width:0;
+	height: 0;
 	border-radius: 50px;
+	border:50px solid transparent;
+	border-right-color:#fc0;
+	transform:rotate(-135deg);
 	position: absolute;
 	right:-50px;
 	bottom:-50px;
