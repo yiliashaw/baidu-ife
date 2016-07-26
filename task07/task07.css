@@ -32,11 +32,15 @@ header .title img {
     vertical-align: bottom;
 }
 
+
 header .title p span {
     color: #393A3A;
     font-family: SimHei, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 21px;
+    padding-left: 20px;
+    color: #393A3A;
+
 }
 
 header nav {
@@ -80,7 +84,7 @@ header nav li a,
 header nav .login a {
     display: block;
     color: #a3a4a9;
-    font: 400 14px/1.929 'Microsoft YaHei';
+    font: 400 16px/1.929 'Microsoft YaHei';
     text-decoration: none;
     padding: 11px 30px;
 }
@@ -140,7 +144,7 @@ header nav .login a {
     position: absolute;
     top: 690px;
     width: 100%;
-    height: 164px;
+    height: 165px;
     text-align: center;
 }
 
@@ -174,7 +178,6 @@ header nav .login a {
 
 #introduce {
     height: 450px;
-
     position: relative;
 }
 
@@ -197,148 +200,185 @@ header nav .login a {
     font: 400 53.586px 'SimHei';
 }
 
-/*activity*/
-#activity {
 
-   height: 972px;
+/*activity*/
+
+#activity {
+    height: 972px;
     width: 100%;
     background-image: url(images/search_map_02.png);
     background-repeat: no-repeat;
     background-size: contain;
-
 }
 
 #activity form {
-    
     height: 340px;
-
-    padding-left:100px;
-    padding-right:100px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
-#activity form fieldset {
 
+#activity form fieldset {
     border: none;
     text-align: center;
 }
+
 #activity form fieldset legend span {
-   display: block;
+    display: block;
     padding-top: 50px;
     color: #FFFFFF;
-  font: 400 21px/1.994 'Microsoft YaHei';
+    font: 400 21px/1.994 'Microsoft YaHei';
 }
+
 #activity form fieldset p {
-    color: rgba( 255, 255, 255, 0.8 );
+    color: rgba( 255, 255, 255, 0.8);
     font: 400 12px/2.605 'Microsoft YaHei';
 }
+
 #activity form fieldset section {
-    float:left;
+    float: left;
     width: 25%;
     padding-top: 50px;
-
 }
+
 #activity form fieldset:after {
     content: '';
     clear: both;
     display: block;
 }
+
 #activity form fieldset section label {
     display: none;
 }
-#activity form fieldset section select{
+
+#activity form fieldset section select {
     width: 235px;
-     height: 40px;
-    color: rgba( 50, 51, 51, 0.702 );
-  font: 400 1em 'Microsoft YaHei';
+    height: 40px;
+    color: rgba( 50, 51, 51, 0.702);
+    font: 400 1em 'Microsoft YaHei';
     border: none;
     outline: none;
-     background-image: url(images/search_option_04.png);
+    background-image: url(images/search_option_04.png);
     background-repeat: no-repeat;
     background-position: 215px 10px;
     background-color: #fff;
-
 }
+
 #activity .country,
 #activity .province,
-#activity .city{
+#activity .city {}
 
-
-}
 #activity form fieldset section select option {
-color: rgba( 50, 51, 51, 0.702 );
-  font: 400 1em 'Microsoft YaHei';
-
+    color: rgba( 50, 51, 51, 0.702);
+    font: 400 1em 'Microsoft YaHei';
     line-height: 2em;
     margin: 5px auto;
 }
-#activity form fieldset section select option:before {
 
-}
+#activity form fieldset section select option:before {}
+
 #activity form fieldset section select option:hover {
     background-color: #fff;
     color: #be4e48;
 }
-#activity form fieldset section input  {
-    width: 235px;
-   height: 40px;
 
+#activity form fieldset section input {
+    width: 235px;
+    height: 40px;
     background-color: #be4e48;
     color: #fff;
     border: none;
-  font: 400 14px/1.896 'Microsoft YaHei';
+    font: 400 14px/1.896 'Microsoft YaHei';
 }
+
 
 /*News*/
 
 #news {
     height: 1087px;
-    border:1px solid red;
     text-align: center;
-     position: relative;
+    position: relative;
 }
-#news .up{
-   
-}
+
 #news .up .left {
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     background-image: url(images/news_up_left.png);
     width: 850px;
     height: 566px;
 }
+
+#news .up .left img {
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#news .up .left .content {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#news .up .left .content .title1 {
+    color: #FFFFFF;
+    font: 400 49.473px/1.528 'Microsoft YaHei';
+}
+
+#news .up .left .content .title2 {
+    color: #FFFFFF;
+    font: 400 157.788px/1.528 'Microsoft YaHei';
+}
+
+#news .up .left .content .title3,
+#news .up .left .content .title4 {
+    color: #FFFFFF;
+    font: 400 21.915px/1.969 'Microsoft YaHei';
+}
+
 #news .up .right {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     width: 431px;
-    height:566px;
-    text-align: center;;
-    border:1px solid green ;
+    height: 566px;
+    text-align: center;
 }
+
 #news .up .right h4 {
-    padding-top:150px; 
+    padding-top: 100px;
+    font: 400 21px/2.5 'Microsoft YaHei';
 }
-#news .up .right .content{
-    padding: 30px 80px;
-  
-    font-size: .5em;
+
+#news .up .right h4 span {
+    color: #E25C60;
+}
+
+#news .up .right .content {
+    padding: 30px 73px;
+    text-align: left;
     line-height: 2em;
+    color: #AAAAAA;
+    font: 400 12px/2.5 'SimSun';
 }
+
 #news .up .right .more {
-    border: 1px solid #be4e48;
-    display: inline-block;
-    
-    padding: 10px;
+    border: 1px solid #E25C60;
+    margin: 0 120px;
 }
+
 #news .up .right .more a {
     text-decoration: none;
     display: block;
-    color:#be4e48;
+    color: #E25C60;
+    font: 400 12px/2.613 'Microsoft YaHei';
 }
-#news .up .right ul {
-   
-    margin-top:10px;
 
+#news .up .right ul {
+    margin-top: 10px;
 }
 
 #news .up .right ul li {
@@ -347,8 +387,7 @@ color: rgba( 50, 51, 51, 0.702 );
     width: 4px;
     height: 4px;
     border-radius: 2px;
-    border:1px solid #aaa;
-
+    border: 1px solid #aaa;
 }
 
 #news .up .right ul li:hover {
@@ -357,87 +396,363 @@ color: rgba( 50, 51, 51, 0.702 );
 
 #news .down {
     position: absolute;
-    left:0;
-    top:566px;
+    left: 0;
+    top: 566px;
 }
 
 #news .down .left {
     position: absolute;
-    left:0;
-    top:0;
-    border:1px solid yellow;
+    left: 0;
+    top: 0;
     height: 521px;
     width: 424px;
-
+    background-color: #e74f4d;
 }
+
+#news .down .left .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 2em;
+}
+
+#news .down .middle .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#news .down .title {
+    font: 400 21px 'SimHei';
+    text-align: center;
+    margin: 10px 0;
+}
+
+#news .down .left .more {
+    margin-top: 50px;
+    border: 1px solid #fff;
+}
+
+#news .down .middle .more {
+    margin-top: 50px;
+    border: 1px solid #e74f4d;
+}
+
+#news .down .left .more a {
+    display: block;
+    color: #fff;
+    font: 400 21px 'SimHei';
+    text-decoration: none;
+    padding: 10px;
+}
+
+#news .down .middle .more a {
+    display: block;
+    color: #e74f4d;
+    font: 400 21px 'SimHei';
+    text-decoration: none;
+    padding: 10px;
+}
+
 #news .down .middle {
     position: absolute;
-    left:424px;
-    top:0px;
+    left: 424px;
+    top: 0px;
     height: 521px;
     width: 425px;
-    border:1px solid green;
 }
+
 #news .down .right {
     position: absolute;
-    left:849px ;
-    top:0;
+    left: 849px;
+    top: 0;
     height: 521px;
     width: 431px;
-    border:1px solid pink;
-    background-image: url(images/news_down_bgi.png);
+    background-image: url(images/news_down_poster.png);
+}
 
+#news .down .right img {
+    position: absolute;
+    left: -2px;
+    ;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
+/*Join*/
+
+#join {
+    margin: 120px 0 150px 0;
+}
+
+#join .title {
+    padding: 0 0 70px 0;
+    text-align: center;
+}
+
+#join .title h3 {
+    color: #323333;
+    font: 400 21px 'SimHei';
+}
+
+#join .title p {
+    color: #AAAAAA;
+    font: 400 12px 'Microsoft YaHei';
+    padding: 30px 300px 0 300px;
+}
+
+#join .volunteer_info {
+    width: 40%;
+    height: 280px;
+    float: left;
+}
+
+#join form {
+    width: 60%;
+    height: 280px;
+    float: left;
+}
+
+#join:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#join form section {
+    float: left;
+}
+
+#join form fieldset:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#join .volunteer_info section {
+    margin: 0px 20px 5px 60px;
+}
+
+#join .volunteer_info section h4 {
+    color: rgba( 35, 24, 21, 0.8);
+    font: 400 14px/1.929 'SimHei';
+}
+
+#join .volunteer_info section p {
+    color: rgba( 35, 24, 21, 0.6);
+    font: 400 14px/1.45 'SimSun';
+    text-align: left;
+}
+
+#join .volunteer_info section .more {
+    text-align: right;
+    background-image: url(images/i_more.png);
+    background-repeat: no-repeat;
+    background-position: 388px 10px;
+}
+
+#join .volunteer_info section .more a {
+    color: rgba( 35, 24, 21, 0.6);
+    font: 400 14px/1.421 'SimSun';
+    text-decoration: none;
+}
+
+#join form fieldset {
+    margin: 0 40px 0 20px;
+    border: none;
+}
+
+#join form fieldset legend {
+    display: none;
+}
+
+#join form fieldset section {
+    background-color: #ededee;
+    height: 40px;
+}
+
+#join form fieldset section * {
+    background-color: #ededee;
+    height: 40px;
+    border: none;
+}
+
+#join form fieldset section input {
+    outline: none;
+}
+
+#join form fieldset .name,
+#join form fieldset .age,
+#join form fieldset .contact,
+#join form fieldset .addr {
+    width: 336px;
+    padding-left: 10px;
+    margin: 5px 4px;
+}
+
+#join form fieldset .dream_life {
+    width: 690px;
+    height: 130px;
+    margin: 5px 4px;
+    padding: 3px 5px;
+}
+
+#join form fieldset .dream_life textarea {
+    width: 690px;
+
+    height: 130px;
+    outline: none;
+}
+
+#join form fieldset .submit {
+    height: 40px;
+    margin: 5px 4px 0 4px;
+    width: 700px;
+}
+
+#join form fieldset .submit input {
+    width: 100%;
+    color: #323333;
+    font: 600 14px/1.929 'SimHei';
+}
+
+#join form fieldset label {
+    color: rgba( 35, 24, 21, 0.8);
+    font: 400 12px/1.5 'SimSun';
+}
 
 
+/*contact*/
+
+#contact {
+    height: 355px;
+    text-align: center;
+    background-color: #32363e;
+}
+
+#contact h3 {
+    color: #FFFFFF;
+    font: 400 21px/2.303 'SimHei';
+    padding: 88px 0 10px;
+}
+
+#contact p {
+    color: #FFFFFF;
+    font: 400 12px 'SimSun';
+    padding: 0 420px 30px 420px;
+}
+
+#contact form fieldset {
+    border: none;
+}
+
+#contact form fieldset legend {
+    display: none;
+}
+
+#contact form fieldset label {
+    display: none;
+}
+
+#contact form fieldset #email {
+    width: 431px;
+    height: 41px;
+    border: none;
+    outline: none;
+    float: left;
+    text-indent: 10px;
+    margin-left: 384px;
+    font:400 14px 'Microsoft YaHei';
+}
+
+#contact form fieldset #submit {
+    width: 81px;
+    height: 41px;
+    color: #fff;
+    background-color: #707278;
+    border: none;
+    float: left;
+    font:400 16px 'Microsoft YaHei';
+    outline: none;
+}
+
+#contact form fieldset:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#contact ul {
+    margin-top: 35px;
+
+}
+
+#contact ul li {
+    float: left;
+    list-style-type: none;
+    width: 29px;
+    height: 25px;
+    margin: 0 15px;
+}
+
+#contact ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#contact ul .qq {
+    background-image: url(images/i_qq.png);
+    margin-left: 522px;
+}
+
+#contact ul .weibo {
+    background-image: url(images/i_weibo_06.png);
+}
+
+#contact ul .twitter {
+    background-image: url(images/i_twitter.png);
+}
+
+#contact ul .net {
+    background-image: url(images/i_net.png);
+}
+
+#contact ul li a {
+    display: block;
+    width: 29px;
+    height: 25px;
+}
+
+/*footer*/
+
+footer {
+    height: 60px;
+    background-color: #2f3039;
+    margin: 0;
+    color: #fff;
 
 
+}
 
+footer .copy_right {
+    float: left;
+    padding: 30px 10px;
+    color: #FFFFFF;
+  font: 400 12px 'SimSun';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+footer .back_to_top {
+    float:right;
+    padding: 30px 10px;
+    color: #FFFFFF;
+  font: 400 12px 'SimSun';
+}
 
 
 
