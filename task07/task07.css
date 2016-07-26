@@ -234,6 +234,7 @@ header nav .login a {
     font: 400 12px/2.605 'Microsoft YaHei';
 }
 
+
 #activity form fieldset section {
     float: left;
     width: 25%;
@@ -257,15 +258,16 @@ header nav .login a {
     font: 400 1em 'Microsoft YaHei';
     border: none;
     outline: none;
+/*  
     background-image: url(images/search_option_04.png);
     background-repeat: no-repeat;
     background-position: 215px 10px;
     background-color: #fff;
+    */
+   
 }
 
-#activity .country,
-#activity .province,
-#activity .city {}
+
 
 #activity form fieldset section select option {
     color: rgba( 50, 51, 51, 0.702);
@@ -274,12 +276,7 @@ header nav .login a {
     margin: 5px auto;
 }
 
-#activity form fieldset section select option:before {}
 
-#activity form fieldset section select option:hover {
-    background-color: #fff;
-    color: #be4e48;
-}
 
 #activity form fieldset section input {
     width: 235px;
