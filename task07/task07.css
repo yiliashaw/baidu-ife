@@ -97,7 +97,7 @@ header nav .login a {
 /*welcom*/
 
 #welcome {
-    background-image: url(images/wel_backgi.png);
+    background-image: url(images/wel_backgi.jpg);
     width: 1280px;
     height: 854px;
     position: relative;
@@ -206,7 +206,7 @@ header nav .login a {
 #activity {
     height: 972px;
     width: 100%;
-    background-image: url(images/search_map_02.png);
+    background-image: url(images/search_map_02.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -300,7 +300,7 @@ header nav .login a {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(images/news_up_left.png);
+    background-image: url(images/news_up_left.jpg);
     width: 850px;
     height: 566px;
 }
@@ -469,7 +469,7 @@ header nav .login a {
     top: 0;
     height: 521px;
     width: 431px;
-    background-image: url(images/news_down_poster.png);
+    background-image: url(images/news_down_poster.jpg);
 }
 
 #news .down .right img {
