@@ -1,10 +1,42 @@
-for num in (1...13)
-  .col-md-{num}
-    flex num num percentage(num/12)
-
-a
-b
-  width 10px
 
 body
-  background: red
+  margin 0
+  padding 0
+
+.container
+  margin-top 50px
+  width 90%
+  margin 10px auto
+  // padding 10px
+  border 1px solid #999
+
+.float
+  >div
+    float left
+  &:after
+    clear both
+    content ''
+    display block
+
+.flex
+  display flex
+  flex-wrap wrap
+
+.container>div
+  box-sizing border-box
+  padding 10px
+
+.col-content
+  background-color #eee
+  height 50px
+  border 1px solid #999
+
+@media screen and (max-width:768px)
+  for num in (1...13)
+    .col-sm-{num}
+      width percentage(num/12)
+
+@media screen and (min-width:769px)
+  for num in (1...13)
+    .col-md-{num}
+      width percentage(num/12)
