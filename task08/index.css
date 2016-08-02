@@ -21,7 +21,7 @@ body {
   flex-wrap: wrap;
 }
 .container>div {
-  box-sizing: border-box; /*将border和padding放入框中(即放入width的范围内),以方便width的百分比计算,*/
+  box-sizing: border-box;
   padding: 10px;
 }
 .col-content {
