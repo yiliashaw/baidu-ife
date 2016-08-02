@@ -1,0 +1,111 @@
+doctype html
+head
+  title task09
+  meta(charset="utf-8")
+  link(rel="stylesheet", href="")
+body
+  header
+    img(src="logo.jpg", alt="logo")
+    form(action="")
+      fieldset
+        legend search&login
+        input(type="search")
+        input(type="submit" value="登录") 
+  aside
+    figure
+      img(src="headshot.jpg", alt="headshot")
+      figcaption ABC123
+    ul
+      li.collect
+        span 110
+        span 收藏
+      li.fans
+        span 313
+        span 粉丝
+    nav
+      ul
+        li.report
+          span
+          span 个人报表
+          ul
+            li.file1 
+              span
+              span 文件一
+            li.file2 
+              span
+              span 文件二
+              ul
+               li.doc1
+                 span
+                 span 文档1
+               li.doc2
+                 span
+                 span 文档2
+            li.file3
+              span
+              span 文件三
+        li.collection
+          span
+          span 个人收藏
+        li.myshare
+          span
+          span 我的分享
+        li.gallery
+          span
+          span 图库
+        li.growth_record
+          span
+          span 成长记录
+        li.account
+          span
+          span 账户信息
+        
+      
+      
+    
+  div#main
+    div.directory
+      p
+        span C站 
+        span / 个人报表 
+        span / 文件一 
+        span / 文档1 
+       
+    div.search
+      form.search_form
+        fieldset
+          legend 查询
+          section.order
+            label(for="order") 查询项
+            input(type="select")
+          section.buyer
+            label+input
+          section.seller
+            label+input        
+          section.date
+            label+input
+          section.num_of_pp
+            label+input
+          section.time_total
+            label+input
+          section.num_of_deal
+            label+input
+          section.search
+            input(type="submit")
+          
+      div.search_history
+    div.stat
+      ul
+        li.green
+        li.blue
+        li.red
+        li.yellow
+    div.proj
+      div.material
+      div.proj_submit
+    div.other
+      div.calender
+      div.car_top_brands
+
+    
+  
