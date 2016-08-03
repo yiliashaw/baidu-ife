@@ -29,39 +29,42 @@ body
       ul
         li.report.first
           span.icon
-          span 个人报表
+          span.dir_name 个人报表
           ul
             li.file1.second
-              span
-              span 文件一
-            li.file21.second
-              span
-              span 文件二
+              span.icon
+              span.icon
+              span.dir_name 文件一
+            li.file2.second
+              span.icon
+              span.icon
+              span.dir_name 文件二
               ul
                li.doc1.third
-                 span
-                 span 文档1
+                 span.icon
+                 span.dir_name 文档1
                li.doc2.third
-                 span
-                 span 文档2
+                 span.icon
+                 span.dir_name 文档2
             li.file3.second
-              span
-              span 文件三
+              span.icon
+              span.icon
+              span.dir_name 文件三
         li.collection.first
-          span
-          span 个人收藏
+          span.icon
+          span.dir_name 个人收藏
         li.myshare.first
-          span
-          span 我的分享
+          span.icon
+          span.dir_name 我的分享
         li.gallery.first
-          span
-          span 图库
+          span.icon
+          span.dir_name 图库
         li.growth_record.first
-          span
-          span 成长记录
+          span.icon
+          span.dir_name 成长记录
         li.account.first
-          span
-          span 账户信息
+          span.icon
+          span.dir_name 账户信息
 
 
 
@@ -70,9 +73,12 @@ body
     div.directory
       p
         span C站
-        span / 个人报表
-        span / 文件一
-        span / 文档1
+        |  /
+        span  个人报表
+        |  /
+        span  文件一
+        |  /
+        span  文档1
 
     div.search
       form.search_form
@@ -80,27 +86,33 @@ body
           legend 查询
           section.order
             label(for="order") 查询项
-            input(type="select")
+            select(id="order",name="order")
+              option 第一项
           section.buyer
-            label(for="")
-            input(type="text")
+            label(for="") 买方
+            select(id="order",name="order")
+              option 小A
           section.seller
-            label(for="")
-            input(type="text")
+            label(for="") 卖方
+            select(id="order",name="order")
+              option 小C
           section.date
-            label(for="")
-            input(type="text")
+            label(for="") 日期
+            input(type="date",id="order",name="order",value="2016-04-01")
           section.num_of_pp
-            label(for="")
-            input(type="text")
+            label(for="") 人数
+            select(id="order",name="order")
+              option 10人
           section.time_total
-            label(for="")
-            input(type="text")
+            label(for="") 总耗时
+            select(id="order",name="order")
+              option 8天
           section.num_of_deal
-            label(for="")
-            input(type="text")
+            label(for="") 成交项
+            select(id="order",name="order")
+              option 10项
           section.search
-            input(type="submit")
+            input(type="submit",id="order",value="搜索")
 
       div.search_history
     div.stat

@@ -82,72 +82,63 @@ aside>ul>li:first-child
   border-right: 1px solid #6E8095;
 
 aside>nav
-  border:1px solid red
   padding:10px 40px;
 aside>nav li
     list-style-type: none;
-aside>nav>li.first
-  list-style-type: none;
-
-aside>nav>ul span
+aside>nav>ul span.dir_name
   color: #6E8095;
   font: 600 12px/4 'SimHei';
+  padding-left:12px;
 
-aside>nav>ul li.report .icon
+aside>nav>ul span.icon
+  background-repeat: no-repeat
+  display: inline-block
+  width: 12px;
+  height: 12px;
+
+aside>nav>ul li.report>.icon
   background-image: url(images/report.png)
-  width: 5px;
-  height: 5px;
-  border:1px solid #fff;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+aside>nav>ul li.file1>.icon
+  background-image: url(images/file1.png)
+  padding-right:3px
+aside>nav>ul li.file1 .icon:nth-of-type(2)
+  background-image: url(images/file.png)
+aside>nav>ul li.file2>.icon
+  background-image: url(images/file2.png)
+aside>nav>ul li.file2>.icon:nth-of-type(1)
+  background-image: url(images/11.png)
+  padding-right:3px
+  background-position: 0px 4px
+aside>nav>ul li.doc1>.icon
+  background-image: url(images/doc1.png)
+aside>nav>ul li.doc2>.icon
+  background-image: url(images/doc.png)
+aside>nav>ul li.file3>.icon
+  background-image: url(images/file1.png)
+aside>nav>ul li.file3 .icon:nth-of-type(2)
+  background-image: url(images/file.png)
+aside>nav>ul li.collection>.icon
+  background-image: url(images/star.png)
+aside>nav>ul li.myshare>.icon
+  background-image: url(images/myshare.png)
+aside>nav>ul li.gallery>.icon
+  background-image: url(images/star.png)
+aside>nav>ul li.growth_record>.icon
+  background-image: url(images/star.png)
+aside>nav>ul li.account>.icon
+  background-image: url(images/account.png)
+aside>nav>ul .second
+  padding-left:30px
+aside>nav>ul .third
+  padding-left: 25px;
+aside>nav>ul .second>.dir_name,
+aside>nav>ul .third>.dir_name
+  font: 600 12px/2.5 'SimHei';
+  padding-left:5px
+aside>nav>ul .report>.dir_name,
+aside>nav>ul .file2>.dir_name,
+aside>nav>ul .doc1>.dir_name
+  color:#fff;
 
 
 
@@ -158,4 +149,52 @@ div#main
   width: 100%;
   height: 1213px;
   background-color: #eee
+
+div.directory
+  height: 31px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+div.directory p
+  padding-left:30px;
+  font-size: 12.278px;
+  font-family: "SimHei";
+  color: rgb(170, 170, 170);
+  line-height: 1.852;
+div.directory p span:last-child
+  color:#6898c2;
+
+
+div.search
+  width: 80%;
+  height: 86px;
+  margin:17px auto;
+  border:1px solid red;
+
+
+div.stat
+  border:1px solid blue;
+
+
+div.proj
+  border:1px solid green;
+
+
+ div.other
+ border:1px solid purple;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
