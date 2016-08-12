@@ -630,6 +630,18 @@ div.directory p span:last-child {
   outline: none;
   text-indent: 5px;
 }
+.proj .proj_submit form fieldset section input::-webkit-input-placeholder,
+.proj .proj_submit form fieldset section textarea::-webkit-input-placeholder {
+  color: #000;
+}
+.proj .proj_submit form fieldset section input::-moz-placeholder,
+.proj .proj_submit form fieldset section textarea::-moz-placeholder {
+  color: #000;
+}
+.proj .proj_submit form fieldset section input:-ms-input-placeholder,
+.proj .proj_submit form fieldset section textarea:-ms-input-placeholder {
+  color: #000;
+}
 .proj .proj_submit form fieldset section textarea {
   height: 120px;
   padding: 2px;
