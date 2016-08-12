@@ -5,6 +5,8 @@
 header
   background-color: #2289bf
   height: 57px
+  width:100%
+  min-width: 1280px;
   position: relative
 header>img
   position: absolute
@@ -12,19 +14,14 @@ header>img
   top:10px
 header>form
   position: absolute
-  right:80px
+  right:100px
   top:15px
-header>form>fieldset section
   float:left
-header>form>fieldset
-  border:none
-  &:after
+header:after
     content: ''
     clear:both
     display: block
-header>form>fieldset>legend
-  display: none
-header .search input
+header form input
   width: 313px
   height: 28px
   line-height: 28px
@@ -36,23 +33,30 @@ header .search input
   background-repeat: no-repeat
   background-position: 15px 5px
   text-indent: 35px
-header .login input
+header>input
   color: #FFFFFF
-  font: 600 12px/2.25 'Adobe Heiti Std'
+  font: 12px/2.25 'Adobe Heiti Std'
   background-color:  #2289bf
   border:none
+  outline: none;
   padding:0 35px
   background-image: url(images/login.png)
   background-repeat: no-repeat
   background-position: 15px 5px
+  position: absolute
+  right:2px
+  top:15px
+
 
 div.container
-  width:1280px
+  width:100%;
+  min-width: 1280px;
   margin:0 auto
+  display: flex;
+  flex-direction: row;
 
 aside
   background-color:#2a2e3d
-  float:left
   width: 260px
   height: 1213px
 aside>figure
@@ -62,12 +66,15 @@ aside>figure
   align-items: center
   padding:15px
 aside>figure>img
-  background-image: url(images/headpic.png)
-  background-repeat: no-repeat
-  background-position: center
+  width:57px;
+  height:57px;
+  border-radius: 50%;
+  border:1px solid #d4d4d6;
+  padding:3px;
+
 aside>figure>figcaption
   color: #F6F5F5
-  font: 600 16px 'SimHei'
+  font: 16px 'SimHei'
   padding:0 23px
 aside>ul
   display: flex
@@ -79,7 +86,7 @@ aside>ul>li
   flex-direction: column
   text-align: center
   color: #6E8095
-  font: 600 12px 'SimHei'
+  font: 12px 'SimHei'
   padding:0 35px
 aside>ul>li span:first-child
    font-size:14px
@@ -92,7 +99,7 @@ aside>nav li
     list-style-type: none
 aside>nav>ul span.dir_name
   color: #6E8095
-  font: 600 12px/4 'SimHei'
+  font:  12px/4 'SimHei'
   padding-left:12px
 
 aside>nav>ul span.icon
@@ -138,7 +145,7 @@ aside>nav>ul .third
   padding-left: 55px
 aside>nav>ul .second>.dir_name,
 aside>nav>ul .third>.dir_name
-  font: 600 12px/2.5 'SimHei'
+  font:  12px/2.5 'SimHei'
   padding-left:5px
 aside>nav>ul .report>.dir_name,
 aside>nav>ul .file2>.dir_name,
@@ -151,8 +158,8 @@ div#main
   // position: fixed
   // left:261px
   // top:57px
-  float:left
-  width:1020px
+
+  width:100%;
   height: 1213px
   background-color: #eee
 
@@ -306,18 +313,12 @@ div.directory p span:last-child
       background-image: url(images/arrow_left.png)
     .toright
       background-image: url(images/arrow_right.png)
-    .one,
-    .two,
-    .three,
-    .four,
-    .five,
-    .six
+    .history
       width:110px
       display: flex
       flex-direction: column
       justify-content: center
       align-items: center
-
       p:nth-of-type(1)
         font-size: 12px
         font-family: "Microsoft YaHei"
@@ -338,8 +339,8 @@ div.directory p span:last-child
           -moz-transform: scale(0.949, 1)
           -webkit-transform: scale(0.949, 1)
           -ms-transform: scale(0.949, 1)
-    .one
-      border-top:4px solid #4389c9
+    .history:hover
+      border-top:3px solid #4389c9
       box-sizing: border-box
     .history_query
       width:130px
@@ -431,7 +432,6 @@ div.directory p span:last-child
   height: 355px
   display: flex
   justify-content: space-between
-
   >div
     border:1px solid #ddd
     border-radius: 8px
@@ -462,55 +462,34 @@ div.directory p span:last-child
       margin-right:5px
       width: 80px
       height: 28px
-      //position:relative
-
-      a
-        display:block
-        text-decoration: none
-        font-size: 12px
-        font-family: "Microsoft YaHei"
-        color: rgb(83, 83, 83)
-        line-height: 1.381
-        height: 27px
-        display: flex
-        justify-content: center
-        align-items: center
-        background-color: #ededf0
-        border:1px solid transparent
-        border-radius: 5px 5px 0 0
-        border-bottom-color: #ddd
-        // &:after
-        //   position: absolute
-        //   left:0
-        //   top:28x
-        //   content:''
-        //   height:3px
-        //   display: block
-        //   width: 80px
-        //   background-color: #fc0
-  .nav_tabs .active
-    margin-bottom: -1px
-    border:1px solid #ddd
-    border-bottom: none
-    border-radius: 5px 5px 0 0
-  .nav_tabs .active>a,
-  .nav_tabs li>a:focus,
-  .nav_tabs li>a:hover
-    background-color: #fff
-    border-bottom:none
-    border-radius: 5px 5px 0 0
-    border:1px solid #ddd
-
-
-      // &:after
-      //   position: absolute
-      //   left:0
-      //   top:20px
-      //   content:''
-      //   height:3px
-      //   display: block
-      //   width: 80px
-      //   background-color: #fc0
+      text-decoration: none
+      font-size: 12px
+      font-family: "Microsoft YaHei"
+      color: rgb(83, 83, 83)
+      line-height: 1.381
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #ededf0
+      border-radius: 5px 5px 0 0
+      cursor: pointer;
+      border:1px solid #ededf0;
+      border-sizing:border-box;
+    .active
+      border:1px solid #ddd
+      border-radius: 5px 5px 0 0
+      background-color: #fff;
+      position: relative;
+      &:after
+        position: absolute
+        left:0
+        right:0
+        top:27px
+        content:''
+        height:4px
+        display: block
+        width: 80px
+        background-color: #fff
 
 
   .tab_content
@@ -522,6 +501,7 @@ div.directory p span:last-child
     display: flex
     justify-content: center
     align-items: center
+
     table
       border:1px solid #ddd
       border-collapse: collapse
@@ -534,8 +514,7 @@ div.directory p span:last-child
         color: rgb(83, 83, 83)
         line-height: 2.5
         text-align: center
-      tr:first-child
-        td:first-child
+        &:hover
           background-color: #f4f6f7
   .proj_submit form fieldset
     height: 270px;
@@ -563,6 +542,7 @@ div.directory p span:last-child
         height:30px;
         outline:none;
         text-indent:5px;
+        font-size:12px;
       input::-webkit-input-placeholder,
       textarea::-webkit-input-placeholder
         color:#000;
@@ -575,6 +555,7 @@ div.directory p span:last-child
       textarea
         height:120px;
         padding:2px;
+        resize:none;
     .proj_title
       padding-bottom: 0;
     .proj_price
@@ -588,6 +569,8 @@ div.directory p span:last-child
       flex-direction: row;
       align-items: center;
       float:left;
+      input
+        border:none;
     .proj_search
       float:right;
       width: 51px;
@@ -683,10 +666,7 @@ div.directory p span:last-child
              font-size: 12px;
              font-family: "SimHei";
              color: rgb(50, 51, 51);
-
-
-
-
+             cursor: pointer;
 
   .car_top_brands
     width:530px;

@@ -5,6 +5,8 @@
 header {
   background-color: #2289bf;
   height: 57px;
+  width: 100%;
+  min-width: 1280px;
   position: relative;
 }
 header>img {
@@ -14,24 +16,16 @@ header>img {
 }
 header>form {
   position: absolute;
-  right: 80px;
+  right: 100px;
   top: 15px;
-}
-header>form>fieldset section {
   float: left;
 }
-header>form>fieldset {
-  border: none;
-}
-header>form>fieldset:after {
+header:after {
   content: '';
   clear: both;
   display: block;
 }
-header>form>fieldset>legend {
-  display: none;
-}
-header .search input {
+header form input {
   width: 313px;
   height: 28px;
   line-height: 28px;
@@ -44,23 +38,29 @@ header .search input {
   background-position: 15px 5px;
   text-indent: 35px;
 }
-header .login input {
+header>input {
   color: #fff;
-  font: 600 12px/2.25 'Adobe Heiti Std';
+  font: 12px/2.25 'Adobe Heiti Std';
   background-color: #2289bf;
   border: none;
+  outline: none;
   padding: 0 35px;
   background-image: url("images/login.png");
   background-repeat: no-repeat;
   background-position: 15px 5px;
+  position: absolute;
+  right: 2px;
+  top: 15px;
 }
 div.container {
-  width: 1280px;
+  width: 100%;
+  min-width: 1280px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
 }
 aside {
   background-color: #2a2e3d;
-  float: left;
   width: 260px;
   height: 1213px;
 }
@@ -72,13 +72,15 @@ aside>figure {
   padding: 15px;
 }
 aside>figure>img {
-  background-image: url("images/headpic.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  border: 1px solid #d4d4d6;
+  padding: 3px;
 }
 aside>figure>figcaption {
   color: #f6f5f5;
-  font: 600 16px 'SimHei';
+  font: 16px 'SimHei';
   padding: 0 23px;
 }
 aside>ul {
@@ -92,7 +94,7 @@ aside>ul>li {
   flex-direction: column;
   text-align: center;
   color: #6e8095;
-  font: 600 12px 'SimHei';
+  font: 12px 'SimHei';
   padding: 0 35px;
 }
 aside>ul>li span:first-child {
@@ -109,7 +111,7 @@ aside>nav li {
 }
 aside>nav>ul span.dir_name {
   color: #6e8095;
-  font: 600 12px/4 'SimHei';
+  font: 12px/4 'SimHei';
   padding-left: 12px;
 }
 aside>nav>ul span.icon {
@@ -171,7 +173,7 @@ aside>nav>ul .third {
 }
 aside>nav>ul .second>.dir_name,
 aside>nav>ul .third>.dir_name {
-  font: 600 12px/2.5 'SimHei';
+  font: 12px/2.5 'SimHei';
   padding-left: 5px;
 }
 aside>nav>ul .report>.dir_name,
@@ -180,8 +182,7 @@ aside>nav>ul .doc1>.dir_name {
   color: #fff;
 }
 div#main {
-  float: left;
-  width: 1020px;
+  width: 100%;
   height: 1213px;
   background-color: #eee;
 }
@@ -356,47 +357,27 @@ div.directory p span:last-child {
 .search_form_container .search_history .toright {
   background-image: url("images/arrow_right.png");
 }
-.search_form_container .search_history .one,
-.search_form_container .search_history .two,
-.search_form_container .search_history .three,
-.search_form_container .search_history .four,
-.search_form_container .search_history .five,
-.search_form_container .search_history .six {
+.search_form_container .search_history .history {
   width: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.search_form_container .search_history .one p:nth-of-type(1),
-.search_form_container .search_history .two p:nth-of-type(1),
-.search_form_container .search_history .three p:nth-of-type(1),
-.search_form_container .search_history .four p:nth-of-type(1),
-.search_form_container .search_history .five p:nth-of-type(1),
-.search_form_container .search_history .six p:nth-of-type(1) {
+.search_form_container .search_history .history p:nth-of-type(1) {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #323333;
   line-height: 1.2;
   margin-bottom: 10px;
 }
-.search_form_container .search_history .one p span:nth-of-type(1),
-.search_form_container .search_history .two p span:nth-of-type(1),
-.search_form_container .search_history .three p span:nth-of-type(1),
-.search_form_container .search_history .four p span:nth-of-type(1),
-.search_form_container .search_history .five p span:nth-of-type(1),
-.search_form_container .search_history .six p span:nth-of-type(1) {
+.search_form_container .search_history .history p span:nth-of-type(1) {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #aeaeae;
   font-weight: bolder;
 }
-.search_form_container .search_history .one p span:nth-of-type(2),
-.search_form_container .search_history .two p span:nth-of-type(2),
-.search_form_container .search_history .three p span:nth-of-type(2),
-.search_form_container .search_history .four p span:nth-of-type(2),
-.search_form_container .search_history .five p span:nth-of-type(2),
-.search_form_container .search_history .six p span:nth-of-type(2) {
+.search_form_container .search_history .history p span:nth-of-type(2) {
   font-size: 21px;
   font-family: "Microsoft YaHei";
   color: #ec6500;
@@ -405,8 +386,8 @@ div.directory p span:last-child {
   -webkit-transform: scale(0.949, 1);
   -ms-transform: scale(0.949, 1);
 }
-.search_form_container .search_history .one {
-  border-top: 4px solid #4389c9;
+.search_form_container .search_history .history:hover {
+  border-top: 3px solid #4389c9;
   box-sizing: border-box;
 }
 .search_form_container .search_history .history_query {
@@ -540,35 +521,36 @@ div.directory p span:last-child {
   margin-right: 5px;
   width: 80px;
   height: 28px;
-}
-.proj .nav_tabs li a {
-  display: block;
   text-decoration: none;
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #535353;
   line-height: 1.381;
-  height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ededf0;
-  border: 1px solid transparent;
   border-radius: 5px 5px 0 0;
-  border-bottom-color: #ddd;
+  cursor: pointer;
+  border: 1px solid #ededf0;
+  border-sizing: border-box;
 }
 .proj .nav_tabs .active {
-  margin-bottom: -1px;
   border: 1px solid #ddd;
-  border-bottom: none;
   border-radius: 5px 5px 0 0;
-}
-.proj .nav_tabs .active>a,
-.proj .nav_tabs li>a:focus,
-.proj .nav_tabs li>a:hover {
   background-color: #fff;
-  border-bottom: none;
-  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+.proj .nav_tabs .active:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 27px;
+  content: '';
+  height: 4px;
+  display: block;
+  width: 80px;
+  background-color: #fff;
 }
 .proj .tab_content {
   margin: 0 20px 25px 20px;
@@ -594,7 +576,7 @@ div.directory p span:last-child {
   line-height: 2.5;
   text-align: center;
 }
-.proj .tab_content table tr:first-child td:first-child {
+.proj .tab_content table td:hover {
   background-color: #f4f6f7;
 }
 .proj .proj_submit form fieldset {
@@ -629,6 +611,7 @@ div.directory p span:last-child {
   height: 30px;
   outline: none;
   text-indent: 5px;
+  font-size: 12px;
 }
 .proj .proj_submit form fieldset section input::-webkit-input-placeholder,
 .proj .proj_submit form fieldset section textarea::-webkit-input-placeholder {
@@ -645,6 +628,7 @@ div.directory p span:last-child {
 .proj .proj_submit form fieldset section textarea {
   height: 120px;
   padding: 2px;
+  resize: none;
 }
 .proj .proj_submit form fieldset .proj_title {
   padding-bottom: 0;
@@ -662,6 +646,9 @@ div.directory p span:last-child {
   flex-direction: row;
   align-items: center;
   float: left;
+}
+.proj .proj_submit form fieldset .proj_agreement input {
+  border: none;
 }
 .proj .proj_submit form fieldset .proj_search {
   float: right;
@@ -775,6 +762,7 @@ div.directory p span:last-child {
   font-size: 12px;
   font-family: "SimHei";
   color: #323333;
+  cursor: pointer;
 }
 .other .car_top_brands {
   width: 530px;

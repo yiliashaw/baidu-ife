@@ -31,6 +31,7 @@ function onSelectYearMonth(){
   }
 }
 
+
 var return_Today = document.getElementById("return_today");
 function returnToday(){
   var today = new Date();
@@ -39,8 +40,8 @@ function returnToday(){
   monthSelect.value = today.getMonth()+1;
   onSelectYearMonth();
   for(let i = 0 ; i < 40; i++){
-    if(grid[i].innerHTML==todayDate){
-      grid[i].style.border="1px solid #ddd";
+    if(grid[i].innerHTML==todayDate ){
+      grid[i].style.border="1px solid #f6c62b";
     }
   }
 }
@@ -49,29 +50,14 @@ function returnToday(){
 window.onload = (function(){
   onSelectYearMonth();
   returnToday();
-
 })()
 
 
-if (return_Today.addEventListener){
-    return_Today.addEventListener('click', returnToday, false);
-}
-else {
-    return_Today.attachEvent('onclick', returnToday, false);
-}
+  return_Today.addEventListener('click', returnToday, false);
+  yearSelect.addEventListener('change', onSelectYearMonth, false);
+  monthSelect.addEventListener('change', onSelectYearMonth, false);
 
-if (yearSelect.addEventListener){
-    yearSelect.addEventListener('change', onSelectYearMonth, false);
-}
-else {
-    yearSelect.attachEvent('onchange', onSelectYearMonth, false);
-}
-if (monthSelect.addEventListener){
-    monthSelect.addEventListener('change', onSelectYearMonth, false);
-}
-else {
-    monthSelect.attachEvent('onchange', onSelectYearMonth, false);
-}
+
 
 //car_brands_ranking
   var value = document.getElementsByClassName("value");

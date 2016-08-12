@@ -9,13 +9,9 @@ body
   header
     img(src="images/logo.png", alt="logo")
     form(action="")
-      fieldset
-        legend search&login
-        section.search
-          label(for="search")
+          label.search(for="search")
           input(type="search",name="search",id="search")
-        section.login
-         input(type="submit" value="登录")
+    input(type="button",value="登录",id="login",name="login" )
   div.container
     aside
       figure
@@ -122,7 +118,7 @@ body
         div.search_history
           div.toleft
 
-          div.one
+          div.history.one
             p
               |10:00 am
             p
@@ -130,7 +126,7 @@ body
                 |¥
               span
                 |1200
-          div.two
+          div.history.two
             p
               |11:00 am
             p
@@ -138,7 +134,7 @@ body
                 |¥
               span
                 |1300
-          div.three
+          div.history.three
             p
               |12:00 am
             p
@@ -146,7 +142,7 @@ body
                 |¥
               span
                 |1200
-          div.four
+          div.history.four
             p
               |01:00 pm
             p
@@ -154,7 +150,7 @@ body
                 |¥
               span
                 |1400
-          div.five
+          div.history.five
             p
               |02:00 pm
             p
@@ -162,7 +158,7 @@ body
                 |¥
               span
                 |1500
-          div.six
+          div.history.six
             p
               |03:00 pm
             p
@@ -212,19 +208,14 @@ body
             |第一组项目
           ul.nav_tabs
             li.proj1.active
-              a(href="")
                 |项目一
             li.proj2
-              a(href="")
                 |项目一
             li.proj3
-              a(href="")
                 |项目一
             li.proj4
-               a(href="")
                 |项目一
             li.proj5
-              a(href="")
                 |项目一
           div.tab_content
             div.tab_pane.proj1
@@ -312,7 +303,7 @@ body
               section.proj_price
                 label(for="price")
                   |价格
-                input(type="text",name="price",id="price",placeholder="$158")
+                input(type="text",name="price",id="price",placeholder="¥158")
               section.proj_manager
                 label(for="manager")
                   |负责人
