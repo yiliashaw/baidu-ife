@@ -760,6 +760,9 @@ div.directory p span:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #323333;
 }
 .other .car_top_brands {
   width: 530px;
