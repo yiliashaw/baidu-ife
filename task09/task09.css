@@ -54,9 +54,14 @@ header .login input {
   background-repeat: no-repeat;
   background-position: 15px 5px;
 }
+div.container {
+  width: 1280px;
+  margin: 0 auto;
+}
 aside {
   background-color: #2a2e3d;
-  width: 261px;
+  float: left;
+  width: 260px;
   height: 1213px;
 }
 aside>figure {
@@ -162,7 +167,7 @@ aside>nav>ul .second {
   padding-left: 30px;
 }
 aside>nav>ul .third {
-  padding-left: 25px;
+  padding-left: 55px;
 }
 aside>nav>ul .second>.dir_name,
 aside>nav>ul .third>.dir_name {
@@ -175,10 +180,8 @@ aside>nav>ul .doc1>.dir_name {
   color: #fff;
 }
 div#main {
-  position: fixed;
-  left: 261px;
-  top: 57px;
-  width: 100%;
+  float: left;
+  width: 1020px;
   height: 1213px;
   background-color: #eee;
 }
@@ -198,18 +201,613 @@ div.directory p {
 div.directory p span:last-child {
   color: #6898c2;
 }
-div.search {
-  width: 80%;
-  height: 86px;
-  margin: 17px auto;
-  border: 1px solid #f00;
+.search_form_container {
+  width: 890px;
+  height: 160px;
+  margin: 20px auto;
 }
-div.stat {
-  border: 1px solid #00f;
+.search_form_container .search_form {
+  height: 85px;
+  background-image: url("images/change.png");
+  background-repeat: no-repeat;
+  background-position: 333px 25px;
 }
-div.proj {
-  border: 1px solid #008000;
+.search_form_container fieldset {
+  border: none;
+  position: relative;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
-div.other {
-  border: 1px solid #800080;
+.search_form_container fieldset:after {
+  content: '';
+  height: 85px;
+  display: block;
+}
+.search_form_container fieldset legend {
+  display: none;
+}
+.search_form_container fieldset a {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #fff;
+  line-height: 2.167;
+  text-decoration: none;
+  position: absolute;
+  left: 346px;
+  top: 30px;
+}
+.search_form_container fieldset label {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #aaa;
+  line-height: 2.167;
+}
+.search_form_container fieldset select {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #323333;
+  line-height: 2.167;
+  outline: none;
+  height: 25px;
+  text-indent: 5px;
+}
+.search_form_container fieldset section {
+  position: absolute;
+}
+.search_form_container fieldset .order {
+  left: 30px;
+  top: 15px;
+}
+.search_form_container fieldset .order select {
+  width: 70px;
+  margin-left: 16px;
+}
+.search_form_container fieldset .buyer {
+  left: 180px;
+  top: 15px;
+}
+.search_form_container fieldset .buyer select {
+  width: 110px;
+  margin-left: 16px;
+}
+.search_form_container fieldset .seller {
+  left: 180px;
+  top: 45px;
+}
+.search_form_container fieldset .seller select {
+  width: 110px;
+  margin-left: 16px;
+}
+.search_form_container fieldset .date {
+  left: 400px;
+  top: 15px;
+}
+.search_form_container fieldset .date input {
+  width: 120px;
+  margin-left: 16px;
+  text-indent: 5px;
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #323333;
+  outline: none;
+  height: 22px;
+}
+.search_form_container fieldset .num_of_pp {
+  left: 400px;
+  top: 45px;
+}
+.search_form_container fieldset .num_of_pp select {
+  width: 70px;
+  margin-left: 16px;
+}
+.search_form_container fieldset .num_of_deal {
+  left: 530px;
+  top: 45px;
+}
+.search_form_container fieldset .num_of_deal select {
+  width: 120px;
+  margin-left: 16px;
+}
+.search_form_container fieldset .time_total {
+  left: 580px;
+  top: 15px;
+}
+.search_form_container fieldset .time_total select {
+  width: 70px;
+  margin-left: 16px;
+}
+.search_form_container fieldset .search_btn {
+  left: 730px;
+  top: 30px;
+}
+.search_form_container fieldset .search_btn input {
+  width: 50px;
+  height: 25px;
+  background-color: #388ac1;
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #fff;
+  line-height: 2.167;
+  border: none;
+}
+.search_form_container .search_history {
+  height: 65px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.search_form_container .search_history div {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  height: 65px;
+}
+.search_form_container .search_history .toleft,
+.search_form_container .search_history .toright {
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search_form_container .search_history .toleft {
+  background-image: url("images/arrow_left.png");
+}
+.search_form_container .search_history .toright {
+  background-image: url("images/arrow_right.png");
+}
+.search_form_container .search_history .one,
+.search_form_container .search_history .two,
+.search_form_container .search_history .three,
+.search_form_container .search_history .four,
+.search_form_container .search_history .five,
+.search_form_container .search_history .six {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search_form_container .search_history .one p:nth-of-type(1),
+.search_form_container .search_history .two p:nth-of-type(1),
+.search_form_container .search_history .three p:nth-of-type(1),
+.search_form_container .search_history .four p:nth-of-type(1),
+.search_form_container .search_history .five p:nth-of-type(1),
+.search_form_container .search_history .six p:nth-of-type(1) {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #323333;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.search_form_container .search_history .one p span:nth-of-type(1),
+.search_form_container .search_history .two p span:nth-of-type(1),
+.search_form_container .search_history .three p span:nth-of-type(1),
+.search_form_container .search_history .four p span:nth-of-type(1),
+.search_form_container .search_history .five p span:nth-of-type(1),
+.search_form_container .search_history .six p span:nth-of-type(1) {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #aeaeae;
+  font-weight: bolder;
+}
+.search_form_container .search_history .one p span:nth-of-type(2),
+.search_form_container .search_history .two p span:nth-of-type(2),
+.search_form_container .search_history .three p span:nth-of-type(2),
+.search_form_container .search_history .four p span:nth-of-type(2),
+.search_form_container .search_history .five p span:nth-of-type(2),
+.search_form_container .search_history .six p span:nth-of-type(2) {
+  font-size: 21px;
+  font-family: "Microsoft YaHei";
+  color: #ec6500;
+  line-height: 0.686;
+  -moz-transform: scale(0.949, 1);
+  -webkit-transform: scale(0.949, 1);
+  -ms-transform: scale(0.949, 1);
+}
+.search_form_container .search_history .one {
+  border-top: 4px solid #4389c9;
+  box-sizing: border-box;
+}
+.search_form_container .search_history .history_query {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url("images/search_history.jpg");
+  background-repeat: no-repeat;
+  background-position: 20px 15px;
+}
+.search_form_container .search_history .history_query p {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #535353;
+  line-height: 1.381;
+  margin: 20px;
+}
+.stat {
+  width: 890px;
+  margin: 20px auto;
+  height: 95px;
+  margin-bottom: 10px;
+}
+.stat p {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #323333;
+  line-height: 1.62;
+}
+.stat ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.stat ul li {
+  height: 70px;
+  width: 200px;
+  list-style-type: none;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 15px 10px 10px;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+}
+.stat ul li div {
+  width: 60px;
+  height: 45px;
+}
+.stat ul li p {
+  display: flex;
+  flex-direction: column;
+}
+.stat ul li p span:nth-of-type(1) {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #323333;
+  line-height: 2.051;
+}
+.stat ul li p span:nth-of-type(2) {
+  font-size: 10px;
+  font-family: "SimHei";
+  color: #aaa;
+  line-height: 2.005;
+}
+.stat ul .green {
+  border-left: 4px solid #44b29e;
+}
+.stat ul .green div {
+  background-color: #44b29e;
+}
+.stat ul .blue {
+  border-left: 4px solid #388ac1;
+}
+.stat ul .blue div {
+  background-color: #388ac1;
+}
+.stat ul .red {
+  border-left: 4px solid #cf4a36;
+}
+.stat ul .red div {
+  background-color: #cf4a36;
+}
+.stat ul .yellow {
+  border-left: 4px solid #e2cd47;
+}
+.stat ul .yellow div {
+  background-color: #e2cd47;
+}
+.proj {
+  width: 890px;
+  margin: 10px auto;
+  height: 355px;
+  display: flex;
+  justify-content: space-between;
+}
+.proj >div {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.proj .material {
+  width: 530px;
+}
+.proj .proj_submit {
+  width: 350px;
+}
+.proj h2 {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #aaa;
+  line-height: 1.381;
+  height: 40px;
+  background-color: #f4f5f6;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.proj .nav_tabs {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 20px 0 20px;
+}
+.proj .nav_tabs li {
+  list-style-type: none;
+  margin-right: 5px;
+  width: 80px;
+  height: 28px;
+}
+.proj .nav_tabs li a {
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #535353;
+  line-height: 1.381;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededf0;
+  border: 1px solid transparent;
+  border-radius: 5px 5px 0 0;
+  border-bottom-color: #ddd;
+}
+.proj .nav_tabs .active {
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+.proj .nav_tabs .active>a,
+.proj .nav_tabs li>a:focus,
+.proj .nav_tabs li>a:hover {
+  background-color: #fff;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+.proj .tab_content {
+  margin: 0 20px 25px 20px;
+  width: 490px;
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 0 4px 4px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proj .tab_content table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+.proj .tab_content table td {
+  width: 101px;
+  height: 30px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-family: "SimSun";
+  color: #535353;
+  line-height: 2.5;
+  text-align: center;
+}
+.proj .tab_content table tr:first-child td:first-child {
+  background-color: #f4f6f7;
+}
+.proj .proj_submit form fieldset {
+  height: 270px;
+  margin-top: 15px;
+  border: none;
+}
+.proj .proj_submit form fieldset:after {
+  conten: "";
+  display: block;
+  clear: both;
+}
+.proj .proj_submit form fieldset legend {
+  display: none;
+}
+.proj .proj_submit form fieldset label {
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #c3c2c2;
+  line-height: 1.381;
+  text-indent: 5px;
+}
+.proj .proj_submit form fieldset section {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 20px;
+}
+.proj .proj_submit form fieldset section input,
+.proj .proj_submit form fieldset section textarea {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+  outline: none;
+  text-indent: 5px;
+}
+.proj .proj_submit form fieldset section textarea {
+  height: 120px;
+  padding: 2px;
+}
+.proj .proj_submit form fieldset .proj_title {
+  padding-bottom: 0;
+}
+.proj .proj_submit form fieldset .proj_price {
+  float: left;
+  width: 30%;
+  padding: 0 0 0 20px;
+  border-right: 1px solid #ddd;
+}
+.proj .proj_submit form fieldset .proj_manager {
+  padding: 0 20px 0 0;
+}
+.proj .proj_submit form fieldset .proj_agreement {
+  flex-direction: row;
+  align-items: center;
+  float: left;
+}
+.proj .proj_submit form fieldset .proj_search {
+  float: right;
+  width: 51px;
+  height: 26px;
+}
+.proj .proj_submit form fieldset .proj_search input {
+  background-color: #388ac1;
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #fff;
+  line-height: 2.167;
+}
+.other {
+  width: 890px;
+  margin: 10px auto;
+  height: 355px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.other >div {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.other >div >h2 {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #aaa;
+  line-height: 1.381;
+  height: 40px;
+  background-color: #f4f5f6;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.other .calendar {
+  width: 350px;
+}
+.other .calendar .cal_main {
+  height: 290px;
+  width: 310px;
+  margin: 8px auto;
+}
+.other .calendar .cal_main .cal_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.other .calendar .cal_main .cal_header select,
+.other .calendar .cal_main .cal_header input {
+  outline: none;
+  height: 20px;
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #535353;
+  line-height: 1.2;
+  border: 1px solid #ccc;
+}
+.other .calendar .cal_main .cal_header #year {
+  width: 62px;
+}
+.other .calendar .cal_main .cal_header #month {
+  width: 85px;
+}
+.other .calendar .cal_main .cal_header #marked_date {
+  width: 75px;
+}
+.other .calendar .cal_main .cal_header #return_today {
+  width: 62px;
+  background-color: #fff;
+}
+.other .calendar .cal_main .cal_weekday {
+  border-top: 1px solid #a9cfec;
+  width: 100%;
+  border-collapse: collapse;
+}
+.other .calendar .cal_main .cal_weekday .weekdays {
+  font-family: "SimHei";
+  color: #535353;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.other .calendar .cal_main .cal_weekday .weekdays th {
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+}
+.other .calendar .cal_main .cal_day {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+}
+.other .calendar .cal_main .cal_day tbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.other .calendar .cal_main .cal_day tbody tr {
+  display: flex;
+  justify-content: space-between;
+}
+.other .calendar .cal_main .cal_day tbody tr td {
+  width: 40px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.other .car_top_brands {
+  width: 530px;
+}
+.other .car_top_brands .ranking {
+  width: 450px;
+  height: 270px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+.other .car_top_brands .ranking tr {
+  height: 25px;
+}
+.other .car_top_brands .ranking tr th {
+  font-size: 13px;
+  font-family: "SimHei";
+  color: #231815;
+  line-height: 2.077;
+  border: 1px solid #ddd;
+}
+.other .car_top_brands .ranking tr td {
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #323333;
+  line-height: 2;
+}
+.other .car_top_brands .ranking tr td .value {
+  display: inline-block;
+}
+.other .car_top_brands .ranking tr td .meter {
+  display: inline-block;
+  height: 5px;
+  width: 160px;
+  margin-left: 20px;
+  background-color: #dcdcdc;
+}
+.other .car_top_brands .ranking tr td .meter .son {
+  height: 100%;
+}
+.other .car_top_brands .ranking td:nth-of-type(1) {
+  width: 65px;
+}
+.other .car_top_brands .ranking td:nth-of-type(2) {
+  width: 90px;
+}
+.other .car_top_brands .ranking .spec:hover {
+  background-color: #f3f5f6;
 }

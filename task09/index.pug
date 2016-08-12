@@ -3,6 +3,8 @@ head
   title task09
   meta(charset="utf-8")
   link(rel="stylesheet", href="task09.css")
+
+
 body
   header
     img(src="images/logo.png", alt="logo")
@@ -14,118 +16,557 @@ body
           input(type="search",name="search",id="search")
         section.login
          input(type="submit" value="登录")
-  aside
-    figure
-      img(src="images/headshot.png", alt="headshot")
-      figcaption ABC123
-    ul
-      li.collect
-        span 110
-        span 收藏
-      li.fans
-        span 313
-        span 粉丝
-    nav
+  div.container
+    aside
+      figure
+        img(src="images/headshot.png", alt="headshot")
+        figcaption ABC123
       ul
-        li.report.first
-          span.icon
-          span.dir_name 个人报表
-          ul
-            li.file1.second
-              span.icon
-              span.icon
-              span.dir_name 文件一
-            li.file2.second
-              span.icon
-              span.icon
-              span.dir_name 文件二
-              ul
-               li.doc1.third
-                 span.icon
-                 span.dir_name 文档1
-               li.doc2.third
-                 span.icon
-                 span.dir_name 文档2
-            li.file3.second
-              span.icon
-              span.icon
-              span.dir_name 文件三
-        li.collection.first
-          span.icon
-          span.dir_name 个人收藏
-        li.myshare.first
-          span.icon
-          span.dir_name 我的分享
-        li.gallery.first
-          span.icon
-          span.dir_name 图库
-        li.growth_record.first
-          span.icon
-          span.dir_name 成长记录
-        li.account.first
-          span.icon
-          span.dir_name 账户信息
+        li.collect
+          span 110
+          span 收藏
+        li.fans
+          span 313
+          span 粉丝
+      nav
+        ul
+          li.report.first
+            span.icon
+            span.dir_name 个人报表
+            ul
+              li.file1.second
+                span.icon
+                span.icon
+                span.dir_name 文件一
+              li.file2.second
+                span.icon
+                span.icon
+                span.dir_name 文件二
+                ul
+                li.doc1.third
+                  span.icon
+                  span.dir_name 文档1
+                li.doc2.third
+                  span.icon
+                  span.dir_name 文档2
+              li.file3.second
+                span.icon
+                span.icon
+                span.dir_name 文件三
+          li.collection.first
+            span.icon
+            span.dir_name 个人收藏
+          li.myshare.first
+            span.icon
+            span.dir_name 我的分享
+          li.gallery.first
+            span.icon
+            span.dir_name 图库
+          li.growth_record.first
+            span.icon
+            span.dir_name 成长记录
+          li.account.first
+            span.icon
+            span.dir_name 账户信息
 
 
 
 
-  div#main
-    div.directory
-      p
-        span C站
-        |  /
-        span  个人报表
-        |  /
-        span  文件一
-        |  /
-        span  文档1
+    div#main
+      div.directory
+        p
+          span C站
+          |  /
+          span  个人报表
+          |  /
+          span  文件一
+          |  /
+          span  文档1
+      //- div.wrapper
+      div.search_form_container
+        form.search_form
+          fieldset
+            legend 查询
+            section.order
+              label(for="order") 查询项
+              select(id="order",name="order")
+                option 第一项
+            section.buyer
+              label(for="") 买方
+              select(id="order",name="order")
+                option 小A
+            a(href="")
+              |换
+            section.seller
+              label(for="") 卖方
+              select(id="order",name="order")
+                option 小C
+            section.date
+              label(for="") 日期
+              input(type="date",id="order",name="order",value="2016-04-01")
+            section.num_of_pp
+              label(for="") 人数
+              select(id="order",name="order")
+                option 10人
+            section.time_total
+              label(for="") 总耗时
+              select(id="order",name="order")
+                option 8天
+            section.num_of_deal
+              label(for="") 成交项
+              select(id="order",name="order")
+                option 10项
+            section.search_btn
+              input(type="submit",id="order",value="搜 索")
 
-    div.search
-      form.search_form
-        fieldset
-          legend 查询
-          section.order
-            label(for="order") 查询项
-            select(id="order",name="order")
-              option 第一项
-          section.buyer
-            label(for="") 买方
-            select(id="order",name="order")
-              option 小A
-          section.seller
-            label(for="") 卖方
-            select(id="order",name="order")
-              option 小C
-          section.date
-            label(for="") 日期
-            input(type="date",id="order",name="order",value="2016-04-01")
-          section.num_of_pp
-            label(for="") 人数
-            select(id="order",name="order")
-              option 10人
-          section.time_total
-            label(for="") 总耗时
-            select(id="order",name="order")
-              option 8天
-          section.num_of_deal
-            label(for="") 成交项
-            select(id="order",name="order")
-              option 10项
-          section.search
-            input(type="submit",id="order",value="搜索")
+        div.search_history
+          div.toleft
 
-      div.search_history
-    div.stat
-      ul
-        li.green
-        li.blue
-        li.red
-        li.yellow
-    div.proj
-      div.material
-      div.proj_submit
-    div.other
-      div.calender
-      div.car_top_brands
+          div.one
+            p
+              |10:00 am
+            p
+              span
+                |¥
+              span
+                |1200
+          div.two
+            p
+              |11:00 am
+            p
+              span
+                |¥
+              span
+                |1300
+          div.three
+            p
+              |12:00 am
+            p
+              span
+                |¥
+              span
+                |1200
+          div.four
+            p
+              |01:00 pm
+            p
+              span
+                |¥
+              span
+                |1400
+          div.five
+            p
+              |02:00 pm
+            p
+              span
+                |¥
+              span
+                |1500
+          div.six
+            p
+              |03:00 pm
+            p
+              span
+                |¥
+              span
+                |1800
+          div.toright
+          div.history_query
+            p
+              |历史查询
+      div.stat
+        p
+          |2016年4月份统计
+        ul
+          li.green
+            p
+              span
+                |13311
+              span
+                |成交量
+            div
+          li.blue
+            p
+              span
+                |13311
+              span
+                |成交量
+            div
+          li.red
+            p
+              span
+                |13311
+              span
+                |成交量
+            div
+          li.yellow
+            p
+              span
+                |13311
+              span
+                |成交量
+            div
+      div.proj
+        div.material
+          h2.proj_title1
+            |第一组项目
+          ul.nav_tabs
+            li.proj1.active
+              a(href="")
+                |项目一
+            li.proj2
+              a(href="")
+                |项目一
+            li.proj3
+              a(href="")
+                |项目一
+            li.proj4
+               a(href="")
+                |项目一
+            li.proj5
+              a(href="")
+                |项目一
+          div.tab_content
+            div.tab_pane.proj1
+              table
+                tr
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+
+                tr
+                  td
+                    |购买材料一
+
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+
+                tr
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+
+                tr
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+
+                tr
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+
+                tr
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+                  td
+                    |购买材料一
+
+            div.tab_pane.proj2
+              table
+            div.tab_pane.proj3
+              table
+            div.tab_pane.proj4
+              table
+            div.tabl_pane.proj5
+              table
+        div.proj_submit
+          h2.proj_title2
+            |第一组项目
+          form.search_proj
+            fieldset
+              legend
+                |Proj_search
+              section.proj_title
+                label(for="title")
+                  |标题
+                input(type="text",name="title",id="title",placeholder="项目报表三")
+              section.proj_price
+                label(for="price")
+                  |价格
+                input(type="text",name="price",id="price",placeholder="$158")
+              section.proj_manager
+                label(for="manager")
+                  |负责人
+                input(type="text",name="manager",id="manager",placeholder="小A")
+              section.proj_description
+                label(for="description")
+                  |详细描述
+                textarea(name="description",id="description",placeholder="该项目的负责人是....")
+              section.proj_agreement
+                input(type="checkbox",name="agreement",id="agreement",checked)
+                label(for="agreement")
+                  |遵守保密协议
+              section.proj_search
+                input(type="submit",value="搜索",id="proj_search",name="proj_search")
+
+      div.other
+        div.calendar
+          h2
+            |日历
+          div.cal_main
+            div.cal_header
+              select(id="year",name="year")
+                option(value="2015")
+                  |2015年
+                option(value="2016",selected="selected")
+                  |2016年
+                option(value="2017")
+                  |2017年
+                option(value="2018")
+                  |2018年
+                option(value="2019")
+                  |2019年
+                option(value="2020")
+                  |2020年
+              select(id="month",name="month")
+                option(value="1")
+                  |1月
+                option(value="2")
+                  |2月
+                option(value="3")
+                  |3月
+                option(value="4")
+                  |4月
+                option(value="5")
+                  |5月
+                option(value="6",selected="selected")
+                  |6月
+                option(value="7")
+                  |7月
+                option(value="8")
+                  |8月
+                option(value="9")
+                  |9月
+                option(value="10")
+                  |10月
+                option(value="11")
+                  |11月
+                option(value="12")
+                  |12月
+              select(id="marked_date",name="marked_date")
+                option(value="")
+                  |标注日期
+              input(type="submit",id="return_today",name="return_today",value="返回今天")
+
+            table.cal_weekday
+              tr.weekdays
+                th
+                  |一
+                th
+                  |二
+                th
+                  |三
+                th
+                  |四
+                th
+                  |五
+                th
+                  |六
+                th
+                  |日
+            table.cal_day
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td
+              tr
+                td
+                td
+                td
+                td
+                td
+                td
+                td
+
+
+
+
+        div.car_top_brands
+          h2
+            |汽车行业品牌
+          table.ranking
+            tr.head
+              th
+                |排名
+              th
+                |品牌
+              th
+                |搜索指数
+            tr.spec
+              td
+                |1
+              td
+                |大众
+              td
+                div.value
+                  |48912001
+                div.meter
+                  div.son.one
+            tr.spec
+              td
+               |2
+              td
+                |丰田
+              td
+                div.value
+                  |29307333
+
+                div.meter
+                  div.son.two
+            tr.spec
+              td
+                |3
+              td
+                |奥迪
+              td
+                div.value
+                  |23139070
+
+                div.meter
+                  div.son.three
+            tr.spec
+              td
+                |4
+              td
+                |本田
+              td
+                div.value
+                  |22885564
+
+                div.meter
+                  div.son.four
+            tr.spec
+              td
+                |5
+              td
+                |福特
+              td
+                div.value
+                  |22324792
+
+                div.meter
+                  div.son.five
+            tr.spec
+              td
+                |6
+              td
+                |宝马
+              td
+                div.value
+                  |21444077
+
+                div.meter
+                  div.son.six
+            tr.spec
+              td
+                |7
+              td
+                |现代
+              td
+                div.value
+                  |20114969
+                div.meter
+                  div.son.seven
+
+            tr.spec
+              td
+                |8
+              td
+                |起亚
+              td
+                div.value
+                  |19251680
+                div.meter
+                  div.son.eight
+
+            tr.spec
+              td
+                |9
+              td
+                |奔驰
+              td
+                div.value
+                  |19172837
+                div.meter
+                  div.son.nine
+
+            tr.spec
+              td
+                |10
+              td
+                |别克
+              td
+                div.value
+                 |18544027
+                div.meter
+                  div.son.ten
+
+  script(type="text/javascript",src="task09.js")
+
 
 
