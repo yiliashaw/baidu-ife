@@ -7,46 +7,46 @@ head
 
 body
   header
-    img(src="images/logo.png", alt="logo")
-    form(action="")
+    img.logo(src="images/logo.png", alt="logo")
+    form.search_page(action="")
           label.search(for="search")
           input(type="search",name="search",id="search")
     input(type="button",value="登录",id="login",name="login" )
   div.container
     aside
-      figure
+      figure.avatar
         img(src="images/headpic.png", alt="headshot")
         figcaption ABC123
-      ul
+      ul.brief_info
         li.collect
           span 110
           span 收藏
         li.fans
           span 313
           span 粉丝
-      nav
+      nav.nav_dir
         ul
-          li.report.first
+          li.report.first.active
             span.icon
             span.dir_name 个人报表
             ul
-              li.file1.second
-                span.icon
+              li.file.second
+                span.icon-arrow
                 span.icon
                 span.dir_name 文件一
-              li.file2.second
-                span.icon
+              li.file.second.active
+                span.icon-arrow
                 span.icon
                 span.dir_name 文件二
                 ul
-                li.doc1.third
+                li.doc.third.active
                   span.icon
                   span.dir_name 文档1
-                li.doc2.third
+                li.doc.third
                   span.icon
                   span.dir_name 文档2
-              li.file3.second
-                span.icon
+              li.file.second
+                span.icon-arrow
                 span.icon
                 span.dir_name 文件三
           li.collection.first
@@ -81,99 +81,97 @@ body
       //- div.wrapper
       div.search_form_container
         form.search_form
-          fieldset
-            legend 查询
-            section.order
-              label(for="order") 查询项
-              select(id="order",name="order")
-                option 第一项
-            section.buyer
-              label(for="") 买方
-              select(id="order",name="order")
-                option 小A
-            a(href="")
-              |换
-            section.seller
-              label(for="") 卖方
-              select(id="order",name="order")
-                option 小C
-            section.date
-              label(for="") 日期
-              input(type="date",id="order",name="order",value="2016-04-01")
-            section.num_of_pp
-              label(for="") 人数
-              select(id="order",name="order")
-                option 10人
-            section.time_total
-              label(for="") 总耗时
-              select(id="order",name="order")
-                option 8天
-            section.num_of_deal
-              label(for="") 成交项
-              select(id="order",name="order")
-                option 10项
-            section.search_btn
-              input(type="submit",id="order",value="搜 索")
+          section.order
+            label(for="order") 查询项
+            select(id="order",name="order")
+              option 第一项
+          section.buyer
+            label(for="") 买方
+            select(id="order",name="order")
+              option 小A
+          a.reverse(href="")
+            |换
+          section.seller
+            label(for="") 卖方
+            select(id="order",name="order")
+              option 小C
+          section.date
+            label(for="") 日期
+            input(type="date",id="order",name="order",value="2016-04-01")
+          section.num_of_pp
+            label(for="") 人数
+            select(id="order",name="order")
+              option 10人
+          section.time_total
+            label(for="") 总耗时
+            select(id="order",name="order")
+              option 8天
+          section.num_of_deal
+            label(for="") 成交项
+            select(id="order",name="order")
+              option 10项
+          section.search_btn
+            input(type="submit",id="order",value="搜 索")
 
         div.search_history
           div.toleft
 
           div.history.one
-            p
+            p.time
               |10:00 am
-            p
-              span
+            p.price
+              span.currency
                 |¥
-              span
+              span.amount
                 |1200
           div.history.two
-            p
+            p.time
               |11:00 am
-            p
-              span
+            p.price
+              span.currency
                 |¥
-              span
+              span.amount
                 |1300
           div.history.three
-            p
+            p.time
               |12:00 am
-            p
-              span
+            p.price
+              span.currency
                 |¥
-              span
+              span.amount
                 |1200
           div.history.four
-            p
+            p.time
               |01:00 pm
-            p
-              span
+            p.price
+              span.currency
                 |¥
-              span
+              span.amount
                 |1400
           div.history.five
-            p
+            p.time
               |02:00 pm
-            p
-              span
+            p.price
+              span.currency
                 |¥
-              span
+              span.amount
                 |1500
           div.history.six
-            p
+            p.time
               |03:00 pm
-            p
-              span
+            p.price
+              span.currency
                 |¥
-              span
+              span.amount
                 |1800
           div.toright
           div.history_query
             p
               |历史查询
       div.stat
-        p
+        p.stat_title
           |2016年4月份统计
-        ul
+        ul.stat_graphic
           li.green
             p
               span
@@ -293,31 +291,28 @@ body
           h2.proj_title2
             |第一组项目
           form.search_proj
-            fieldset
-              legend
-                |Proj_search
-              section.proj_title
-                label(for="title")
-                  |标题
-                input(type="text",name="title",id="title",placeholder="项目报表三")
-              section.proj_price
-                label(for="price")
-                  |价格
-                input(type="text",name="price",id="price",placeholder="¥158")
-              section.proj_manager
-                label(for="manager")
-                  |负责人
-                input(type="text",name="manager",id="manager",placeholder="小A")
-              section.proj_description
-                label(for="description")
-                  |详细描述
-                textarea(name="description",id="description",placeholder="该项目的负责人是....")
-              section.proj_agreement
-                input(type="checkbox",name="agreement",id="agreement",checked)
-                label(for="agreement")
-                  |遵守保密协议
-              section.proj_search
-                input(type="submit",value="搜索",id="proj_search",name="proj_search")
+            section.proj_title
+              label(for="title")
+                |标题
+              input(type="text",name="title",id="title",placeholder="项目报表三")
+            section.proj_price
+              label(for="price")
+                |价格
+              input(type="text",name="price",id="price",placeholder="¥158")
+            section.proj_manager
+              label(for="manager")
+                |负责人
+              input(type="text",name="manager",id="manager",placeholder="小A")
+            section.proj_description
+              label(for="description")
+                |详细描述
+              textarea(name="description",id="description",placeholder="该项目的负责人是....")
+            section.proj_agreement
+              input(type="checkbox",name="agreement",id="agreement",checked)
+              label(for="agreement")
+                |遵守保密协议
+            section.proj_search
+              input(type="submit",value="搜索",id="proj_search",name="proj_search")
 
       div.other
         div.calendar

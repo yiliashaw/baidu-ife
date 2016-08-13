@@ -2,30 +2,51 @@
   margin: 0;
   padding: 0;
 }
+li {
+  list-style-type: none;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #aaa;
+  line-height: 1.381;
+  height: 40px;
+  background-color: #f4f5f6;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
 header {
   background-color: #2289bf;
   height: 57px;
   width: 100%;
-  min-width: 1280px;
   position: relative;
-}
-header>img {
-  position: absolute;
-  left: 50px;
-  top: 10px;
-}
-header>form {
-  position: absolute;
-  right: 100px;
-  top: 15px;
-  float: left;
 }
 header:after {
   content: '';
   clear: both;
   display: block;
 }
-header form input {
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+.search_page {
+  position: absolute;
+  right: 100px;
+  top: 15px;
+  float: left;
+}
+.search_page input {
   width: 313px;
   height: 28px;
   line-height: 28px;
@@ -38,7 +59,7 @@ header form input {
   background-position: 15px 5px;
   text-indent: 35px;
 }
-header>input {
+#login {
   color: #fff;
   font: 12px/2.25 'Adobe Heiti Std';
   background-color: #2289bf;
@@ -52,44 +73,39 @@ header>input {
   right: 2px;
   top: 15px;
 }
-div.container {
-  width: 100%;
-  min-width: 1280px;
-  margin: 0 auto;
+.container {
   display: flex;
-  flex-direction: row;
+  flex: 1 0;
 }
 aside {
   background-color: #2a2e3d;
-  width: 260px;
-  height: 1213px;
+  flex: 0 0 260px;
 }
-aside>figure {
+.avatar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 15px;
 }
-aside>figure>img {
+.avatar img {
   width: 57px;
   height: 57px;
   border-radius: 50%;
   border: 1px solid #d4d4d6;
   padding: 3px;
 }
-aside>figure>figcaption {
+.avatar figcaption {
   color: #f6f5f5;
   font: 16px 'SimHei';
   padding: 0 23px;
 }
-aside>ul {
+.brief_info {
   display: flex;
   justify-content: center;
   align-content: center;
 }
-aside>ul>li {
-  list-style-type: none;
+.brief_info li {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -97,109 +113,95 @@ aside>ul>li {
   font: 12px 'SimHei';
   padding: 0 35px;
 }
-aside>ul>li span:first-child {
+.brief_info li span:first-child {
   font-size: 14px;
 }
-aside>ul>li:first-child {
-  border-right: 1px solid #6e8095;
+.brief_info li:first-child {
+  border-right: 2px solid rgba(56,61,78,0.5);
 }
-aside>nav {
+.nav_dir {
   padding: 10px 40px;
-}
-aside>nav li {
-  list-style-type: none;
-}
-aside>nav>ul span.dir_name {
   color: #6e8095;
   font: 12px/4 'SimHei';
+}
+.dir_name {
   padding-left: 12px;
 }
-aside>nav>ul span.icon {
+.icon-arrow,
+.icon {
   background-repeat: no-repeat;
   display: inline-block;
   width: 12px;
   height: 12px;
+  margin-right: 7px;
+  background-position: 50% 50%;
 }
-aside>nav>ul li.report>.icon {
+.report>.icon {
   background-image: url("images/report.png");
 }
-aside>nav>ul li.file1>.icon {
-  background-image: url("images/file1.png");
-  padding-right: 3px;
-}
-aside>nav>ul li.file1 .icon:nth-of-type(2) {
+.file>.icon {
   background-image: url("images/file.png");
 }
-aside>nav>ul li.file2>.icon {
-  background-image: url("images/file2.png");
+.file .icon-arrow {
+  background-image: url("images/arrow.png");
 }
-aside>nav>ul li.file2>.icon:nth-of-type(1) {
-  background-image: url("images/11.png");
-  padding-right: 3px;
-  background-position: 0px 4px;
-}
-aside>nav>ul li.doc1>.icon {
-  background-image: url("images/doc1.png");
-}
-aside>nav>ul li.doc2>.icon {
+.doc>.icon {
   background-image: url("images/doc.png");
 }
-aside>nav>ul li.file3>.icon {
-  background-image: url("images/file1.png");
-}
-aside>nav>ul li.file3 .icon:nth-of-type(2) {
-  background-image: url("images/file.png");
-}
-aside>nav>ul li.collection>.icon {
+.collection>.icon {
   background-image: url("images/star.png");
 }
-aside>nav>ul li.myshare>.icon {
+.myshare>.icon {
   background-image: url("images/myshare.png");
 }
-aside>nav>ul li.gallery>.icon {
+.gallery>.icon {
   background-image: url("images/star.png");
 }
-aside>nav>ul li.growth_record>.icon {
+.growth_record>.icon {
   background-image: url("images/star.png");
 }
-aside>nav>ul li.account>.icon {
+.account>.icon {
   background-image: url("images/account.png");
 }
-aside>nav>ul .second {
+.second {
   padding-left: 30px;
 }
-aside>nav>ul .third {
+.third {
   padding-left: 55px;
 }
-aside>nav>ul .second>.dir_name,
-aside>nav>ul .third>.dir_name {
+.second>.dir_name,
+.third>.dir_name {
   font: 12px/2.5 'SimHei';
   padding-left: 5px;
 }
-aside>nav>ul .report>.dir_name,
-aside>nav>ul .file2>.dir_name,
-aside>nav>ul .doc1>.dir_name {
+.active>.dir_name {
   color: #fff;
 }
-div#main {
-  width: 100%;
-  height: 1213px;
+.active>.icon,
+.active>.icon-arrow {
+  -webkit-filter: brightness(4);
+}
+.active>.icon-arrow {
+  transform: rotate(90deg);
+}
+#main {
+  flex: 1 0 890px;
   background-color: #eee;
 }
-div.directory {
+.directory {
   height: 31px;
   background-color: #fff;
   display: flex;
   align-items: center;
 }
-div.directory p {
+.directory p {
   padding-left: 30px;
   font-size: 12.278px;
   font-family: "SimHei";
   color: #aaa;
   line-height: 1.852;
 }
-div.directory p span:last-child {
+.directory p span:last-child {
   color: #6898c2;
 }
 .search_form_container {
@@ -207,177 +209,167 @@ div.directory p span:last-child {
   height: 160px;
   margin: 20px auto;
 }
-.search_form_container .search_form {
+.search_form {
   height: 85px;
   background-image: url("images/change.png");
   background-repeat: no-repeat;
   background-position: 333px 25px;
-}
-.search_form_container fieldset {
   border: none;
   position: relative;
   background-color: #fff;
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
+  font-size: 12px;
+  font-family: "SimHei";
+  line-height: 2.167;
 }
-.search_form_container fieldset:after {
+.search_form:after {
   content: '';
   height: 85px;
   display: block;
 }
-.search_form_container fieldset legend {
-  display: none;
-}
-.search_form_container fieldset a {
-  font-size: 12px;
-  font-family: "SimHei";
-  color: #fff;
-  line-height: 2.167;
-  text-decoration: none;
-  position: absolute;
-  left: 346px;
-  top: 30px;
-}
-.search_form_container fieldset label {
-  font-size: 12px;
-  font-family: "SimHei";
+.search_form label {
   color: #aaa;
-  line-height: 2.167;
 }
-.search_form_container fieldset select {
-  font-size: 12px;
-  font-family: "SimHei";
+.search_form select {
   color: #323333;
-  line-height: 2.167;
   outline: none;
   height: 25px;
   text-indent: 5px;
+  font-size: 12px;
+  font-family: "SimHei";
 }
-.search_form_container fieldset section {
+.search_form section {
   position: absolute;
 }
-.search_form_container fieldset .order {
+.order {
   left: 30px;
   top: 15px;
 }
-.search_form_container fieldset .order select {
+.order select {
   width: 70px;
   margin-left: 16px;
 }
-.search_form_container fieldset .buyer {
+.buyer {
   left: 180px;
   top: 15px;
 }
-.search_form_container fieldset .buyer select {
+.buyer select {
   width: 110px;
   margin-left: 16px;
 }
-.search_form_container fieldset .seller {
+.seller {
   left: 180px;
   top: 45px;
 }
-.search_form_container fieldset .seller select {
+.seller select {
   width: 110px;
   margin-left: 16px;
 }
-.search_form_container fieldset .date {
+.date {
   left: 400px;
   top: 15px;
 }
-.search_form_container fieldset .date input {
+.date input {
   width: 120px;
   margin-left: 16px;
   text-indent: 5px;
-  font-size: 12px;
-  font-family: "SimHei";
   color: #323333;
   outline: none;
   height: 22px;
 }
-.search_form_container fieldset .num_of_pp {
+.num_of_pp {
   left: 400px;
   top: 45px;
 }
-.search_form_container fieldset .num_of_pp select {
+.num_of_pp select {
   width: 70px;
   margin-left: 16px;
 }
-.search_form_container fieldset .num_of_deal {
+.num_of_deal {
   left: 530px;
   top: 45px;
 }
-.search_form_container fieldset .num_of_deal select {
+.num_of_deal select {
   width: 120px;
   margin-left: 16px;
 }
-.search_form_container fieldset .time_total {
+.time_total {
   left: 580px;
   top: 15px;
 }
-.search_form_container fieldset .time_total select {
+.time_total select {
   width: 70px;
   margin-left: 16px;
 }
-.search_form_container fieldset .search_btn {
+.search_btn {
   left: 730px;
   top: 30px;
 }
-.search_form_container fieldset .search_btn input {
+.search_btn input {
   width: 50px;
   height: 25px;
   background-color: #388ac1;
   font-size: 12px;
   font-family: "SimHei";
   color: #fff;
-  line-height: 2.167;
   border: none;
 }
-.search_form_container .search_history {
-  height: 65px;
+.reverse {
+  font-size: 12px;
+  font-family: "SimHei";
+  color: #fff;
+  line-height: 2.167;
+  text-decoration: none;
+  position: absolute;
+  left: 347px;
+  top: 30px;
+}
+.search_history {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.search_form_container .search_history div {
+.search_history div {
   background-color: #fff;
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
   height: 65px;
 }
-.search_form_container .search_history .toleft,
-.search_form_container .search_history .toright {
+.toleft,
+.toright {
   width: 30px;
   background-repeat: no-repeat;
   background-position: center;
 }
-.search_form_container .search_history .toleft {
+.toleft {
   background-image: url("images/arrow_left.png");
 }
-.search_form_container .search_history .toright {
+.toright {
   background-image: url("images/arrow_right.png");
 }
-.search_form_container .search_history .history {
+.history {
   width: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.search_form_container .search_history .history p:nth-of-type(1) {
+.time {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #323333;
   line-height: 1.2;
   margin-bottom: 10px;
 }
-.search_form_container .search_history .history p span:nth-of-type(1) {
+.currency {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #aeaeae;
   font-weight: bolder;
 }
-.search_form_container .search_history .history p span:nth-of-type(2) {
+.amount {
   font-size: 21px;
   font-family: "Microsoft YaHei";
   color: #ec6500;
@@ -386,11 +378,11 @@ div.directory p span:last-child {
   -webkit-transform: scale(0.949, 1);
   -ms-transform: scale(0.949, 1);
 }
-.search_form_container .search_history .history:hover {
+.history:hover {
   border-top: 3px solid #4389c9;
   box-sizing: border-box;
 }
-.search_form_container .search_history .history_query {
+.history_query {
   width: 130px;
   display: flex;
   align-items: center;
@@ -399,7 +391,7 @@ div.directory p span:last-child {
   background-repeat: no-repeat;
   background-position: 20px 15px;
 }
-.search_form_container .search_history .history_query p {
+.history_query p {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #535353;
@@ -412,21 +404,20 @@ div.directory p span:last-child {
   height: 95px;
   margin-bottom: 10px;
 }
-.stat p {
+.stat_title {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #323333;
   line-height: 1.62;
 }
-.stat ul {
+.stat_graphic {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.stat ul li {
+.stat_graphic li {
   height: 70px;
   width: 200px;
-  list-style-type: none;
   background-color: #fff;
   box-sizing: border-box;
   display: flex;
@@ -436,48 +427,48 @@ div.directory p span:last-child {
   justify-content: space-between;
   border: 1px solid #ddd;
 }
-.stat ul li div {
+.stat_graphic li div {
   width: 60px;
   height: 45px;
 }
-.stat ul li p {
+.stat_graphic li p {
   display: flex;
   flex-direction: column;
 }
-.stat ul li p span:nth-of-type(1) {
+.stat_graphic li p span:nth-of-type(1) {
   font-size: 12px;
   font-family: "SimHei";
   color: #323333;
   line-height: 2.051;
 }
-.stat ul li p span:nth-of-type(2) {
+.stat_graphic li p span:nth-of-type(2) {
   font-size: 10px;
   font-family: "SimHei";
   color: #aaa;
   line-height: 2.005;
 }
-.stat ul .green {
+.stat_graphic .green {
   border-left: 4px solid #44b29e;
 }
-.stat ul .green div {
+.stat_graphic .green div {
   background-color: #44b29e;
 }
-.stat ul .blue {
+.stat_graphic .blue {
   border-left: 4px solid #388ac1;
 }
-.stat ul .blue div {
+.stat_graphic .blue div {
   background-color: #388ac1;
 }
-.stat ul .red {
+.stat_graphic .red {
   border-left: 4px solid #cf4a36;
 }
-.stat ul .red div {
+.stat_graphic .red div {
   background-color: #cf4a36;
 }
-.stat ul .yellow {
+.stat_graphic .yellow {
   border-left: 4px solid #e2cd47;
 }
-.stat ul .yellow div {
+.stat_graphic .yellow div {
   background-color: #e2cd47;
 }
 .proj {
@@ -492,32 +483,17 @@ div.directory p span:last-child {
   border-radius: 8px;
   background-color: #fff;
   overflow: hidden;
-}
-.proj .material {
-  width: 530px;
-}
-.proj .proj_submit {
-  width: 350px;
-}
-.proj h2 {
-  font-size: 12px;
-  font-family: "SimHei";
-  color: #aaa;
-  line-height: 1.381;
-  height: 40px;
-  background-color: #f4f5f6;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
   border-bottom: 1px solid #ddd;
 }
-.proj .nav_tabs {
+.material {
+  width: 530px;
+}
+.nav_tabs {
   display: flex;
   flex-direction: row;
   margin: 15px 20px 0 20px;
 }
-.proj .nav_tabs li {
-  list-style-type: none;
+.nav_tabs li {
   margin-right: 5px;
   width: 80px;
   height: 28px;
@@ -535,13 +511,13 @@ div.directory p span:last-child {
   border: 1px solid #ededf0;
   border-sizing: border-box;
 }
-.proj .nav_tabs .active {
+.nav_tabs .active {
   border: 1px solid #ddd;
   border-radius: 5px 5px 0 0;
   background-color: #fff;
   position: relative;
 }
-.proj .nav_tabs .active:after {
+.nav_tabs .active:after {
   position: absolute;
   left: 0;
   right: 0;
@@ -552,7 +528,7 @@ div.directory p span:last-child {
   width: 80px;
   background-color: #fff;
 }
-.proj .tab_content {
+.tab_pane {
   margin: 0 20px 25px 20px;
   width: 490px;
   height: 250px;
@@ -562,11 +538,11 @@ div.directory p span:last-child {
   justify-content: center;
   align-items: center;
 }
-.proj .tab_content table {
+.tab_pane table {
   border: 1px solid #ddd;
   border-collapse: collapse;
 }
-.proj .tab_content table td {
+.tab_pane table td {
   width: 101px;
   height: 30px;
   border: 1px solid #ddd;
@@ -576,36 +552,36 @@ div.directory p span:last-child {
   line-height: 2.5;
   text-align: center;
 }
-.proj .tab_content table td:hover {
+.tab_pane table td:hover {
   background-color: #f4f6f7;
 }
-.proj .proj_submit form fieldset {
+.proj_submit {
+  width: 350px;
+}
+.search_proj {
   height: 270px;
   margin-top: 15px;
   border: none;
 }
-.proj .proj_submit form fieldset:after {
+.search_proj:after {
   conten: "";
   display: block;
   clear: both;
 }
-.proj .proj_submit form fieldset legend {
-  display: none;
-}
-.proj .proj_submit form fieldset label {
+.search_proj label {
   font-size: 12px;
   font-family: "Microsoft YaHei";
   color: #c3c2c2;
   line-height: 1.381;
   text-indent: 5px;
 }
-.proj .proj_submit form fieldset section {
+.search_proj section {
   display: flex;
   flex-direction: column;
   padding: 2px 20px;
 }
-.proj .proj_submit form fieldset section input,
-.proj .proj_submit form fieldset section textarea {
+.search_proj section input,
+.search_proj section textarea {
   border: none;
   border-bottom: 1px solid #ddd;
   height: 30px;
@@ -613,49 +589,49 @@ div.directory p span:last-child {
   text-indent: 5px;
   font-size: 12px;
 }
-.proj .proj_submit form fieldset section input::-webkit-input-placeholder,
-.proj .proj_submit form fieldset section textarea::-webkit-input-placeholder {
+.search_proj section input::-webkit-input-placeholder,
+.search_proj section textarea::-webkit-input-placeholder {
   color: #000;
 }
-.proj .proj_submit form fieldset section input::-moz-placeholder,
-.proj .proj_submit form fieldset section textarea::-moz-placeholder {
+.search_proj section input::-moz-placeholder,
+.search_proj section textarea::-moz-placeholder {
   color: #000;
 }
-.proj .proj_submit form fieldset section input:-ms-input-placeholder,
-.proj .proj_submit form fieldset section textarea:-ms-input-placeholder {
+.search_proj section input:-ms-input-placeholder,
+.search_proj section textarea:-ms-input-placeholder {
   color: #000;
 }
-.proj .proj_submit form fieldset section textarea {
+.search_proj section textarea {
   height: 120px;
   padding: 2px;
   resize: none;
 }
-.proj .proj_submit form fieldset .proj_title {
+.search_proj .proj_title {
   padding-bottom: 0;
 }
-.proj .proj_submit form fieldset .proj_price {
+.search_proj .proj_price {
   float: left;
   width: 30%;
   padding: 0 0 0 20px;
   border-right: 1px solid #ddd;
 }
-.proj .proj_submit form fieldset .proj_manager {
+.search_proj .proj_manager {
   padding: 0 20px 0 0;
 }
-.proj .proj_submit form fieldset .proj_agreement {
+.search_proj .proj_agreement {
   flex-direction: row;
   align-items: center;
   float: left;
 }
-.proj .proj_submit form fieldset .proj_agreement input {
+.search_proj .proj_agreement input {
   border: none;
 }
-.proj .proj_submit form fieldset .proj_search {
+.search_proj .proj_search {
   float: right;
   width: 51px;
   height: 26px;
 }
-.proj .proj_submit form fieldset .proj_search input {
+.search_proj .proj_search input {
   background-color: #388ac1;
   font-size: 12px;
   font-family: "SimHei";
@@ -676,115 +652,99 @@ div.directory p span:last-child {
   overflow: hidden;
   background-color: #fff;
 }
-.other >div >h2 {
-  font-size: 12px;
-  font-family: "SimHei";
-  color: #aaa;
-  line-height: 1.381;
-  height: 40px;
-  background-color: #f4f5f6;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-  border-bottom: 1px solid #ddd;
-}
-.other .calendar {
+.calendar {
   width: 350px;
 }
-.other .calendar .cal_main {
+.cal_main {
   height: 290px;
   width: 310px;
   margin: 8px auto;
+  font-family: "SimHei";
+  font-size: 12px;
+  color: #535353;
+  line-height: 1.2;
 }
-.other .calendar .cal_main .cal_header {
+.cal_header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.other .calendar .cal_main .cal_header select,
-.other .calendar .cal_main .cal_header input {
+.cal_header select,
+.cal_header input {
   outline: none;
   height: 20px;
-  font-size: 12px;
+  border: 1px solid #ccc;
   font-family: "SimHei";
+  font-size: 12px;
   color: #535353;
   line-height: 1.2;
-  border: 1px solid #ccc;
 }
-.other .calendar .cal_main .cal_header #year {
+.cal_header #year {
   width: 62px;
 }
-.other .calendar .cal_main .cal_header #month {
+.cal_header #month {
   width: 85px;
 }
-.other .calendar .cal_main .cal_header #marked_date {
+.cal_header #marked_date {
   width: 75px;
 }
-.other .calendar .cal_main .cal_header #return_today {
+.cal_header #return_today {
   width: 62px;
   background-color: #fff;
 }
-.other .calendar .cal_main .cal_weekday {
+.cal_weekday {
   border-top: 1px solid #a9cfec;
   width: 100%;
   border-collapse: collapse;
 }
-.other .calendar .cal_main .cal_weekday .weekdays {
-  font-family: "SimHei";
-  color: #535353;
-  font-size: 12px;
-  line-height: 1.2;
-}
-.other .calendar .cal_main .cal_weekday .weekdays th {
+.cal_weekday .weekdays th {
   border-bottom: 1px solid #ddd;
   height: 30px;
 }
-.other .calendar .cal_main .cal_day {
+.cal_day {
   width: 100%;
   height: 100%;
   margin-top: 5px;
 }
-.other .calendar .cal_main .cal_day tbody {
+.cal_day tbody {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.other .calendar .cal_main .cal_day tbody tr {
+.cal_day tbody tr {
   display: flex;
   justify-content: space-between;
 }
-.other .calendar .cal_main .cal_day tbody tr td {
+.cal_day tbody tr td {
   width: 40px;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-family: "SimHei";
   color: #323333;
   cursor: pointer;
 }
-.other .car_top_brands {
+.car_top_brands {
   width: 530px;
 }
-.other .car_top_brands .ranking {
+.ranking {
   width: 450px;
   height: 270px;
   margin: 20px auto;
   border: 1px solid #ddd;
   border-collapse: collapse;
 }
-.other .car_top_brands .ranking tr {
+.ranking tr {
   height: 25px;
 }
-.other .car_top_brands .ranking tr th {
+.ranking tr th {
   font-size: 13px;
   font-family: "SimHei";
   color: #231815;
   line-height: 2.077;
   border: 1px solid #ddd;
 }
-.other .car_top_brands .ranking tr td {
+.ranking tr td {
   border: 1px solid #ddd;
   text-align: center;
   font-size: 12px;
@@ -792,25 +752,25 @@ div.directory p span:last-child {
   color: #323333;
   line-height: 2;
 }
-.other .car_top_brands .ranking tr td .value {
+.ranking tr td .value {
   display: inline-block;
 }
-.other .car_top_brands .ranking tr td .meter {
+.ranking tr td .meter {
   display: inline-block;
   height: 5px;
   width: 160px;
   margin-left: 20px;
   background-color: #dcdcdc;
 }
-.other .car_top_brands .ranking tr td .meter .son {
+.ranking tr td .meter .son {
   height: 100%;
 }
-.other .car_top_brands .ranking td:nth-of-type(1) {
+.ranking td:nth-of-type(1) {
   width: 65px;
 }
-.other .car_top_brands .ranking td:nth-of-type(2) {
+.ranking td:nth-of-type(2) {
   width: 90px;
 }
-.other .car_top_brands .ranking .spec:hover {
+.spec:hover {
   background-color: #f3f5f6;
 }
