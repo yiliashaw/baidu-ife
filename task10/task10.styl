@@ -1,0 +1,46 @@
+*
+  margin:0
+  padding: 0
+
+
+.container
+  width:80%;
+  border:1px solid #ddd;
+  margin:20px auto;
+  padding:20px;
+.box
+  width:150px;
+  font:40px 'SimHei' ;
+  border:1px solid;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+.one
+  border-color:#f00;
+  height:120px;
+.two
+  border-color:#f00;
+  height:100px;
+.three
+  border-color:#f00;
+  height:40px;
+.four
+  border-color:#00f;
+  height:200px;
+
+@media screen and (min-width:641px)
+  .container
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+@media screen and (max-width:640px)
+  .container
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  .four
+    order:-1
+
+
+
