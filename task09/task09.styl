@@ -1,43 +1,77 @@
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+
 *
   margin: 0
   padding: 0
+
+input
+textarea
+  +placeholder()
+    color inherit
+    font-size: inherit
+    font-family: inherit
+    line-height: inherit
+input
+select
+button
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit
 li
   list-style-type: none
 html
   height: 100%
+
+column-left-width = 260px
+column-right-width = 890px
+
 body
-  height: 100%;
+  min-width column-left-width + column-right-width
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  font: 12px/1.2 "SimHei";
 h2
   font-size: 12px
-  font-family: "SimHei"
   color: rgb(170, 170, 170)
-  line-height: 1.381
-  height: 40px
+  line-height: 40px;
   background-color: #f4f5f6
-  display: flex
-  align-items: center
   padding-left: 10px
+
+
+.card
+  border:1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
 
 header
   background-color: #2289bf
   height: 57px
-  width:100%
-  position: relative
-  &:after
-    content: ''
-    clear:both
-    display: block
+  display: flex;
+  align-items: center;
+  // position: relative
+  // &:after
+  //   content: ''
+  //   clear:both
+  //   display: block
 .logo
-  position: absolute
-  left:50px
-  top:10px
+  margin-left:50px;
+  // position: absolute
+  // left:50px
+  // top:10px
 .search_page
-  position: absolute
-  right:100px
-  top:15px
-  float:left
+  margin-left:auto;
+  // position: absolute
+  // right:100px
+  // top:15px
+  // float:left
   input
     width: 313px
     height: 28px
@@ -52,17 +86,19 @@ header
     text-indent: 35px
 #login
   color: #FFFFFF
-  font: 12px/2.25 'Adobe Heiti Std'
+  line-height 2.25
   background-color:  #2289bf
   border:none
   outline: none;
-  padding:0 35px
   background-image: url(images/login.png)
   background-repeat: no-repeat
   background-position: 15px 5px
-  position: absolute
-  right:2px
-  top:15px
+  padding-left:39px;
+  margin-right:36px;
+  //padding:0 35px
+  // position: absolute
+  // right:2px
+  // top:15px
 
 
 .container
@@ -72,7 +108,7 @@ header
 //left
 aside
   background-color:#2a2e3d
-  flex:0 0 260px;
+  flex:0 0 column-left-width;
 
 //head pic
 .avatar
@@ -89,7 +125,7 @@ aside
     padding:3px;
   figcaption
     color: #F6F5F5
-    font: 16px 'SimHei'
+    font-size 16px
     padding:0 23px
 
 //collection & fans
@@ -102,7 +138,6 @@ aside
     flex-direction: column
     text-align: center
     color: #6E8095
-    font: 12px 'SimHei'
     padding:0 35px
     span:first-child
       font-size:14px
@@ -113,7 +148,7 @@ aside
 .nav_dir
   padding:10px 40px
   color: #6E8095
-  font:  12px/4 'SimHei'
+  line-height: 4
 .dir_name
   padding-left:12px
 .icon-arrow,
@@ -145,10 +180,10 @@ aside
 .second
   padding-left:30px
 .third
-  padding-left: 55px
+  padding-left: 25px
 .second>.dir_name,
 .third>.dir_name
-  font:  12px/2.5 'SimHei'
+  line-height: 2.5
   padding-left:5px
 .active
   &>.dir_name
@@ -162,29 +197,26 @@ aside
 
 //right
 #main
-  flex:1 0 890px;
+  flex:1 0 auto;
   background-color: #eee
 
 //path
 .directory
-  height: 31px
+  line-height: 31px
   background-color: #fff
-  display: flex
-  align-items: center
   p
     padding-left:30px
-    font-size: 12.278px
-    font-family: "SimHei"
+    font-size: 12px
     color: rgb(170, 170, 170)
-    line-height: 1.852
     span:last-child
       color:#6898c2
 
+.wrapper
+  width:column-right-width;
+  margin: auto;
 //I search project
 .search_form_container
-  width:890px
-  height:160px
-  margin:20px auto
+  margin-top:20px
 .search_form
   height:85px
   background-image: url(images/change.png)
@@ -195,13 +227,11 @@ aside
   background-color: #fff
   border-top:1px solid #ddd
   border-left:1px solid #ddd
-  font-size: 12px
-  font-family: "SimHei"
   line-height: 2.167
-  &:after
-    content: ''
-    height:85px
-    display: block
+  // &:after
+  //   content: ''
+  //   height:85px
+  //   display: block
   label
     color: rgb(170, 170, 170)
   select
@@ -209,8 +239,6 @@ aside
     outline:none
     height: 25px
     text-indent: 5px
-    font-size: 12px
-    font-family: "SimHei"
   section
     position: absolute
 .order
@@ -266,13 +294,9 @@ aside
     width:50px
     height: 25px
     background-color: #388ac1
-    font-size: 12px
-    font-family: "SimHei"
     color: rgb(255, 255, 255)
     border:none
 .reverse
-  font-size: 12px
-  font-family: "SimHei"
   color: rgb(255, 255, 255)
   line-height: 2.167
   text-decoration: none
@@ -291,6 +315,7 @@ aside
     border-top:1px solid #ddd
     border-left:1px solid #ddd
     height:65px
+    box-sizing: border-box;
 .toleft,
 .toright
   width:30px
@@ -302,32 +327,27 @@ aside
   background-image: url(images/arrow_right.png)
 .history
   width:110px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-.time
-  font-size: 12px
   font-family: "Microsoft YaHei"
+  text-align: center;
+  padding-top:14px;
+  paddind-bottom:11px;
+  // display: flex
+  // flex-direction: column
+  // justify-content: center
+  // align-items: center
+.time
   color: rgb(50, 51, 51)
-  line-height: 1.2
   margin-bottom: 10px
 .currency
-  font-size: 12px
-  font-family: "Microsoft YaHei"
   color:#aeaeae
   font-weight: bolder
 .amount
   font-size: 21px
-  font-family: "Microsoft YaHei"
   color: rgb(236, 101, 0)
   line-height: 0.686
-  -moz-transform: scale(0.949, 1)
-  -webkit-transform: scale(0.949, 1)
-  -ms-transform: scale(0.949, 1)
 .history:hover
   border-top:3px solid #4389c9
-  box-sizing: border-box
+  padding-top: 12px;
 .history_query
   width:130px
   display: flex
@@ -336,22 +356,18 @@ aside
   background-image: url(images/search_history.jpg)
   background-repeat: no-repeat
   background-position: 20px 15px
+  font-family: "Microsoft YaHei"
+  line-height: 1.381
+  color: rgb(83, 83, 83)
   p
-    font-size: 12px
-    font-family: "Microsoft YaHei"
-    color: rgb(83, 83, 83)
-    line-height: 1.381
     margin:20px
-
 
 //III  statistic
 .stat
-  width:890px
-  margin:20px auto
+  margin-top:20px
   height: 95px
   margin-bottom:10px
 .stat_title
-  font-size: 12px
   font-family: "Microsoft YaHei"
   color: rgb(50, 51, 51)
   line-height: 1.62
@@ -374,18 +390,13 @@ aside
       width:60px
       height:45px
     p
-      display:flex
-      flex-direction:column
-      span:nth-of-type(1)
-        font-size: 12px
-        font-family: "SimHei"
+      span
+        display: block;
+        line-height: 2
         color: rgb(50, 51, 51)
-        line-height: 2.051
-      span:nth-of-type(2)
+      span:last-of-type
         font-size: 10px
-        font-family: "SimHei"
         color: rgb(170, 170, 170)
-        line-height: 2.005
   .green
     border-left:4px solid #44b29e
     div
@@ -405,18 +416,10 @@ aside
 
 //V
 .proj
-  width:890px
-  margin:10px auto
-  height: 355px
+  margin-top:10px
   display: flex
   justify-content: space-between
-  >div
-    border:1px solid #ddd
-    border-radius: 8px
-    background-color: #fff
-    overflow: hidden
 
-    border-bottom:1px solid #ddd
 //V project table
 .material
   width:530px
@@ -429,7 +432,6 @@ aside
     width: 80px
     height: 28px
     text-decoration: none
-    font-size: 12px
     font-family: "Microsoft YaHei"
     color: rgb(83, 83, 83)
     line-height: 1.381
@@ -472,7 +474,6 @@ aside
       width: 101px
       height: 30px
       border:1px solid #ddd
-      font-size: 12px
       font-family: "SimSun"
       color: rgb(83, 83, 83)
       line-height: 2.5
@@ -480,97 +481,94 @@ aside
       &:hover
         background-color: #f4f6f7
 
+price_width = 94px
+
 //V project search
 .proj_submit
   width: 350px
 .search_proj
+  padding 15px 20px 20px
   height: 270px;
-  margin-top:15px;
   border:none;
   &:after
     conten:""
     display:block
     clear:both
+  input[type="text"]
+    width 100%
   label
-    font-size: 12px;
+    display: block;
     font-family: "Microsoft YaHei";
     color: rgb(195, 194, 194);
     line-height: 1.381;
     text-indent:5px;
   section
-    display: flex;
-    flex-direction: column;
-    padding:2px 20px;
-    input, textarea
+    .user_input,
+    .user_description
       border:none;
-      border-bottom: 1px solid #ddd;
       height:30px;
       outline:none;
       text-indent:5px;
-      font-size:12px;
-    input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder
-      color:#000;
-    input::-moz-placeholder,
-    textarea::-moz-placeholder
-      color:#000;
-    input:-ms-input-placeholder,
-    textarea:-ms-input-placeholder
-      color:#000;
-    textarea
+    .user_description
       height:120px;
-      padding:2px;
+      padding-top:8px;
       resize:none;
   .proj_title
     padding-bottom: 0;
+    border-bottom:1px solid #ddd;
   .proj_price
     float:left;
-    width: 30%;
-    padding:0 0 0 20px;
+    width: price_width;
     border-right:1px solid #ddd;
+    padding-top:2px
+  .proj_desc
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding-top:2px
   .proj_manager
-    padding:0 20px 0 0;
+    padding-top:2px
+    margin-left price_width + 1px
   .proj_agreement
-    flex-direction: row;
-    align-items: center;
-    float:left;
-    input
-      border:none;
-  .proj_search
-    float:right;
-    width: 51px;
-    height: 26px;
-    input
+    display: flex
+    align-items: center
+    height 34px
+    .checkbox
+    .checkbox-replace
+      width 13px
+      height 13px
+      border 0
+    .checkbox
+      opacity 0
+    .checkbox-replace
+      background: #d5d6d5 no-repeat 50% 50%
+      margin-left -12px
+    .checkbox:checked+.checkbox-replace
+      background-image: url(images/checked.png)
+    label
+      padding-left:8px;
+      display: inline;
+    button
+      margin-left auto
       background-color:#388ac1
-      font-size: 12px;
-      font-family: "SimHei";
-      color: rgb(255, 255, 255);
+      color: #fff;
       line-height: 2.167;
-
+      border:none;
+      padding:0 12px;
 //IV
 .other
-  width:890px
-  margin:10px auto
-  height: 355px
+  margin-top:10px
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  >div
-    border:1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
+
+
 //calendar
 .calendar
   width:350px;
 .cal_main
-  height: 290px;
   width:310px;
   margin:8px auto;
-  font-family: "SimHei";
-  font-size: 12px;
   color: rgb(83, 83, 83);
-  line-height: 1.2;
 .cal_header
   display: flex;
   justify-content: space-between;
@@ -579,10 +577,7 @@ aside
     outline: none;
     height:20px;
     border:1px solid #ccc;
-    font-family: "SimHei";
-    font-size: 12px;
     color: rgb(83, 83, 83);
-    line-height: 1.2;
   #year
     width:62px;
   #month
@@ -630,16 +625,12 @@ aside
   tr
     height: 25px;
     th
-      font-size: 13px;
-      font-family: "SimHei";
       color: rgb(35, 24, 21);
       line-height: 2.077;
       border:1px solid #ddd;
     td
       border:1px solid #ddd;
       text-align: center;
-      font-size: 12px;
-      font-family: "SimHei";
       color: rgb(50, 51, 51);
       line-height: 2;
       .value
@@ -658,16 +649,6 @@ aside
     width: 90px;
 .spec:hover
   background-color: #f3f5f6;
-
-
-
-
-
-
-
-
-
-
 
 
 
