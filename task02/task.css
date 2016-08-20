@@ -1,7 +1,12 @@
 * {
-	margin: 0; 
+	margin: 0;
 	padding: 0;
+}
+body{
 	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-color: #E3E3E3;
+	font-size: 16px;
+
 }
 
 .logo {
@@ -12,14 +17,10 @@
 .flower {
 	height: 400px;
 	width: 500px;
+
 }
 
-body {
-	background-color: #E3E3E3;
-}
-
-
-header {
+#header {
 	background-color: #3B3B3B;
 	overflow: hidden;
 }
@@ -63,7 +64,7 @@ nav>ul>li>a:link {color:#fff;}
 nav>ul>li>a:hover {color:#4876FF;}
 nav>ul>li>a:active {color:#CD2626;}
 
-article,aside {	
+article,aside {
 	overflow: hidden;
 	background-color: #fff;
 	margin: 15px auto;
@@ -72,7 +73,7 @@ article,aside {
 	min-width: 660px;
 	max-width: 1200px;
 
-	
+
 }
 
 h3 {
@@ -121,10 +122,10 @@ tr>th {
 	background-color: #4A4A4A;
 	color: #fff;
 	text-align: left;
-} 
+}
 tr>td {
 	border: 1px solid #6C7B8B;
-} 
+}
 
 tr#calc {
 	background-color: #D4D4D4;
@@ -150,7 +151,7 @@ form .desc {
 	float: left;
 	width:50%;
 	text-align: right;
-	margin:0 10px;	
+	margin:0 10px;
 }
 
 form .desc:after {
@@ -173,7 +174,7 @@ form .gender, form .hobby {
 .reg {
 	text-align: left;
 	margin: 5px 0;
-	
+
 }
 .info{
 	color: #D4D4D4;
@@ -192,6 +193,6 @@ form  textarea {
 	background-color: #6495ED;
 	color:#fff;
 	height: 30px;
-	border-radius: 5px;	
+	border-radius: 5px;
 	font-size: 1.1em;
 }
