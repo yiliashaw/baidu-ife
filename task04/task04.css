@@ -1,15 +1,18 @@
 * {
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
-
+html{
+	height: 100%;
+}
 body {
-	position: fixed;
+	/*position: fixed;
 	left:0;
 	top:0;
 	bottom:0;
 	right:0;
-	
+	*/
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,41 +22,33 @@ body {
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);	*/
-	
 	position: relative;
-	
-	border: 1px solid green;
-	
+	background-color: #eee;
+	z-index: -1;
 }
 
 #wrapper p {
-	background-color: #ccc;
-	
-	text-indent: 30px;	
-	width: 400px;	
-
+	text-indent: 30px;
+	width: 400px;
+	padding:10px;
 }
 
-#left {
+#wrapper div{
 	background-color: #fc0;
 	width: 50px;
 	height: 50px;
-	border-radius: 0 0 100% 0;
 	position: absolute;
+	z-index: -1;
+}
+
+#left {
+	border-radius: 0 0 100% 0;
 	left:0px;
 	top:0px;
-
 }
 
 #right {
-	background-color: #fc0;
-	width:50px;
-	height: 50px;
 	border-radius: 100% 0 0 0;
-	position: absolute;
 	right:0px;
 	bottom:0px;
-	z-index: -1;
-	
-
 }

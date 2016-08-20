@@ -1,13 +1,13 @@
 * {
 	margin: 0;
 	padding: 0;
-	
+
 }
 
 
 
 #wrapper {
-	margin: 20px 20px;
+	margin: 10px;
 	padding: 20px;
 	background-color: #eee;
 	border:1px solid #999;
@@ -15,7 +15,7 @@
 #wrapper:after {
 	content: '';
 	clear: both;
-	display:block; 
+	display:block;
 }
 aside.left {
 	border:1px solid #999;
@@ -28,13 +28,13 @@ aside.left {
 .team figurecaption {
 	vertical-align: top;
 	margin: 0 15px;
-} 
+}
 
 article {
-	border:1px solid #999;	
-	margin: 0 150px 0 260px;
+	border:1px solid #999;
+	margin: 0 140px 0 260px;
 	background-color: #fff;
-	
+
 }
 article h2 {
 	text-align: center;
@@ -57,4 +57,9 @@ aside.right {
 
 aside.right figure {
 	margin-bottom: 10px;
+}
+aside.right figurecaption {
+	display: block;
+	text-align: center;
+	line-height: 2em;
 }

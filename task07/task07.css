@@ -12,7 +12,7 @@ body {
 
 header {
     height: 57px;
-    
+
 }
 
 head:after {
@@ -259,13 +259,15 @@ header nav .login a {
     font: 400 1em 'Microsoft YaHei';
     border: none;
     outline: none;
-/*  
+    text-indent: 5px;
+    opacity: 0.8;
+/*
     background-image: url(images/search_option_04.png);
     background-repeat: no-repeat;
     background-position: 215px 10px;
     background-color: #fff;
     */
-   
+
 }
 
 

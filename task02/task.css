@@ -96,17 +96,17 @@ article#a2>ul>li,article#a4>ul>li{
 
 article#a3 figure {
 	border: 1px solid  #D4D4D4;
-	margin: 8px;
-	width: 50%;
+	margin: 8px auto;
+	width: 60%;
 	text-align: center;
-	margin-left: 80px;
-	padding: 25px;
+	padding: 10px;
 }
 
 
 article#a3 figure img {
-	margin: 15px 20px;
+	max-width:100%;
 }
+
 
 p#tb_desc {
 	text-indent: 0px;
@@ -143,8 +143,9 @@ aside>h3 {
 form fieldset {
 	border:none;
 }
-form legend {
-	display: none;
+
+form section {
+	padding:3px 0;
 }
 
 form .desc {
@@ -163,7 +164,8 @@ form .desc:after {
 
 form input, form select,form textarea {
 	outline: none;
-
+	height:18px;
+	vertical-align: top;
 }
 
 form .gender, form .hobby {
@@ -179,12 +181,13 @@ form .gender, form .hobby {
 .info{
 	color: #D4D4D4;
 	margin-left: 50%;
-	font-size: 0.75em;
+	font-size: .75em;
 }
 
 form  textarea {
 	width: 45%;
 	height: 150px;
+	resize: none;
 }
 
 #submit {
