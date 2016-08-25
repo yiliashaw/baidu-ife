@@ -128,30 +128,33 @@ h2 {
 .articles {
   background-color: #fff;
 }
-article {
-  padding: 20px 28px;
+.item {
   border-bottom: 2px solid #f5f5f5;
+  padding: 20px 20px;
+  display: flex;
+}
+.cont-box {
+  padding-left: 20px;
   position: relative;
 }
-article:after {
-  content: '';
-  display: block;
-  clear: both;
+.three-row {
+  flex-direction: column;
+  position: relative;
 }
-article img {
-  float: left;
-  margin-right: 30px;
+.three-row >.pic>a {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
-article h1 {
+h1 {
   font-size: 4.5em;
-  margin-bottom: 28px;
 }
-p {
+.info,
+.three-info {
   font-size: 3.6em;
   color: #ccc;
 }
 .info {
   position: absolute;
-  bottom: 28px;
-  left: 340px;
+  bottom: 0px;
 }
