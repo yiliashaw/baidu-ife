@@ -1,0 +1,84 @@
+*
+  margin 0
+  padding 0
+li
+  list-style-type: none
+a
+  text-decoration: none
+body
+  padding 50px
+  font 16px/1.5 'SimHei',tahoma,arial,sans-serif;
+
+
+table
+  border-collapse: collapse
+  margin 25px 0;
+td,th
+  border 2px solid #fff
+th
+  color:#fff;
+  background-color: #000;
+tr:nth-child(odd)
+  background-color: #ccc;
+for num in (2...5)
+  tr:nth-child({num})
+    color:red
+#text
+  border 1px solid #ccc
+  width:120px;
+  padding 4px
+  margin 25px 0
+  transition:width 2s
+#text:focus
+  width:200px;
+
+
+div
+  width: 400px;
+  height:200px;
+.slides
+  position: relative
+  overflow: hidden;
+.inner
+  width:300%
+  transition: margin-left 1s;
+  &:after
+    content: ''
+    display: block
+    clear: both
+.green
+  background-color:  green
+  float:left
+
+.blue
+  background-color:  blue
+  float:left
+
+.red
+  background-color:  red
+  float:left
+#green,#blue,#red
+  display: none
+label
+  position: absolute
+  bottom: 0
+  display: inline-block
+  border-left 2px solid transparent
+  box-sizing: border-box
+  width: 25px
+  line-height: 25px
+  text-align: center
+  background-color: rgba(255,255,255,0.5)
+  color white
+label:nth-of-type(1)
+  right 52px
+#green:checked ~ .inner
+  margin-left:0
+label:nth-of-type(2)
+  right: 26px
+#blue:checked ~ .inner
+  margin-left:-100%
+label:nth-of-type(3)
+  right: 0
+#red:checked ~ .inner
+  margin-left:-200%
