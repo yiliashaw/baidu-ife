@@ -1,34 +1,36 @@
 *
   margin:0
   padding: 0
+
 body
-  font: 10px 'SimHei',sans-serif ;
+  font: 1vw 'SimHei',sans-serif ;
   color:#313131;
   margin:0 auto;
   background-color:#f5f5f5;
-  max-width: 1000px;
+
 li
   list-style-type: none;
 a
   text-decoration: none;
 
 header
-  background: url(images/back.png) no-repeat 0px 7px;
+  background: url(images/back.png) no-repeat 2vw 2vw;
+  background-size: 4.5em;
   background-color: #91d4da;
   position: relative;
   text-align: center;
   a,h1
-    line-height: 115px;
+    line-height: 11.5vw;
     color:#fff
     font-size: 4.5em
   a
     position: absolute
     left:0
-    padding-left:72px;
+    padding-left:7.2vw;
 
 
 .menu
-  height:100px;
+  height:10vw;
   display: flex;
   flex-direction: row;
   font-size: 4em;
@@ -37,90 +39,107 @@ header
   background-color:#fff;
   li
     box-sizing: border-box;
-    line-height: 80px;
-    width:197px;
+    line-height: 8vw;
+    width:19.7vw;
     text-align: center;
     cursor: pointer
-    box-sizing: border-box;
-    padding:10px 0 10px 0;
+    padding:.6vw 0;
+    border-bottom: .8vw solid transparent;
   .active,li:hover
-      padding-bottom: 5px;
-      border-bottom:5px solid #91d4da;
-
+      border-bottom-color:  #91d4da;
+.scroll-pic img
+    width: 100vw;
+    height:55vw;
 .link-box
   background-color:#fff;
-  padding:0 28px;
+  padding:0 2.8vw;
   ul
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 .tab
-  padding:40px 0;
+  padding:4vw 0;
   border-bottom: 1px solid #ddd;
+  img
+    width:12vw;
+    height: 12vw;
   span
     display: block;
     font-size:3.5em;
     text-align: center;
     color:#000;
 .subfield-title
-  padding:60px 0 55px 0;
+  padding:6vw 0 5.5vw 0;
   li
     flex-grow: 1;
     text-align: center;
+    img
+      max-width: 100%;
   li+li
     border-left:1px solid #ddd
   h4
     font-size: 4.2em;
     color:#313131;
-    padding:10px 0 15px 0;
+    padding:1vw 0 1.5vw 0;
   h5
     font-size: 3.8em;
     color:#5f5f5f;
-    padding-top:15px;
-
+    padding-top:1.5vw;
+  img
+    width:30.9vw;
+    height: 22vw;
 .module
-  margin:35px 0;
+  margin:3.5vw 0;
   background-color: #fff;
-  padding:20px 28px;
+  padding:2vw;
 h2
   font-size: 4.4em;
   color:#313131;
-  line-height: 80px;
+  line-height: 8vw;
   border-bottom: 1px solid #ddd;
 .copywritings
-  padding-top:34px;
+  padding-top:3.4vw;
   display: flex
   justify-content:space-between;
+  img
+    width:24.7vw
+    height:22.7vw
   ul
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    flex:0 1 670px;
+    flex:0 1 70vw;
     li
-      line-height: 100px;
+      line-height: 10vw;
       font-size: 3.4em
-      height: 100px;
+      height: 10vw;
       background-color:#f5f5f5;
-      margin:2px;
+      margin:.2vw 0;
       text-align: center;
-      flex:0 1 320px;
+      flex:0 1 28vw;
 
 .articles
   background-color: #fff;
 .item
-  border-bottom: 2px solid #f5f5f5;
-  padding: 20px 20px;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 2vw 2vw;
   display: flex;
+  img
+    width:28vw;
+    height: 20vw;
 .cont-box
-  padding-left:20px;
+  padding-left:2vw;
   position: relative;
 .three-row
   flex-direction: column;
   position: relative;
   >.pic>a
-    padding: 20px 0;
+    padding: 2vw 0;
     display: flex;
     justify-content: space-between;
+  img
+    width: 31.4vw;
+    height:20.7;
 h1
   font-size: 4.5em;
 .info,.three-info
@@ -128,7 +147,7 @@ h1
   color:#ccc;
 .info
   position: absolute;
-  bottom:0px;
+  bottom:0vw;
 
 
 
