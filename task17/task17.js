@@ -58,115 +58,196 @@ const calcPercent = (num, total) =>
 const getMonth = str =>
   str.slice(0, 7);
 
+const randomColor = () =>
+  '#' + ('000000' + Math.round(Math.random() * 0xffffff).toString(16)).slice(-6);
+
+const escapeHTML = str => {
+  str = String(str);
+  const map = {
+    '<': '&lt;',
+    '>': '&gt;',
+    '&': '&amp;',
+    '"': '&quot;',
+    "'": '&#39;',
+  };
+  // for (let i = str.length - 1; i > -1; --i) {
+  //   const char = str[i];
+  //   if (map.hasOwnProperty(char)) {
+  //     str = str.slice(0, i) + map[char] + str.slice(i + 1);
+  //   }
+  // }
+  // return str;
+  return str.replace(/[\<\>&"']/g, match => {
+    return map[match];
+  });
+};
+
+const template = str => {
+  const tmp = document.createElement('div');
+  return data => {
+    tmp.innerHTML = str.replace(
+      /`([^`]+)`/g,
+      (match, group1) =>
+        data.hasOwnProperty(group1) ? escapeHTML(data[group1]) : match
+    );
+    return tmp.firstElementChild;
+  };
+};
+
+const templateEl = template(
+  '<div class=item tooltip=`tooltip` style="height:`height`;background-color:`bg`"></div>'
+);
+
+const createEl = (date, aqi) => {
+  return templateEl({
+    // text: '<script>',
+    tooltip: date + " : " + aqi.toFixed(2),
+    height: calcPercent(aqi, 700),
+    bg: randomColor()
+  });
+  // const div = document.createElement("div");
+  // div.className = "item";
+  // div.setAttribute("tooltip", date + " : " + aqi.toFixed(2));
+  // div.style.height = calcPercent(aqi, 700);
+  // div.style.backgroundColor = randomColor();
+  // return div;
+};
+
+const interval = ["日", "周", "月"];
+const wrapper = document.querySelector("#aqi-chart-wrap");
 /**
  * 渲染图表
  */
 function renderChart() {
-  const interval = ["日","周","月"];
   const city = document.querySelector("#city-select").value;
-  charData = aqiSourceData[city];
-  const wrapper = document.querySelector("#aqi-chart-wrap");
-  const arr = Object.keys(charData).sort(); //把年月日先排个序，Object.keys取出来的属性顺序不一定是对的
+  const chartData = aqiSourceData[city];
+  const arr = Object.keys(chartData).sort(); //把年月日先排个序，Object.keys取出来的属性顺序不一定是对的
   wrapper.innerHTML = "";  //初始化wrapper
-  var title = document.createElement("h3");
-  title.className="chart-title";
+  const title = document.createElement("h3");
+  title.className = "chart-title";
   wrapper.appendChild(title);
 
   /* ----------日视图-------------- */
   if (pageState.nowGraTime == "day") {
     wrapper.className = "day-view";
-    title.innerHTML=city + "每"+ interval[0]+"空气质量统计情况"
+    title.textContent = city + "每" + interval[0] + "空气质量统计情况"
     for (let i = 0; i < arr.length; i++) {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.setAttribute("tooltip",arr[i] + ":" + charData[arr[i]]);
-      div.style.height = calcPercent(charData[arr[i]], 700);
-      div.style.backgroundColor = "#CDCD00";
-      div.style.title ="dqt";
+      const div = createEl(arr[i], chartData[arr[i]]);
+      // const div = document.createElement("div");
+      // div.className = "item";
+      // div.setAttribute("tooltip", arr[i] + ":" + chartData[arr[i]]);
+      // div.style.height = calcPercent(chartData[arr[i]], 700);
+      // div.style.backgroundColor = randomColor();
+      // div.style.title = "dqt";
       wrapper.appendChild(div);
     }
-  /*----------周视图--------------*/
+    /*----------周视图--------------*/
   } else if (pageState.nowGraTime == "week") {
     wrapper.className = "week-view";
-    title.innerHTML=city + "每"+ interval[1]+"空气质量统计情况"
-    const weeks = Math.ceil(arr.length / 7);
-    for (let i = 0; i < weeks; i++) {
-      let aqiTotal = 0;
-      const daysOfWeek = i === weeks - 1 ? (arr.length - i * 7) : 7;
-      for (let j = 0; j < daysOfWeek; j++) {
-        aqiTotal += charData[arr[i * 7 + j]];
-      }
-      const avg = aqiTotal / daysOfWeek;
-      const div = document.createElement("div");
-      div.className = "item";
-      div.setAttribute("tooltip","第"+(i+1) + "周:" + avg.toFixed(2));
-      div.style.height = calcPercent(avg, 700);
-      div.style.backgroundColor = "#3CB371";
-      wrapper.appendChild(div);
-    }
-    // const date = new Date();
-    // const getWeek = str => {
-    //   const year = parseInt(str.slice(0, 5), 10);
-    //   const month = parseInt(str.slice(6, 8), 10);
-    //   const _date = parseInt(str.slice(9, 11), 10);
-    //   date.setFullYear(year);
-    //   date.setMonth(month - 1);
-    //   date.setDate(_date);
-    //   const day = date.getDay();
-    //   if(day === 0){
-    //     return str;
-    //   }else{
+    title.textContent = city + "每" + interval[1] + "空气质量统计情况"
+    // const weeks = Math.ceil(arr.length / 7);
+    // for (let i = 0; i < weeks; i++) {
+    //   let aqiTotal = 0;
+    //   const daysOfWeek = i === weeks - 1 ? (arr.length - i * 7) : 7;
+    //   for (let j = 0; j < daysOfWeek; j++) {
+    //     aqiTotal += chartData[arr[i * 7 + j]];
     //   }
-    // };
+    //   const avg = aqiTotal / daysOfWeek;
+    //   const div = document.createElement("div");
+    //   div.className = "item";
+    //   div.setAttribute("tooltip", "第" + (i + 1) + "周:" + avg.toFixed(2));
+    //   div.style.height = calcPercent(avg, 700);
+    //   div.style.backgroundColor = randomColor();
+    //   wrapper.appendChild(div);
+    // }
+    const date = new Date(1970, 0, 1);
+    const getWeekDay = str => {
+      const year = parseInt(str.slice(0, 4), 10);
+      const month = parseInt(str.slice(5, 7), 10);
+      const day = parseInt(str.slice(-2), 10);
+      date.setFullYear(year);
+      date.setMonth(month - 1);
+      date.setDate(day);
+      // const date = new Date(year, month - 1, day);
+      return date.getDay();
+    };
 
-    // let total = 0;
-    // let days = 0;
+    let total = 0;
+    let days = 0;
     // let currentWeek = getWeek(arr[0]);
+    for (let i = 0; i < arr.length; i++) {
+      const item = arr[i];
+      total += chartData[item];
+      days += 1;
+      const isEnd = i === arr.length - 1;
+      // const week = isEnd ? null : getWeek(arr[i + 1]);
+      if (isEnd || getWeekDay(item) === 6) {
+        // currentWeek = week;
+        const avg = total / days;
+        total = 0;
+        days = 0;
+        const div = createEl(item, avg);
+        // const div = document.createElement("div");
+        // div.className = "item";
+        // div.style.height = calcPercent(avg, 700);
+        // div.style.backgroundColor = randomColor();
+        wrapper.appendChild(div);
+      }
+    }
+
+
+    /*----------月视图--------------*/
+  } else if (pageState.nowGraTime == "month") {
+    title.textContent = city + "每" + interval[2] + "空气质量统计情况"
+    wrapper.className = "month-view";
+    // let aqiMonth = 0;
+    // let days = 0;
+    // let currentMonth = getMonth(arr[0]);
     // for (let i = 0; i < arr.length; i++) {
     //   const item = arr[i];
-    //   total += charData[item];
+    //   aqiMonth += chartData[item];
     //   days += 1;
     //   const isEnd = i === arr.length - 1;
-    //   const week = isEnd ? null : getWeek(arr[i + 1]);
-    //   if (isEnd || week !== currentWeek) {
-    //     currentWeek = week;
-    //     const avg = total / days;
-    //     total = 0;
+    //   const month = isEnd ? null : getMonth(arr[i + 1]);
+    //   if (isEnd || month !== currentMonth) {
+    //     currentMonth = month;
+    //     const avg = aqiMonth / days;
+    //     aqiMonth = 0;
     //     days = 0;
     //     const div = document.createElement("div");
     //     div.className = "item";
+    //     div.setAttribute("tooltip", getMonth(arr[i]) + "月:" + avg.toFixed(2));
     //     div.style.height = calcPercent(avg, 700);
-    //     div.style.backgroundColor = "#3CB371";
+    //     div.style.backgroundColor = randomColor();
     //     wrapper.appendChild(div);
     //   }
     // }
 
-
-  /*----------月视图--------------*/
-  } else if (pageState.nowGraTime == "month") {
-    title.innerHTML=city + "每"+ interval[2]+"空气质量统计情况"
-    wrapper.className = "month-view";
-    let aqiMonth = 0;
-    let days = 0;
-    let currentMonth = getMonth(arr[0]);
+    const months = {} // {month: [aqiSum, days]}
     for (let i = 0; i < arr.length; i++) {
       const item = arr[i];
-      aqiMonth += charData[item];
-      days += 1;
-      const isEnd = i === arr.length - 1;
-      const month = isEnd ? null : getMonth(arr[i + 1]);
-      if (isEnd || month !== currentMonth) {
-        currentMonth = month;
-        const avg = aqiMonth / days;
-        aqiMonth = 0;
-        days = 0;
-        const div = document.createElement("div");
-        div.className = "item";
-        div.setAttribute("tooltip", getMonth(arr[i])+"月:" + avg.toFixed(2));
-        div.style.height = calcPercent(avg, 700);
-        div.style.backgroundColor = "#87CEFF";
-        wrapper.appendChild(div);
+      const month = getMonth(item);
+      if (!months.hasOwnProperty(month)) {
+        months[month] = [0, 0];
       }
+      const data = months[month];
+      data[0] = data[0] + chartData[item];
+      data[1] = data[1] + 1;
+    }
+
+    const m = Object.keys(months).sort();
+    for (let i = 0; i < m.length; ++i) {
+      const month = m[i];
+      const [aqiSum, days] = months[month];
+      const avg = aqiSum / days;
+      const div = createEl(month, avg);
+      // const div = document.createElement("div");
+      // div.className = "item";
+      // div.setAttribute("tooltip", month + "月:" + avg.toFixed(2));
+      // div.style.height = calcPercent(avg, 700);
+      // div.style.backgroundColor = randomColor();
+      wrapper.appendChild(div);
+
     }
 
   }
@@ -183,14 +264,15 @@ function renderChart() {
  */
 function graTimeChange() {
   // 确定是否选项发生了变化
-  var graTime = document.querySelector("input[name='gra-time']:checked").value;
-  if (graTime == "day") {
-    pageState.nowGraTime = "day";
-  } else if (graTime == "week") {
-    pageState.nowGraTime = "week";
-  } else if (graTime == "month") {
-    pageState.nowGraTime = "month";
-  }
+  const graTime = document.querySelector("input[name='gra-time']:checked").value;
+  // if (graTime === "day") {
+  //   pageState.nowGraTime = "day";
+  // } else if (graTime === "week") {
+  //   pageState.nowGraTime = "week";
+  // } else if (graTime === "month") {
+  //   pageState.nowGraTime = "month";
+  // }
+  pageState.nowGraTime = graTime;
   console.log(pageState.nowGraTime);
   // 设置对应数据
 
