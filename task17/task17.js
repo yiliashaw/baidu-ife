@@ -142,7 +142,7 @@ function renderChart() {
     // }
 
 
-  /*----------周视图--------------*/
+  /*----------月视图--------------*/
   } else if (pageState.nowGraTime == "month") {
     title.innerHTML=city + "每"+ interval[2]+"空气质量统计情况"
     wrapper.className = "month-view";
@@ -162,7 +162,7 @@ function renderChart() {
         days = 0;
         const div = document.createElement("div");
         div.className = "item";
-        div.setAttribute("tooltip",  getMonth(arr[i])+"月:" + avg.toFixed(2));
+        div.setAttribute("tooltip", getMonth(arr[i])+"月:" + avg.toFixed(2));
         div.style.height = calcPercent(avg, 700);
         div.style.backgroundColor = "#87CEFF";
         wrapper.appendChild(div);
