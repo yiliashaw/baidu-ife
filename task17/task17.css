@@ -2,6 +2,30 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font: 12px 'Microsoft YaHei', sans-serif;
+}
+fieldset {
+  border: none;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+#city-select {
+  font-family: 'Microsoft YaHei', sans-serif;
+  font-size: 18px;
+}
+legend {
+  margin: 10px auto;
+}
+#selector {
+  display: flex;
+  margin: 20px auto;
+  height: 80px;
+}
+#form-gra-time {
+  width: 50%;
+}
 #aqi-chart-wrap {
   width: 1200px;
   height: 500px;
@@ -11,6 +35,13 @@
   justify-content: space-around;
   align-items: flex-end;
   background-color: #eee;
+  position: relative;
+}
+.chart-title {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  font-size: 25px;
 }
 .day-view .item {
   width: 1%;
@@ -20,4 +51,19 @@
 }
 .month-view .item {
   width: 20%;
+}
+[tooltip]:before {
+  content: attr(tooltip);
+  position: absolute;
+  opacity: 0.7;
+  visibility: hidden;
+  padding: 5px;
+  border-radius: 4px;
+}
+[tooltip]:hover:before {
+  opacity: 0.9;
+  background-color: #b4cdcd;
+  visibility: visible;
+  margin-top: -25px;
+  margin-left: 10px;
 }
