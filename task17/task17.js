@@ -95,7 +95,7 @@ const template = str => {
 };
 
 const templateEl = template(
-  '<div class=item tooltip=`tooltip` style="height:`height`;background-color:`bg`"></div>'
+  '<div class=item tooltip="`tooltip`" style="height:`height`;background-color:`bg`"></div>'
 );
 
 const createEl = (date, aqi) => {
