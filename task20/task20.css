@@ -9,23 +9,20 @@ input {
 .display {
   width: 100%;
   height: 100px;
- 
 }
 .display .item {
- 
   background-color: #f00;
   color: #fff;
   font-size: 15px;
   display: inline-block;
   margin: 3px;
-  padding:2px;
+  padding: 2px;
   text-align: center;
   cursor: pointer;
 }
-.display .item>span {
-
+.display .item span {
   background-color: #fc0;
-  color:#191970
+  color: #191970;
 }
 textarea {
   display: block;
