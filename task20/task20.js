@@ -71,9 +71,11 @@ function leftin() {
 }
 
 function strQuery(){
-  var re = RegExp(queryinput.value,'g'); 
-  var str = display.innerHTML;
-  display.innerHTML =str.replace(re,"<span>"+queryinput.value+"</span>");
+  var re = RegExp(queryinput.value,'g');
+  for(let i = 0 ; i<arr.length; i++ ){
+    display.children[i].innerHTML = arr[i].replace(re,"<span>"+queryinput.value+"</span>");
+  }
+  return display;
 }
 // function rightin() {
 //   var inputValue = Number(input.value);
@@ -102,14 +104,14 @@ function strQuery(){
 //   }
 // }
 
-function remove(event) {
-  var el = event.target;
-  display.removeChild(el);
-  var i = 0;
-  while ((el = el.previousSibling) != null)
-    i++;
-  arr.splice(i, 1);
-}
+// function remove(event) {
+//   var el = event.target;
+//   display.removeChild(el);
+//   var i = 0;
+//   while ((el = el.previousSibling) != null)
+//     i++;
+//   arr.splice(i, 1);
+// }
 
 
 
@@ -119,7 +121,7 @@ function init() {
   // rightIn.addEventListener("click", rightin, false);
   // leftOut.addEventListener("click", leftout, false);
   // rightOut.addEventListener("click", rightout, false);
-  display.addEventListener("click", remove, false);
+  //display.addEventListener("click", remove, false);
 
 }
 
