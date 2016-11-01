@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+  <title>task25</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="task25.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <header>
+      <form class="search">
+        <input type="text" name="" placeholder="C#" class="input-search">
+        <input type="button" value="Search" id="submit">
+      </form>
+      <p>PS.右键添加删除节点</p>
+    </header>
+    <ul class="nav">
+      <!--<li class="panel overview"><a class="level1" href="#intro">Overview</a></li>-->
+      <li class="panel collapsed"><a class="level1" href="#intro">INTRO VIDEOS</a>
+        <ul class="collapse" id="intro">
+          <li><a href="#intro" class="level2">Overview</a></li>
+          <li><a href="#intro" class="level2">Quick Tour using JavaScript</a></li>
+          <li><a href="#intro" class="level2">Setup and Basics</a></li>
+          <li><a href="#intro" class="level2">Configure and Extend</a></li>
+          <li><a href="#intro" class="level2">Coding Editing</a></li>
+        </ul>
+      </li>
+      <li class="panel collapsed"><a class="level1" href="#setup">SETUP</a>
+        <ul class="collapse" id="setup">
+          <li><a href="#intro" class="level2">Overview</a></li>
+          <li><a href="#intro" class="level2">Mac</a></li>
+          <li><a href="#intro" class="level2">Linux</a></li>
+          <li><a href="#intro" class="level2">Windows</a></li>
+          <li><a href="#intro" class="level2">Addional Components</a></li>
+        </ul>
+      </li>
+      <li class="panel collapsed"><a class="level1" href="#editor">EDITOR</a>
+        <ul class="collapse" id="editor">
+          <li><a href="#intro" class="level2">The Basics</a></li>
+          <li><a href="#intro" class="level2">Extension Marketplace</a></li>
+          <li><a href="#intro" class="level2">IntlliSense</a></li>
+          <li><a href="#intro" class="level2">Editing Evolved</a></li>
+          <li><a href="#intro" class="level2">Debugging</a></li>
+          <li><a href="#intro" class="level2">Version Control</a></li>
+        </ul>
+      </li>
+      <li class="panel collapsed"><a class="level1" href="#customization">CUSTOMIZATION</a>
+        <ul class="collapse" id="customization">
+          <li><a href="#intro" class="level2">Overview</a></li>
+          <li><a href="#intro" class="level2">user and Workspace Settings</a></li>
+          <li><a href="#intro" class="level2">Key Bindings</a></li>
+          <li><a href="#intro" class="level2">Snippets</a></li>
+          <li><a href="#intro" class="level2">Colorizer</a></li>
+          <li><a href="#intro" class="level2">Themes</a></li>
+          <li><a href="#intro" class="level2">Display Language</a></li>
+        </ul>
+      </li>
+      <li class="panel collapsed"><a class="level1" href="#languages">LANGUAGES</a>
+        <ul class="collapse" id="languages">
+          <li><a href="#intro" class="level2">Overview</a></li>
+          <li><a href="#intro" class="level2">JavaScript</a></li>
+          <li><a href="#intro" class="level2">C#</a></li>
+          <li><a href="#intro" class="level2">C++</a></li>
+          <li><a href="#intro" class="level2">JSON</a></li>
+          <li><a href="#intro" class="level2">HTML</a></li>
+          <li><a href="#intro" class="level2">PHP</a></li>
+          <li><a href="#intro" class="level2">Python</a></li>
+          <li><a href="#intro" class="level2">Markdown</a></li>
+          <li><a href="#intro" class="level2">TypeScript</a></li>
+          <li><a href="#intro" class="level2">CSS,Sass and Less</a></li>
+          <li><a href="#intro" class="level2">Dockerfile</a></li>
+        </ul>
+      </li>
+      <li class="panel collapsed"><a class="level1" href="#runtimes">RUNTIMES</a>
+        <ul class="collapse" id="runtimes">
+          <li><a href="#intro" class="level2">Node.js</a></li>
+          <li><a href="#intro" class="level2">.NET Core</a></li>
+          <li><a href="#intro" class="level2">Unity</a></li>
+          <li><a href="#intro" class="level2">Office</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="container">
+    <ul class="rightmenu">
+      <li id="addsibling">添加同级目录</li>
+      <li id="addchild">添加下级目录</li>
+      <li id="deletenode">删除当前目录</li>
+    </ul>
+  </div>
+  <script src="task25.js"></script>
+</body>

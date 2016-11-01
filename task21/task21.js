@@ -57,6 +57,7 @@ function addDelete(event) {
   if (event.target.className === "item") {
     const str = event.target.innerHTML;
     event.target.textContent = "删除" + str;
+    event.target.style.backgroundColor = "red";
   }
 }
 
@@ -65,6 +66,7 @@ function reomveDelete(event) {
   if (event.target.className === "item") {
     var str = event.target.textContent;
     event.target.textContent = str.slice(2);
+    event.target.style.backgroundColor = "#78BCFB";
   }
 }
 //delete tag
@@ -89,12 +91,16 @@ function strQuery() {
 function init() {
   leftIn.addEventListener("click", function () { addTag(display, arr, input) }, false);
   querybtn.addEventListener("click", strQuery, false);
-  input_tag.addEventListener("change", function () { addTag(tag, arr_tag, input_tag) }, false);
+  input_tag.addEventListener("keyup", function () {
+    if (/[,，;；、\s\n]+/.test(input_tag.value) || event.keyCode == 13) {
+      addTag(tag, arr_tag, input_tag)
+    }
+  }, false);
   tag.addEventListener("mouseover", addDelete, false);
   tag.addEventListener("mouseout", reomveDelete, false);
   tag.addEventListener("click", deleteTag, false);
-  display.addEventListener("mouseover", addDelete, false);
-  display.addEventListener("mouseout", reomveDelete, false);
+  // display.addEventListener("mouseover", addDelete, false);
+  // display.addEventListener("mouseout", reomveDelete, false);
   display.addEventListener("click", deleteTag, false);
 
 }

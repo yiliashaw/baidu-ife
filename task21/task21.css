@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+  margin: 30px;
+}
 input {
   margin: 5px;
   padding: 3px;
@@ -13,12 +16,12 @@ input {
 }
 .display .item,
 .tag-display .item {
-  background-color: #f00;
+  background-color: #78bcfb;
   color: #fff;
   font-size: 15px;
   display: inline-block;
   margin: 3px;
-  padding: 2px;
+  padding: 5px;
   text-align: center;
   cursor: pointer;
 }
@@ -26,6 +29,9 @@ input {
 .tag-display .item span {
   background-color: #fc0;
   color: #191970;
+}
+.display>.item {
+  background-color: #ffa500;
 }
 textarea {
   display: block;
