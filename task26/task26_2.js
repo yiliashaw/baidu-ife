@@ -39,6 +39,8 @@ DisplayObjectContainer.prototype.addChild = function(obj) {
 DisplayObjectContainer.prototype.removeChild = function(obj) {
   var index = this.children.indexOf(obj);
   this.children.splice(index, 1);
+  this.el.removeChild(obj.el);
+  obj.parent = null;
 };
 DisplayObjectContainer.prototype.update = function() {
   for (const child of this.children) {
@@ -111,7 +113,6 @@ Spaceship.prototype.stop = function() {
   this.fuelVel = 0;
 };
 Spaceship.prototype.destroy = function() {
-  this.el.parentNode.removeChild(this.el);
   this.parent.removeChild(this);
 };
 
@@ -124,17 +125,33 @@ function SpaceshipControl(options) {
   this.spaceship = spaceship;
   const fly = el.querySelector('.fly');
   fly.onclick = function() {
-    spaceship.fly();
+    if (getRandom() === true) {
+      spaceship.fly();
+      log("Command sent sucessful.");
+    } else {
+      log("Failed to send command.");
+    }
   };
   const stop = el.querySelector('.stop');
   stop.onclick = function() {
-    spaceship.stop();
+    if (getRandom() === true) {
+      spaceship.stop();
+      log("Command sent sucessful.");
+    } else {
+      log("Failed to send command.");
+    }
+
   };
   const destroy = el.querySelector('.destroy');
   destroy.onclick = function() {
-    spaceship.destroy();
-    var ev = event.target;
-    ev.parentNode.parentNode.removeChild(ev.parentNode);
+    if (getRandom() === true) {
+      spaceship.destroy();
+      var ev = event.target;
+      ev.parentNode.parentNode.removeChild(ev.parentNode);
+      log("Command sent sucessful.");
+    } else {
+      log("Failed to send command.");
+    }
   };
 }
 
@@ -155,30 +172,36 @@ const spaceships = [{
 
 const addCtrl = document.querySelector(".add");
 addCtrl.onclick = function() {
-  for (const config of spaceships) {
-    //Ship create div
-    const el = document.createElement('div');
-    el.className = "ship";
-    el.innerHTML = 100;
-    //Ship instantiate
-    const spaceship = new Spaceship({
-      el,
-      radius: config.radius,
-      centerX: 399,
-      centerY: 245,
-    });
-    //Controller create
-    const ctrEl = document.createElement("div");
-    ctrEl.className = "track";
-    ctrEl.innerHTML = '<button class="fly">FLY</button> <button class="stop">STOP</button> <button class="destroy">DESTROY</button>';
-    document.querySelector("#controller").appendChild(ctrEl);
-    const ctrl = new SpaceshipControl({
-      el: ctrEl,
-      spaceship,
-    });
-    //Stage addChild
-    stage.addChild(spaceship);
+  if (getRandom() === true) {
+    for (const config of spaceships) {
+      //Ship create div
+      const el = document.createElement('div');
+      el.className = "ship";
+      el.innerHTML = 100;
+      //Ship instantiate
+      const spaceship = new Spaceship({
+        el,
+        radius: config.radius,
+        centerX: 399,
+        centerY: 245,
+      });
+      //Controller create
+      const ctrEl = document.createElement("div");
+      ctrEl.className = "track";
+      ctrEl.innerHTML = '<button class="fly">FLY</button> <button class="stop">STOP</button> <button class="destroy">DESTROY</button>';
+      document.querySelector("#controller").appendChild(ctrEl);
+      const ctrl = new SpaceshipControl({
+        el: ctrEl,
+        spaceship,
+      });
+      //Stage addChild
+      stage.addChild(spaceship);
+    }
+    log("Button added sucessful.");
+  } else {
+    log("Failed to add button.");
   }
+
 };
 
 
@@ -200,3 +223,14 @@ function init() {
 }
 
 init();
+
+
+//Log information
+const logInfo = document.querySelector(".loginfo");
+function log(msg) {
+  var time = new Date();
+  const pEl = document.createElement('p');
+  pEl.className = "log";
+  pEl.textContent = time.toLocaleTimeString() + ': ' + msg;
+  logInfo.appendChild(pEl);
+}
