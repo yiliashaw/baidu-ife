@@ -43,9 +43,13 @@ DisplayObjectContainer.prototype.removeChild = function(obj) {
   obj.parent = null;
 };
 DisplayObjectContainer.prototype.update = function() {
-  for (const child of this.children) {
-    child.update();
-  }
+  // for (const child of this.children) {
+  //   child.update();
+  // }
+  this.children.forEach(function(child) {
+      child.update();
+    }
+  );
 };
 
 
@@ -173,6 +177,9 @@ const spaceships = [{
 const addCtrl = document.querySelector(".add");
 addCtrl.onclick = function() {
   if (getRandom() === true) {
+    //  spaceships.forEach(function (config) {
+
+    //  });
     for (const config of spaceships) {
       //Ship create div
       const el = document.createElement('div');
@@ -227,6 +234,7 @@ init();
 
 //Log information
 const logInfo = document.querySelector(".loginfo");
+
 function log(msg) {
   var time = new Date();
   const pEl = document.createElement('p');
