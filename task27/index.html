@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+  <title>task27</title>
+  <meta charset="utf-8">
+  <link href="task27.css" rel="stylesheet">
+</head>
+<div class="container">
+  <div class="wrapper">
+    <div id="universe">
+      <canvas id="drawing" width="800px" height="500px"></canvas>
+    </div>
+    <div id="controller">
+      <header>
+        <h2>COMMAND PANEL</h2>
+        <select name="shiptype" id="shiptype">
+          <option value="qianjin">前进号(30,-5%)</option>
+          <option value="benteng">奔腾号(50,-7%)</option>
+          <option value="chaoyue">超越号(80,-9%)</option>
+        </select>
+        <select name="fuelsys" id="fuelsys">
+          <option value="jingliang">劲量型(+2%)</option>
+          <option value="guangneng">光能型(+3%)</option>
+          <option value="yongyuan">永远型(+4%)</option>
+        </select>
+        <div class="add">Add +</div>
+      </header>
+    </div>
+  </div>
+  <div class="loginfo">
+    <h3>LOG INFO</h3>
+  </div>
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="task27_4.js"></script>
+</div>

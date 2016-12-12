@@ -1,0 +1,129 @@
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  font-family:Consolas,monaco,monospace,'Open Sans', Verdana, Geneva, sans-serif;
+  background-color: #eee;
+}
+.container {
+  margin:20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#universe {
+  width:800px;
+  height:500px;
+  position: relative;
+  background: url(images/uni.jpg);
+}
+
+.ship {
+  position: absolute;
+  top:230px;
+  height:30px;
+  width: 30px;
+   background: linear-gradient(to bottom, #eee, #333);
+  /*background: #2fbf71;*/
+  /*opacity: 0.8;*/
+  border-radius: 15px;
+  color:#f4f2e8;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  /*display: none;*/
+}
+#spaceship1 {
+  left:494px;
+}
+#spaceship2 {
+  left:534px;
+}
+#spaceship3 {
+  left:574px;
+}
+#spaceship4 {
+  left:614px;
+}
+
+#controller {
+  width:800px;
+  min-height: 200px;
+  font: 700 12px/1 Consolas,monaco,monospace,'Open Sans', sans-serif;
+  background-color: #fff;
+  padding-bottom:8px;
+}
+h2 {
+  padding:5px;
+  align-self: center;
+  width: 56%;
+}
+.loginfo {
+  background-color: #111;
+  width: 300px;
+  overflow: scroll;
+  margin-left:2px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  text-align: center;
+  color:white;
+  padding: 10px;
+  font-size: 15px;
+}
+.add {
+  border:2px solid #888;
+  margin:5px 10px;
+  padding:5px 8px;
+  color:#888;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+}
+.add:hover {
+  color:#000;
+  border-color:#000;
+}
+button {
+  border: none;
+  width:80px;
+  padding:8px 12px;
+  margin:5px 10px;
+  background-color:#555;
+  color:#fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+  font: 700 12px/1 Consolas,monaco,monospace,'Open Sans', sans-serif;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+button:hover{
+  background-color: #444;
+}
+#controller>div {
+  margin:5px;
+  padding-left:20px;
+}
+
+.log{
+  color:green;
+  font-size:12px;
+  padding:2px 5px;
+}
+
+#shiptype,#fuelsys {
+  font: 500 12px/1 Consolas,monaco,monospace,'Open Sans', sans-serif;
+  outline: none;
+  align-self: center;
+  padding:4px;
+  border:1px solid #888;
+  border-radius: 4px;
+}
