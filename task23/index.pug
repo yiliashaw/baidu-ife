@@ -1,0 +1,91 @@
+doctype html
+head
+  title task23
+  meta(charset="utf-8")
+  style(type="text/css").
+    * {
+      margin:0px;
+      padding:0px;
+    }
+    input {
+      width: 140px;
+      height: 40px;
+      margin: 10px;
+      font-size:18px;
+      border-radius:2px;
+      box-shadow:1px 1px #ddd;
+      border: none;
+      outline: none;
+      background-color: #adb39b;
+      color: #fff;
+    }
+    .search{
+      width:200px;
+      color:#000;
+      background-color:#fff;
+      border: 1px solid #adb39b;
+      padding: 0 5px;
+    }
+    #btn {
+      width:80%;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-around;
+      border:none;
+    }
+    div {
+      border:1px solid #484111;
+      background-color:#fff;
+      height:80%;
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+    }
+    .supper{
+      height:300px;
+      width:90%;
+      margin:0 auto;
+    }
+    .cat1,.note,.apple,.study{
+      width:40%;
+    }
+    .fish,.phone{
+      width:10%;
+    }
+    .human,.program{
+      width:45%;
+    }
+
+body
+  div#btn
+    input(type="button" class="iterator" value="递归实现")
+    input(type="button" class="breadth" value="广度优先")
+    input(type="button" class="depth" value="深度优先")
+    input(type="text" class="search")
+    input(type="button" class="breadth-search" value="广度优先查找")
+    input(type="button" class="depth-search" value="深度优先查找")
+  div.supper Supper
+    div.cat1 Cat
+      div.apple Apple
+        div.pear Pear
+        div.pig Pig
+        div.cola Cola
+        div.soccer Soccer
+      div.phone Phone
+      div.study Study
+        div.book Book
+        div.school School
+    div.note Note
+      div.human Human
+        div.code Code
+        div.operate Operate
+        div.man Man
+      div.program Program
+        div.bemant Bemant
+          div.cat2 Cat
+        div.glass Glass
+    div.fish Fish
+
+
+
+  script(src="task23.js")
