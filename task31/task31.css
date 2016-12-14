@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: SimHei,Consolas, monaco, monospace, 'Open Sans', Verdana, Geneva, sans-serif;
+  /*background-color: #eee;*/
+}
+
+.wrapper {
+  text-align: center;
+  margin:100px auto;
+}
+
+.wrapper>div {
+  margin:30px auto;
+  width:500px;
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+}
+
+/*.selector {
+  justify-content: center;
+}*/
+select {
+  outline:none;
+  border-radius: 3px;
+  width:120px;
+  height: 25px;
+  padding:2px;
+  font-size:14px;
+  font-family: SimHei,Consolas, monaco, monospace, 'Open Sans', Verdana, Geneva, sans-serif;
+}
+.school {
+  margin-left:50px;
+}
+input#company {
+  outline: none;
+  padding:0 5px;
+  width:300px;
+  height: 25px;
+  border-radius: 2px;
+  border:1px solid #aaa;
+}
+
+label {
+  margin-right: 30px;
+  text-align: right;
+  /*display: inline-block;*/
+  width:100px;
+  /*border:1px solid blue;*/
+}
+#container .city_school, #container .work_company {
+  margin:30px auto;
+  display: none;
+}
+
+#container {
+  /*border:1px solid red;*/
+}
