@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "no-async-without-await"
+  ],
+  "rules": {
+    "comma-dangle": ["error", {
+      "functions": "never"
+    }],
+    "func-style": [
+      "error",
+      "expression", {
+        "allowArrowFunctions": true
+      }
+    ],
+    "no-async-without-await/no-async-without-await": 1,
+    "no-console": "off",
+    "no-plusplus": ["error", {
+      "allowForLoopAfterthoughts": true
+    }]
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
